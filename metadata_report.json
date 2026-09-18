@@ -1,0 +1,1285 @@
+[
+  {
+    "column_name": "id",
+    "dtype": "float64",
+    "semantic_type": "ID",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 490,
+    "null_count": 0,
+    "unique_count": 467,
+    "sample_values": [
+      "2992450.0",
+      "3820211.0",
+      "5651579.0"
+    ]
+  },
+  {
+    "column_name": "listing_url",
+    "dtype": "str",
+    "semantic_type": "URL",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 490,
+    "null_count": 0,
+    "unique_count": 490,
+    "sample_values": [
+      "https://www.airbnb.com/rooms/2992450",
+      "https://www.airbnb.com/rooms/3820211",
+      "https://www.airbnb.com/rooms/5651579"
+    ]
+  },
+  {
+    "column_name": "scrape_id",
+    "dtype": "float64",
+    "semantic_type": "ID",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 490,
+    "null_count": 0,
+    "unique_count": 1,
+    "sample_values": [
+      "20260600000000.0"
+    ]
+  },
+  {
+    "column_name": "last_scraped",
+    "dtype": "str",
+    "semantic_type": "date",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 490,
+    "null_count": 0,
+    "unique_count": 2,
+    "sample_values": [
+      "16-06-2026",
+      "22-06-2026"
+    ]
+  },
+  {
+    "column_name": "source",
+    "dtype": "str",
+    "semantic_type": "categorical",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 490,
+    "null_count": 0,
+    "unique_count": 2,
+    "sample_values": [
+      "city scrape",
+      "previous scrape"
+    ]
+  },
+  {
+    "column_name": "name",
+    "dtype": "str",
+    "semantic_type": "free text",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 490,
+    "null_count": 0,
+    "unique_count": 489,
+    "sample_values": [
+      "Luxury 2 bedroom apartment",
+      "Restored Precinct in Center Sq. w/Parking",
+      "Large studio apt  by Capital Center & ESP@"
+    ]
+  },
+  {
+    "column_name": "description",
+    "dtype": "str",
+    "semantic_type": "free text",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 481,
+    "null_count": 9,
+    "unique_count": 420,
+    "sample_values": [
+      "The apartment is located in a quiet neighborhood . Fully furnished. Linens and towels are provided. It's two blocks away from downtown Albany, and the Palace theater.",
+      "Step into the charming and comfy 1BR/1BA apartment in the heart of Albany, NY. It promises a relaxing retreat bordering picturesque Washington Park and funky Lark Street while being within walking distance to vibrant downtown dining, shops, and exciting attractions.<br /><br />The lovely design and prime location will leave you in awe.<br /><br />✔ Comfy Queen Bedroom <br />✔ On-Demand Hot & Cold Filtered Water <br />✔ Open Design Living <br />✔ Fully Equipped Kitchen<br />✔ Smart TV & High-Speed Wi-Fi <br />✔ Free Parking<br /><br />See more below!",
+      "Spacious studio with hardwood floors, fully equipped kitchen, clean and bright. Large modern bath .  Full Cable TV and WiFi. Walking distance to the new Renaissance Hotel.<br />Walk to everything downtown! The Empire Plaza  and the Egg are  across the street.You can't get any closer, to the MVP Arena,  as well as Restaurants, bars, churches. Walk to  Capital and the new Capital Convention Center. Laundry facilities in the apartment"
+    ]
+  },
+  {
+    "column_name": "neighborhood_overview",
+    "dtype": "float64",
+    "semantic_type": "numeric",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 0,
+    "null_count": 490,
+    "unique_count": 0,
+    "sample_values": []
+  },
+  {
+    "column_name": "picture_url",
+    "dtype": "str",
+    "semantic_type": "URL",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 490,
+    "null_count": 0,
+    "unique_count": 482,
+    "sample_values": [
+      "https://a0.muscache.com/pictures/44627226/0e72c75c_original.jpg",
+      "https://a0.muscache.com/pictures/prohost-api/Hosting-3820211/original/f4d15ef2-fac4-436c-a2e3-df89ddc23d54.png",
+      "https://a0.muscache.com/pictures/b3fc42f3-6e5e-4704-9d0f-8ceee5d32046.jpg"
+    ]
+  },
+  {
+    "column_name": "host_id",
+    "dtype": "float64",
+    "semantic_type": "ID",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 490,
+    "null_count": 0,
+    "unique_count": 186,
+    "sample_values": [
+      "4621559.0",
+      "19648678.0",
+      "29288920.0"
+    ]
+  },
+  {
+    "column_name": "host_url",
+    "dtype": "str",
+    "semantic_type": "URL",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 490,
+    "null_count": 0,
+    "unique_count": 186,
+    "sample_values": [
+      "https://www.airbnb.com/users/show/4621559",
+      "https://www.airbnb.com/users/show/19648678",
+      "https://www.airbnb.com/users/show/29288920"
+    ]
+  },
+  {
+    "column_name": "host_profile_id",
+    "dtype": "float64",
+    "semantic_type": "ID",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 490,
+    "null_count": 0,
+    "unique_count": 155,
+    "sample_values": [
+      "1.46266e+18",
+      "1.46309e+18",
+      "1.46543e+18"
+    ]
+  },
+  {
+    "column_name": "host_profile_url",
+    "dtype": "str",
+    "semantic_type": "URL",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 490,
+    "null_count": 0,
+    "unique_count": 186,
+    "sample_values": [
+      "https://www.airbnb.com/users/profile/1462661762635155041",
+      "https://www.airbnb.com/users/profile/1463087024016718788",
+      "https://www.airbnb.com/users/profile/1465431505328745177"
+    ]
+  },
+  {
+    "column_name": "host_name",
+    "dtype": "str",
+    "semantic_type": "free text",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 490,
+    "null_count": 0,
+    "unique_count": 169,
+    "sample_values": [
+      "Kenneth",
+      "Ming",
+      "Gregg"
+    ]
+  },
+  {
+    "column_name": "host_since",
+    "dtype": "float64",
+    "semantic_type": "date",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 0,
+    "null_count": 490,
+    "unique_count": 0,
+    "sample_values": []
+  },
+  {
+    "column_name": "hosts_time_as_user_years",
+    "dtype": "int64",
+    "semantic_type": "numeric",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 490,
+    "null_count": 0,
+    "unique_count": 16,
+    "sample_values": [
+      "13",
+      "11",
+      "10"
+    ]
+  },
+  {
+    "column_name": "hosts_time_as_user_months",
+    "dtype": "int64",
+    "semantic_type": "numeric",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 490,
+    "null_count": 0,
+    "unique_count": 12,
+    "sample_values": [
+      "5",
+      "10",
+      "3"
+    ]
+  },
+  {
+    "column_name": "hosts_time_as_host_years",
+    "dtype": "int64",
+    "semantic_type": "numeric",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 490,
+    "null_count": 0,
+    "unique_count": 13,
+    "sample_values": [
+      "13",
+      "11",
+      "10"
+    ]
+  },
+  {
+    "column_name": "hosts_time_as_host_months",
+    "dtype": "int64",
+    "semantic_type": "numeric",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 490,
+    "null_count": 0,
+    "unique_count": 12,
+    "sample_values": [
+      "4",
+      "10",
+      "3"
+    ]
+  },
+  {
+    "column_name": "host_location",
+    "dtype": "str",
+    "semantic_type": "categorical",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 348,
+    "null_count": 142,
+    "unique_count": 31,
+    "sample_values": [
+      "New York, NY",
+      "Albany, NY",
+      "Stamford, NY"
+    ]
+  },
+  {
+    "column_name": "host_about",
+    "dtype": "str",
+    "semantic_type": "free text",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 260,
+    "null_count": 230,
+    "unique_count": 95,
+    "sample_values": [
+      "I am a real down to earth & cool person.",
+      "Hello! I’m a proud resident of Albany, NY, where i both live and work With a background in real estate and management, I bring years of expertise to hosting and caring for my own property here in Albany. In addition to managing vacation rentals, I also own a Japanese restaurant, so hospitality and guest satisfaction are at the heart of everything I do.\n\nI look forward to welcoming you to Albany and sharing the best of the city with you!",
+      "I am an Albany native .I have lived in Ireland and had a B & B in Tramore County Waterford back in the early nineties. While doing so we met a lot of wonderful people. I have been in the real estate business for over 30 years . I believe in keeping the mind and body fit. I am easy going and love a good laugh."
+    ]
+  },
+  {
+    "column_name": "host_response_time",
+    "dtype": "float64",
+    "semantic_type": "numeric",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 0,
+    "null_count": 490,
+    "unique_count": 0,
+    "sample_values": []
+  },
+  {
+    "column_name": "host_response_rate",
+    "dtype": "float64",
+    "semantic_type": "numeric",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 0,
+    "null_count": 490,
+    "unique_count": 0,
+    "sample_values": []
+  },
+  {
+    "column_name": "host_acceptance_rate",
+    "dtype": "float64",
+    "semantic_type": "numeric",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 0,
+    "null_count": 490,
+    "unique_count": 0,
+    "sample_values": []
+  },
+  {
+    "column_name": "host_is_superhost",
+    "dtype": "str",
+    "semantic_type": "categorical",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 490,
+    "null_count": 0,
+    "unique_count": 2,
+    "sample_values": [
+      "f",
+      "t"
+    ]
+  },
+  {
+    "column_name": "host_thumbnail_url",
+    "dtype": "float64",
+    "semantic_type": "URL",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 0,
+    "null_count": 490,
+    "unique_count": 0,
+    "sample_values": []
+  },
+  {
+    "column_name": "host_picture_url",
+    "dtype": "str",
+    "semantic_type": "URL",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 490,
+    "null_count": 0,
+    "unique_count": 183,
+    "sample_values": [
+      "https://a0.muscache.com/im/users/4621559/profile_pic/1363081467/original.jpg?aki_policy=profile_x_medium",
+      "https://a0.muscache.com/im/pictures/user/User/original/8ca5d0ce-dbd2-4cef-9a11-086c758cd7ba.jpeg?aki_policy=profile_x_medium",
+      "https://a0.muscache.com/im/users/29288920/profile_pic/1426286865/original.jpg?aki_policy=profile_x_medium"
+    ]
+  },
+  {
+    "column_name": "host_neighbourhood",
+    "dtype": "float64",
+    "semantic_type": "numeric",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 0,
+    "null_count": 490,
+    "unique_count": 0,
+    "sample_values": []
+  },
+  {
+    "column_name": "host_listings_count",
+    "dtype": "int64",
+    "semantic_type": "numeric",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 490,
+    "null_count": 0,
+    "unique_count": 24,
+    "sample_values": [
+      "1",
+      "7",
+      "2"
+    ]
+  },
+  {
+    "column_name": "host_total_listings_count",
+    "dtype": "float64",
+    "semantic_type": "numeric",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 0,
+    "null_count": 490,
+    "unique_count": 0,
+    "sample_values": []
+  },
+  {
+    "column_name": "host_verifications",
+    "dtype": "float64",
+    "semantic_type": "numeric",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 0,
+    "null_count": 490,
+    "unique_count": 0,
+    "sample_values": []
+  },
+  {
+    "column_name": "host_has_profile_pic",
+    "dtype": "str",
+    "semantic_type": "categorical",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 490,
+    "null_count": 0,
+    "unique_count": 2,
+    "sample_values": [
+      "t",
+      "f"
+    ]
+  },
+  {
+    "column_name": "host_identity_verified",
+    "dtype": "str",
+    "semantic_type": "categorical",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 490,
+    "null_count": 0,
+    "unique_count": 2,
+    "sample_values": [
+      "t",
+      "f"
+    ]
+  },
+  {
+    "column_name": "neighbourhood",
+    "dtype": "float64",
+    "semantic_type": "numeric",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 0,
+    "null_count": 490,
+    "unique_count": 0,
+    "sample_values": []
+  },
+  {
+    "column_name": "neighbourhood_cleansed",
+    "dtype": "str",
+    "semantic_type": "categorical",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 490,
+    "null_count": 0,
+    "unique_count": 15,
+    "sample_values": [
+      "THIRD WARD",
+      "SIXTH WARD",
+      "SECOND WARD"
+    ]
+  },
+  {
+    "column_name": "neighbourhood_group_cleansed",
+    "dtype": "float64",
+    "semantic_type": "numeric",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 0,
+    "null_count": 490,
+    "unique_count": 0,
+    "sample_values": []
+  },
+  {
+    "column_name": "latitude",
+    "dtype": "float64",
+    "semantic_type": "numeric",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 490,
+    "null_count": 0,
+    "unique_count": 459,
+    "sample_values": [
+      "42.65789",
+      "42.65222",
+      "42.64615"
+    ]
+  },
+  {
+    "column_name": "longitude",
+    "dtype": "float64",
+    "semantic_type": "numeric",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 490,
+    "null_count": 0,
+    "unique_count": 469,
+    "sample_values": [
+      "-73.7537",
+      "-73.76724",
+      "-73.75966"
+    ]
+  },
+  {
+    "column_name": "property_type",
+    "dtype": "str",
+    "semantic_type": "categorical",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 490,
+    "null_count": 0,
+    "unique_count": 21,
+    "sample_values": [
+      "Entire rental unit",
+      "Private room in rental unit",
+      "Private room in guest suite"
+    ]
+  },
+  {
+    "column_name": "room_type",
+    "dtype": "str",
+    "semantic_type": "categorical",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 490,
+    "null_count": 0,
+    "unique_count": 4,
+    "sample_values": [
+      "Entire home/apt",
+      "Private room",
+      "Shared room"
+    ]
+  },
+  {
+    "column_name": "accommodates",
+    "dtype": "int64",
+    "semantic_type": "numeric",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 490,
+    "null_count": 0,
+    "unique_count": 14,
+    "sample_values": [
+      "4",
+      "3",
+      "2"
+    ]
+  },
+  {
+    "column_name": "bathrooms",
+    "dtype": "float64",
+    "semantic_type": "numeric",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 445,
+    "null_count": 45,
+    "unique_count": 10,
+    "sample_values": [
+      "1.0",
+      "2.0",
+      "1.5"
+    ]
+  },
+  {
+    "column_name": "bathrooms_text",
+    "dtype": "str",
+    "semantic_type": "numeric",
+    "is_mixed_type": true,
+    "total_rows": 490,
+    "non_null_count": 486,
+    "null_count": 4,
+    "unique_count": 18,
+    "sample_values": [
+      "1 bath",
+      "1 private bath",
+      "2 baths"
+    ]
+  },
+  {
+    "column_name": "bedrooms",
+    "dtype": "float64",
+    "semantic_type": "numeric",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 378,
+    "null_count": 112,
+    "unique_count": 9,
+    "sample_values": [
+      "2.0",
+      "1.0",
+      "3.0"
+    ]
+  },
+  {
+    "column_name": "beds",
+    "dtype": "float64",
+    "semantic_type": "numeric",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 446,
+    "null_count": 44,
+    "unique_count": 9,
+    "sample_values": [
+      "2.0",
+      "1.0",
+      "4.0"
+    ]
+  },
+  {
+    "column_name": "amenities",
+    "dtype": "str",
+    "semantic_type": "free text",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 490,
+    "null_count": 0,
+    "unique_count": 474,
+    "sample_values": [
+      "[\"Kitchen\", \"Essentials\", \"Heating\", \"Wifi\", \"Smoke alarm\", \"Air conditioning\", \"Carbon monoxide alarm\", \"TV with standard cable\"]",
+      "[\"Free washer \\u2013 In unit\", \"Microwave\", \"Stove\", \"Shower gel\", \"Wifi\", \"Dishwasher\", \"Smoke alarm\", \"HDTV with standard cable, Apple TV\", \"Essentials\", \"Cooking basics\", \"Hangers\", \"Carbon monoxide alarm\", \"Freezer\", \"Smart lock\", \"Iron\", \"Dining table\", \"Kitchen\", \"Free parking on premises\", \"Coffee maker\", \"Pets allowed\", \"Conditioner\", \"Hair dryer\", \"Refrigerator\", \"Dedicated workspace\", \"Self check-in\", \"Body soap\", \"Heating\", \"Shampoo\", \"Free dryer \\u2013 In unit\", \"Oven\", \"Central air conditioning\", \"Dishes and silverware\"]",
+      "[\"Free washer \\u2013 In unit\", \"Microwave\", \"Stove\", \"Shower gel\", \"Long term stays allowed\", \"Wifi\", \"TV\", \"Ceiling fan\", \"Backyard\", \"Smoke alarm\", \"Hot water kettle\", \"Fire extinguisher\", \"Essentials\", \"Cooking basics\", \"Hangers\", \"Air conditioning\", \"Hot water\", \"Carbon monoxide alarm\", \"Iron\", \"Dining table\", \"Kitchen\", \"Free parking on premises\", \"Coffee maker\", \"Private entrance\", \"Refrigerator\", \"Hair dryer\", \"Baking sheet\", \"Free street parking\", \"Dedicated workspace\", \"Toaster\", \"Self check-in\", \"Lockbox\", \"Bed linens\", \"Heating\", \"Wine glasses\", \"Shampoo\", \"Free dryer \\u2013 In unit\", \"Oven\", \"Luggage dropoff allowed\", \"Dishes and silverware\"]"
+    ]
+  },
+  {
+    "column_name": "price",
+    "dtype": "str",
+    "semantic_type": "numeric",
+    "is_mixed_type": true,
+    "total_rows": 490,
+    "non_null_count": 458,
+    "null_count": 32,
+    "unique_count": 322,
+    "sample_values": [
+      "$80.43",
+      "$211.00",
+      "$97.00"
+    ]
+  },
+  {
+    "column_name": "price_quote_checkin_date",
+    "dtype": "str",
+    "semantic_type": "date",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 468,
+    "null_count": 22,
+    "unique_count": 88,
+    "sample_values": [
+      "31-03-2027",
+      "20-07-2026",
+      "23-08-2026"
+    ]
+  },
+  {
+    "column_name": "price_quote_checkout_date",
+    "dtype": "str",
+    "semantic_type": "date",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 468,
+    "null_count": 22,
+    "unique_count": 107,
+    "sample_values": [
+      "28-04-2027",
+      "21-07-2026",
+      "24-08-2026"
+    ]
+  },
+  {
+    "column_name": "price_quote_total_price",
+    "dtype": "float64",
+    "semantic_type": "numeric",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 458,
+    "null_count": 32,
+    "unique_count": 321,
+    "sample_values": [
+      "2252.0",
+      "211.0",
+      "97.0"
+    ]
+  },
+  {
+    "column_name": "price_quote_price_per_night",
+    "dtype": "float64",
+    "semantic_type": "numeric",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 458,
+    "null_count": 32,
+    "unique_count": 322,
+    "sample_values": [
+      "80.43",
+      "211.0",
+      "97.0"
+    ]
+  },
+  {
+    "column_name": "price_quote_raw",
+    "dtype": "str",
+    "semantic_type": "free text",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 468,
+    "null_count": 22,
+    "unique_count": 448,
+    "sample_values": [
+      "{\"quote\": {\"taxes\": null, \"currency\": \"USD\", \"date_match\": null, \"service_fee\": null, \"total_price\": \"2252\", \"cleaning_fee\": null, \"is_available\": true, \"discount_amount\": null, \"price_per_night\": \"80.42857142857142857142857143\", \"nightly_subtotal\": null, \"discounted_subtotal\": \"2251.07\", \"raw_price_line_items\": [{\"amount\": \"2251.07\", \"item_type\": \"other\", \"description\": \"Average monthly price\", \"price_string\": \"$2,251.07\"}, {\"amount\": \"2251.07\", \"item_type\": \"discounted_subtotal\", \"description\": \"Price after discount\", \"price_string\": \"$2,251.07\"}], \"returned_checkin_date\": null, \"requested_checkin_date\": \"2027-03-31\", \"returned_checkout_date\": null, \"requested_checkout_date\": \"2027-04-28\"}}",
+      "{\"quote\": {\"taxes\": null, \"currency\": \"USD\", \"date_match\": null, \"service_fee\": null, \"total_price\": \"211.00\", \"cleaning_fee\": null, \"is_available\": true, \"discount_amount\": null, \"price_per_night\": \"211.00\", \"nightly_subtotal\": \"211.00\", \"discounted_subtotal\": \"211.00\", \"raw_price_line_items\": [{\"amount\": \"211.00\", \"item_type\": \"nightly_subtotal\", \"description\": \"1 night x $211.00\", \"price_string\": \"$211.00\"}, {\"amount\": \"211.00\", \"item_type\": \"discounted_subtotal\", \"description\": \"Price after discount\", \"price_string\": \"$211.00\"}], \"returned_checkin_date\": null, \"requested_checkin_date\": \"2026-07-20\", \"returned_checkout_date\": null, \"requested_checkout_date\": \"2026-07-21\"}}",
+      "{\"quote\": {\"taxes\": null, \"currency\": \"USD\", \"date_match\": null, \"service_fee\": null, \"total_price\": \"97\", \"cleaning_fee\": null, \"is_available\": true, \"discount_amount\": null, \"price_per_night\": \"97\", \"nightly_subtotal\": \"97.00\", \"discounted_subtotal\": \"97.00\", \"raw_price_line_items\": [{\"amount\": \"97.00\", \"item_type\": \"nightly_subtotal\", \"description\": \"1 night x $97.00\", \"price_string\": \"$97.00\"}, {\"amount\": \"97.00\", \"item_type\": \"discounted_subtotal\", \"description\": \"Price after discount\", \"price_string\": \"$97.00\"}], \"returned_checkin_date\": null, \"requested_checkin_date\": \"2026-08-23\", \"returned_checkout_date\": null, \"requested_checkout_date\": \"2026-08-24\"}}"
+    ]
+  },
+  {
+    "column_name": "minimum_nights",
+    "dtype": "float64",
+    "semantic_type": "numeric",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 489,
+    "null_count": 1,
+    "unique_count": 22,
+    "sample_values": [
+      "28.0",
+      "1.0",
+      "15.0"
+    ]
+  },
+  {
+    "column_name": "maximum_nights",
+    "dtype": "float64",
+    "semantic_type": "numeric",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 489,
+    "null_count": 1,
+    "unique_count": 32,
+    "sample_values": [
+      "1125.0",
+      "1124.0",
+      "112.0"
+    ]
+  },
+  {
+    "column_name": "minimum_minimum_nights",
+    "dtype": "float64",
+    "semantic_type": "numeric",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 489,
+    "null_count": 1,
+    "unique_count": 22,
+    "sample_values": [
+      "28.0",
+      "1.0",
+      "15.0"
+    ]
+  },
+  {
+    "column_name": "maximum_minimum_nights",
+    "dtype": "float64",
+    "semantic_type": "numeric",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 489,
+    "null_count": 1,
+    "unique_count": 23,
+    "sample_values": [
+      "28.0",
+      "3.0",
+      "2.0"
+    ]
+  },
+  {
+    "column_name": "minimum_maximum_nights",
+    "dtype": "float64",
+    "semantic_type": "numeric",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 489,
+    "null_count": 1,
+    "unique_count": 36,
+    "sample_values": [
+      "1125.0",
+      "1124.0",
+      "112.0"
+    ]
+  },
+  {
+    "column_name": "maximum_maximum_nights",
+    "dtype": "float64",
+    "semantic_type": "numeric",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 489,
+    "null_count": 1,
+    "unique_count": 32,
+    "sample_values": [
+      "1125.0",
+      "1124.0",
+      "112.0"
+    ]
+  },
+  {
+    "column_name": "minimum_nights_avg_ntm",
+    "dtype": "float64",
+    "semantic_type": "numeric",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 490,
+    "null_count": 0,
+    "unique_count": 52,
+    "sample_values": [
+      "28.0",
+      "2.7",
+      "1.3"
+    ]
+  },
+  {
+    "column_name": "maximum_nights_avg_ntm",
+    "dtype": "float64",
+    "semantic_type": "numeric",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 490,
+    "null_count": 0,
+    "unique_count": 41,
+    "sample_values": [
+      "1125.0",
+      "1124.0",
+      "112.0"
+    ]
+  },
+  {
+    "column_name": "calendar_updated",
+    "dtype": "float64",
+    "semantic_type": "numeric",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 0,
+    "null_count": 490,
+    "unique_count": 0,
+    "sample_values": []
+  },
+  {
+    "column_name": "has_availability",
+    "dtype": "str",
+    "semantic_type": "categorical",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 485,
+    "null_count": 5,
+    "unique_count": 1,
+    "sample_values": [
+      "t"
+    ]
+  },
+  {
+    "column_name": "availability_30",
+    "dtype": "int64",
+    "semantic_type": "numeric",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 490,
+    "null_count": 0,
+    "unique_count": 31,
+    "sample_values": [
+      "0",
+      "2",
+      "27"
+    ]
+  },
+  {
+    "column_name": "availability_60",
+    "dtype": "int64",
+    "semantic_type": "numeric",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 490,
+    "null_count": 0,
+    "unique_count": 60,
+    "sample_values": [
+      "0",
+      "23",
+      "3"
+    ]
+  },
+  {
+    "column_name": "availability_90",
+    "dtype": "int64",
+    "semantic_type": "numeric",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 490,
+    "null_count": 0,
+    "unique_count": 86,
+    "sample_values": [
+      "0",
+      "53",
+      "25"
+    ]
+  },
+  {
+    "column_name": "availability_365",
+    "dtype": "int64",
+    "semantic_type": "numeric",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 490,
+    "null_count": 0,
+    "unique_count": 214,
+    "sample_values": [
+      "77",
+      "328",
+      "25"
+    ]
+  },
+  {
+    "column_name": "calendar_last_scraped",
+    "dtype": "str",
+    "semantic_type": "date",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 490,
+    "null_count": 0,
+    "unique_count": 2,
+    "sample_values": [
+      "16-06-2026",
+      "22-06-2026"
+    ]
+  },
+  {
+    "column_name": "number_of_reviews",
+    "dtype": "int64",
+    "semantic_type": "numeric",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 490,
+    "null_count": 0,
+    "unique_count": 150,
+    "sample_values": [
+      "9",
+      "317",
+      "406"
+    ]
+  },
+  {
+    "column_name": "number_of_reviews_ltm",
+    "dtype": "int64",
+    "semantic_type": "numeric",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 490,
+    "null_count": 0,
+    "unique_count": 67,
+    "sample_values": [
+      "0",
+      "8",
+      "37"
+    ]
+  },
+  {
+    "column_name": "number_of_reviews_l30d",
+    "dtype": "int64",
+    "semantic_type": "numeric",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 490,
+    "null_count": 0,
+    "unique_count": 13,
+    "sample_values": [
+      "0",
+      "4",
+      "6"
+    ]
+  },
+  {
+    "column_name": "availability_eoy",
+    "dtype": "int64",
+    "semantic_type": "numeric",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 490,
+    "null_count": 0,
+    "unique_count": 146,
+    "sample_values": [
+      "0",
+      "162",
+      "25"
+    ]
+  },
+  {
+    "column_name": "number_of_reviews_ly",
+    "dtype": "int64",
+    "semantic_type": "numeric",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 490,
+    "null_count": 0,
+    "unique_count": 71,
+    "sample_values": [
+      "0",
+      "9",
+      "18"
+    ]
+  },
+  {
+    "column_name": "estimated_occupancy_l365d",
+    "dtype": "int64",
+    "semantic_type": "numeric",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 490,
+    "null_count": 0,
+    "unique_count": 58,
+    "sample_values": [
+      "0",
+      "48",
+      "222"
+    ]
+  },
+  {
+    "column_name": "estimated_revenue_l365d",
+    "dtype": "float64",
+    "semantic_type": "numeric",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 458,
+    "null_count": 32,
+    "unique_count": 344,
+    "sample_values": [
+      "0.0",
+      "10128.0",
+      "21534.0"
+    ]
+  },
+  {
+    "column_name": "first_review",
+    "dtype": "str",
+    "semantic_type": "date",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 430,
+    "null_count": 60,
+    "unique_count": 371,
+    "sample_values": [
+      "01-07-2014",
+      "15-08-2014",
+      "08-05-2015"
+    ]
+  },
+  {
+    "column_name": "last_review",
+    "dtype": "str",
+    "semantic_type": "date",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 430,
+    "null_count": 60,
+    "unique_count": 196,
+    "sample_values": [
+      "17-08-2022",
+      "25-01-2026",
+      "12-06-2026"
+    ]
+  },
+  {
+    "column_name": "review_scores_rating",
+    "dtype": "float64",
+    "semantic_type": "numeric",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 430,
+    "null_count": 60,
+    "unique_count": 73,
+    "sample_values": [
+      "3.56",
+      "4.75",
+      "4.52"
+    ]
+  },
+  {
+    "column_name": "review_scores_accuracy",
+    "dtype": "float64",
+    "semantic_type": "numeric",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 430,
+    "null_count": 60,
+    "unique_count": 70,
+    "sample_values": [
+      "3.44",
+      "4.88",
+      "4.62"
+    ]
+  },
+  {
+    "column_name": "review_scores_cleanliness",
+    "dtype": "float64",
+    "semantic_type": "numeric",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 430,
+    "null_count": 60,
+    "unique_count": 75,
+    "sample_values": [
+      "3.56",
+      "4.87",
+      "4.44"
+    ]
+  },
+  {
+    "column_name": "review_scores_checkin",
+    "dtype": "float64",
+    "semantic_type": "numeric",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 430,
+    "null_count": 60,
+    "unique_count": 59,
+    "sample_values": [
+      "4.22",
+      "4.85",
+      "4.81"
+    ]
+  },
+  {
+    "column_name": "review_scores_communication",
+    "dtype": "float64",
+    "semantic_type": "numeric",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 430,
+    "null_count": 60,
+    "unique_count": 52,
+    "sample_values": [
+      "4.56",
+      "4.81",
+      "4.87"
+    ]
+  },
+  {
+    "column_name": "review_scores_location",
+    "dtype": "float64",
+    "semantic_type": "numeric",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 430,
+    "null_count": 60,
+    "unique_count": 95,
+    "sample_values": [
+      "3.22",
+      "4.82",
+      "4.75"
+    ]
+  },
+  {
+    "column_name": "review_scores_value",
+    "dtype": "float64",
+    "semantic_type": "numeric",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 430,
+    "null_count": 60,
+    "unique_count": 81,
+    "sample_values": [
+      "3.67",
+      "4.78",
+      "4.63"
+    ]
+  },
+  {
+    "column_name": "license",
+    "dtype": "float64",
+    "semantic_type": "numeric",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 0,
+    "null_count": 490,
+    "unique_count": 0,
+    "sample_values": []
+  },
+  {
+    "column_name": "instant_bookable",
+    "dtype": "float64",
+    "semantic_type": "numeric",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 0,
+    "null_count": 490,
+    "unique_count": 0,
+    "sample_values": []
+  },
+  {
+    "column_name": "calculated_host_listings_count",
+    "dtype": "int64",
+    "semantic_type": "numeric",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 490,
+    "null_count": 0,
+    "unique_count": 16,
+    "sample_values": [
+      "1",
+      "7",
+      "2"
+    ]
+  },
+  {
+    "column_name": "calculated_host_listings_count_entire_homes",
+    "dtype": "int64",
+    "semantic_type": "numeric",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 490,
+    "null_count": 0,
+    "unique_count": 14,
+    "sample_values": [
+      "1",
+      "7",
+      "0"
+    ]
+  },
+  {
+    "column_name": "calculated_host_listings_count_private_rooms",
+    "dtype": "int64",
+    "semantic_type": "numeric",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 490,
+    "null_count": 0,
+    "unique_count": 9,
+    "sample_values": [
+      "0",
+      "1",
+      "2"
+    ]
+  },
+  {
+    "column_name": "calculated_host_listings_count_shared_rooms",
+    "dtype": "int64",
+    "semantic_type": "numeric",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 490,
+    "null_count": 0,
+    "unique_count": 2,
+    "sample_values": [
+      "0",
+      "1"
+    ]
+  },
+  {
+    "column_name": "reviews_per_month",
+    "dtype": "float64",
+    "semantic_type": "numeric",
+    "is_mixed_type": false,
+    "total_rows": 490,
+    "non_null_count": 430,
+    "null_count": 60,
+    "unique_count": 253,
+    "sample_values": [
+      "0.06",
+      "2.2",
+      "3.0"
+    ]
+  }
+]
