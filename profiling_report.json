@@ -1,0 +1,1508 @@
+{
+  "report_metadata": {
+    "generated_at": "2026-09-21T22:53:35.968538",
+    "version": "1.0.0",
+    "engine": "Automated Data Cleaning & Validation System — Sprint 3 Profiling API"
+  },
+  "dataset_summary": {
+    "total_rows": 490,
+    "total_columns": 90,
+    "duplicate_row_count": 0,
+    "duplicate_row_pct": 0.0
+  },
+  "per_column_stats": {
+    "id": {
+      "dtype": "float64",
+      "total_rows": 490,
+      "non_null_count": 490,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "unique_count": 467
+    },
+    "listing_url": {
+      "dtype": "str",
+      "total_rows": 490,
+      "non_null_count": 490,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "unique_count": 490
+    },
+    "scrape_id": {
+      "dtype": "float64",
+      "total_rows": 490,
+      "non_null_count": 490,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "unique_count": 1
+    },
+    "last_scraped": {
+      "dtype": "str",
+      "total_rows": 490,
+      "non_null_count": 490,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "unique_count": 2
+    },
+    "source": {
+      "dtype": "str",
+      "total_rows": 490,
+      "non_null_count": 490,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "unique_count": 2
+    },
+    "name": {
+      "dtype": "str",
+      "total_rows": 490,
+      "non_null_count": 490,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "unique_count": 489
+    },
+    "description": {
+      "dtype": "str",
+      "total_rows": 490,
+      "non_null_count": 481,
+      "missing_count": 9,
+      "missing_pct": 1.8367,
+      "unique_count": 420
+    },
+    "neighborhood_overview": {
+      "dtype": "float64",
+      "total_rows": 490,
+      "non_null_count": 0,
+      "missing_count": 490,
+      "missing_pct": 100.0,
+      "unique_count": 0
+    },
+    "picture_url": {
+      "dtype": "str",
+      "total_rows": 490,
+      "non_null_count": 490,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "unique_count": 482
+    },
+    "host_id": {
+      "dtype": "float64",
+      "total_rows": 490,
+      "non_null_count": 490,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "unique_count": 186
+    },
+    "host_url": {
+      "dtype": "str",
+      "total_rows": 490,
+      "non_null_count": 490,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "unique_count": 186
+    },
+    "host_profile_id": {
+      "dtype": "float64",
+      "total_rows": 490,
+      "non_null_count": 490,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "unique_count": 155
+    },
+    "host_profile_url": {
+      "dtype": "str",
+      "total_rows": 490,
+      "non_null_count": 490,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "unique_count": 186
+    },
+    "host_name": {
+      "dtype": "str",
+      "total_rows": 490,
+      "non_null_count": 490,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "unique_count": 169
+    },
+    "host_since": {
+      "dtype": "float64",
+      "total_rows": 490,
+      "non_null_count": 0,
+      "missing_count": 490,
+      "missing_pct": 100.0,
+      "unique_count": 0
+    },
+    "hosts_time_as_user_years": {
+      "dtype": "int64",
+      "total_rows": 490,
+      "non_null_count": 490,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "unique_count": 16
+    },
+    "hosts_time_as_user_months": {
+      "dtype": "int64",
+      "total_rows": 490,
+      "non_null_count": 490,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "unique_count": 12
+    },
+    "hosts_time_as_host_years": {
+      "dtype": "int64",
+      "total_rows": 490,
+      "non_null_count": 490,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "unique_count": 13
+    },
+    "hosts_time_as_host_months": {
+      "dtype": "int64",
+      "total_rows": 490,
+      "non_null_count": 490,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "unique_count": 12
+    },
+    "host_location": {
+      "dtype": "str",
+      "total_rows": 490,
+      "non_null_count": 348,
+      "missing_count": 142,
+      "missing_pct": 28.9796,
+      "unique_count": 31
+    },
+    "host_about": {
+      "dtype": "str",
+      "total_rows": 490,
+      "non_null_count": 260,
+      "missing_count": 230,
+      "missing_pct": 46.9388,
+      "unique_count": 95
+    },
+    "host_response_time": {
+      "dtype": "float64",
+      "total_rows": 490,
+      "non_null_count": 0,
+      "missing_count": 490,
+      "missing_pct": 100.0,
+      "unique_count": 0
+    },
+    "host_response_rate": {
+      "dtype": "float64",
+      "total_rows": 490,
+      "non_null_count": 0,
+      "missing_count": 490,
+      "missing_pct": 100.0,
+      "unique_count": 0
+    },
+    "host_acceptance_rate": {
+      "dtype": "float64",
+      "total_rows": 490,
+      "non_null_count": 0,
+      "missing_count": 490,
+      "missing_pct": 100.0,
+      "unique_count": 0
+    },
+    "host_is_superhost": {
+      "dtype": "str",
+      "total_rows": 490,
+      "non_null_count": 490,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "unique_count": 2
+    },
+    "host_thumbnail_url": {
+      "dtype": "float64",
+      "total_rows": 490,
+      "non_null_count": 0,
+      "missing_count": 490,
+      "missing_pct": 100.0,
+      "unique_count": 0
+    },
+    "host_picture_url": {
+      "dtype": "str",
+      "total_rows": 490,
+      "non_null_count": 490,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "unique_count": 183
+    },
+    "host_neighbourhood": {
+      "dtype": "float64",
+      "total_rows": 490,
+      "non_null_count": 0,
+      "missing_count": 490,
+      "missing_pct": 100.0,
+      "unique_count": 0
+    },
+    "host_listings_count": {
+      "dtype": "int64",
+      "total_rows": 490,
+      "non_null_count": 490,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "unique_count": 24
+    },
+    "host_total_listings_count": {
+      "dtype": "float64",
+      "total_rows": 490,
+      "non_null_count": 0,
+      "missing_count": 490,
+      "missing_pct": 100.0,
+      "unique_count": 0
+    },
+    "host_verifications": {
+      "dtype": "float64",
+      "total_rows": 490,
+      "non_null_count": 0,
+      "missing_count": 490,
+      "missing_pct": 100.0,
+      "unique_count": 0
+    },
+    "host_has_profile_pic": {
+      "dtype": "str",
+      "total_rows": 490,
+      "non_null_count": 490,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "unique_count": 2
+    },
+    "host_identity_verified": {
+      "dtype": "str",
+      "total_rows": 490,
+      "non_null_count": 490,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "unique_count": 2
+    },
+    "neighbourhood": {
+      "dtype": "float64",
+      "total_rows": 490,
+      "non_null_count": 0,
+      "missing_count": 490,
+      "missing_pct": 100.0,
+      "unique_count": 0
+    },
+    "neighbourhood_cleansed": {
+      "dtype": "str",
+      "total_rows": 490,
+      "non_null_count": 490,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "unique_count": 15
+    },
+    "neighbourhood_group_cleansed": {
+      "dtype": "float64",
+      "total_rows": 490,
+      "non_null_count": 0,
+      "missing_count": 490,
+      "missing_pct": 100.0,
+      "unique_count": 0
+    },
+    "latitude": {
+      "dtype": "float64",
+      "total_rows": 490,
+      "non_null_count": 490,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "unique_count": 459
+    },
+    "longitude": {
+      "dtype": "float64",
+      "total_rows": 490,
+      "non_null_count": 490,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "unique_count": 469
+    },
+    "property_type": {
+      "dtype": "str",
+      "total_rows": 490,
+      "non_null_count": 490,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "unique_count": 21
+    },
+    "room_type": {
+      "dtype": "str",
+      "total_rows": 490,
+      "non_null_count": 490,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "unique_count": 4
+    },
+    "accommodates": {
+      "dtype": "int64",
+      "total_rows": 490,
+      "non_null_count": 490,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "unique_count": 14
+    },
+    "bathrooms": {
+      "dtype": "float64",
+      "total_rows": 490,
+      "non_null_count": 445,
+      "missing_count": 45,
+      "missing_pct": 9.1837,
+      "unique_count": 10
+    },
+    "bathrooms_text": {
+      "dtype": "str",
+      "total_rows": 490,
+      "non_null_count": 486,
+      "missing_count": 4,
+      "missing_pct": 0.8163,
+      "unique_count": 18
+    },
+    "bedrooms": {
+      "dtype": "float64",
+      "total_rows": 490,
+      "non_null_count": 378,
+      "missing_count": 112,
+      "missing_pct": 22.8571,
+      "unique_count": 9
+    },
+    "beds": {
+      "dtype": "float64",
+      "total_rows": 490,
+      "non_null_count": 446,
+      "missing_count": 44,
+      "missing_pct": 8.9796,
+      "unique_count": 9
+    },
+    "amenities": {
+      "dtype": "str",
+      "total_rows": 490,
+      "non_null_count": 490,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "unique_count": 474
+    },
+    "price": {
+      "dtype": "str",
+      "total_rows": 490,
+      "non_null_count": 458,
+      "missing_count": 32,
+      "missing_pct": 6.5306,
+      "unique_count": 322
+    },
+    "price_quote_checkin_date": {
+      "dtype": "str",
+      "total_rows": 490,
+      "non_null_count": 468,
+      "missing_count": 22,
+      "missing_pct": 4.4898,
+      "unique_count": 88
+    },
+    "price_quote_checkout_date": {
+      "dtype": "str",
+      "total_rows": 490,
+      "non_null_count": 468,
+      "missing_count": 22,
+      "missing_pct": 4.4898,
+      "unique_count": 107
+    },
+    "price_quote_total_price": {
+      "dtype": "float64",
+      "total_rows": 490,
+      "non_null_count": 458,
+      "missing_count": 32,
+      "missing_pct": 6.5306,
+      "unique_count": 321
+    },
+    "price_quote_price_per_night": {
+      "dtype": "float64",
+      "total_rows": 490,
+      "non_null_count": 458,
+      "missing_count": 32,
+      "missing_pct": 6.5306,
+      "unique_count": 322
+    },
+    "price_quote_raw": {
+      "dtype": "str",
+      "total_rows": 490,
+      "non_null_count": 468,
+      "missing_count": 22,
+      "missing_pct": 4.4898,
+      "unique_count": 448
+    },
+    "minimum_nights": {
+      "dtype": "float64",
+      "total_rows": 490,
+      "non_null_count": 489,
+      "missing_count": 1,
+      "missing_pct": 0.2041,
+      "unique_count": 22
+    },
+    "maximum_nights": {
+      "dtype": "float64",
+      "total_rows": 490,
+      "non_null_count": 489,
+      "missing_count": 1,
+      "missing_pct": 0.2041,
+      "unique_count": 32
+    },
+    "minimum_minimum_nights": {
+      "dtype": "float64",
+      "total_rows": 490,
+      "non_null_count": 489,
+      "missing_count": 1,
+      "missing_pct": 0.2041,
+      "unique_count": 22
+    },
+    "maximum_minimum_nights": {
+      "dtype": "float64",
+      "total_rows": 490,
+      "non_null_count": 489,
+      "missing_count": 1,
+      "missing_pct": 0.2041,
+      "unique_count": 23
+    },
+    "minimum_maximum_nights": {
+      "dtype": "float64",
+      "total_rows": 490,
+      "non_null_count": 489,
+      "missing_count": 1,
+      "missing_pct": 0.2041,
+      "unique_count": 36
+    },
+    "maximum_maximum_nights": {
+      "dtype": "float64",
+      "total_rows": 490,
+      "non_null_count": 489,
+      "missing_count": 1,
+      "missing_pct": 0.2041,
+      "unique_count": 32
+    },
+    "minimum_nights_avg_ntm": {
+      "dtype": "float64",
+      "total_rows": 490,
+      "non_null_count": 490,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "unique_count": 52
+    },
+    "maximum_nights_avg_ntm": {
+      "dtype": "float64",
+      "total_rows": 490,
+      "non_null_count": 490,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "unique_count": 41
+    },
+    "calendar_updated": {
+      "dtype": "float64",
+      "total_rows": 490,
+      "non_null_count": 0,
+      "missing_count": 490,
+      "missing_pct": 100.0,
+      "unique_count": 0
+    },
+    "has_availability": {
+      "dtype": "str",
+      "total_rows": 490,
+      "non_null_count": 485,
+      "missing_count": 5,
+      "missing_pct": 1.0204,
+      "unique_count": 1
+    },
+    "availability_30": {
+      "dtype": "int64",
+      "total_rows": 490,
+      "non_null_count": 490,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "unique_count": 31
+    },
+    "availability_60": {
+      "dtype": "int64",
+      "total_rows": 490,
+      "non_null_count": 490,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "unique_count": 60
+    },
+    "availability_90": {
+      "dtype": "int64",
+      "total_rows": 490,
+      "non_null_count": 490,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "unique_count": 86
+    },
+    "availability_365": {
+      "dtype": "int64",
+      "total_rows": 490,
+      "non_null_count": 490,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "unique_count": 214
+    },
+    "calendar_last_scraped": {
+      "dtype": "str",
+      "total_rows": 490,
+      "non_null_count": 490,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "unique_count": 2
+    },
+    "number_of_reviews": {
+      "dtype": "int64",
+      "total_rows": 490,
+      "non_null_count": 490,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "unique_count": 150
+    },
+    "number_of_reviews_ltm": {
+      "dtype": "int64",
+      "total_rows": 490,
+      "non_null_count": 490,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "unique_count": 67
+    },
+    "number_of_reviews_l30d": {
+      "dtype": "int64",
+      "total_rows": 490,
+      "non_null_count": 490,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "unique_count": 13
+    },
+    "availability_eoy": {
+      "dtype": "int64",
+      "total_rows": 490,
+      "non_null_count": 490,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "unique_count": 146
+    },
+    "number_of_reviews_ly": {
+      "dtype": "int64",
+      "total_rows": 490,
+      "non_null_count": 490,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "unique_count": 71
+    },
+    "estimated_occupancy_l365d": {
+      "dtype": "int64",
+      "total_rows": 490,
+      "non_null_count": 490,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "unique_count": 58
+    },
+    "estimated_revenue_l365d": {
+      "dtype": "float64",
+      "total_rows": 490,
+      "non_null_count": 458,
+      "missing_count": 32,
+      "missing_pct": 6.5306,
+      "unique_count": 344
+    },
+    "first_review": {
+      "dtype": "str",
+      "total_rows": 490,
+      "non_null_count": 430,
+      "missing_count": 60,
+      "missing_pct": 12.2449,
+      "unique_count": 371
+    },
+    "last_review": {
+      "dtype": "str",
+      "total_rows": 490,
+      "non_null_count": 430,
+      "missing_count": 60,
+      "missing_pct": 12.2449,
+      "unique_count": 196
+    },
+    "review_scores_rating": {
+      "dtype": "float64",
+      "total_rows": 490,
+      "non_null_count": 430,
+      "missing_count": 60,
+      "missing_pct": 12.2449,
+      "unique_count": 73
+    },
+    "review_scores_accuracy": {
+      "dtype": "float64",
+      "total_rows": 490,
+      "non_null_count": 430,
+      "missing_count": 60,
+      "missing_pct": 12.2449,
+      "unique_count": 70
+    },
+    "review_scores_cleanliness": {
+      "dtype": "float64",
+      "total_rows": 490,
+      "non_null_count": 430,
+      "missing_count": 60,
+      "missing_pct": 12.2449,
+      "unique_count": 75
+    },
+    "review_scores_checkin": {
+      "dtype": "float64",
+      "total_rows": 490,
+      "non_null_count": 430,
+      "missing_count": 60,
+      "missing_pct": 12.2449,
+      "unique_count": 59
+    },
+    "review_scores_communication": {
+      "dtype": "float64",
+      "total_rows": 490,
+      "non_null_count": 430,
+      "missing_count": 60,
+      "missing_pct": 12.2449,
+      "unique_count": 52
+    },
+    "review_scores_location": {
+      "dtype": "float64",
+      "total_rows": 490,
+      "non_null_count": 430,
+      "missing_count": 60,
+      "missing_pct": 12.2449,
+      "unique_count": 95
+    },
+    "review_scores_value": {
+      "dtype": "float64",
+      "total_rows": 490,
+      "non_null_count": 430,
+      "missing_count": 60,
+      "missing_pct": 12.2449,
+      "unique_count": 81
+    },
+    "license": {
+      "dtype": "float64",
+      "total_rows": 490,
+      "non_null_count": 0,
+      "missing_count": 490,
+      "missing_pct": 100.0,
+      "unique_count": 0
+    },
+    "instant_bookable": {
+      "dtype": "float64",
+      "total_rows": 490,
+      "non_null_count": 0,
+      "missing_count": 490,
+      "missing_pct": 100.0,
+      "unique_count": 0
+    },
+    "calculated_host_listings_count": {
+      "dtype": "int64",
+      "total_rows": 490,
+      "non_null_count": 490,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "unique_count": 16
+    },
+    "calculated_host_listings_count_entire_homes": {
+      "dtype": "int64",
+      "total_rows": 490,
+      "non_null_count": 490,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "unique_count": 14
+    },
+    "calculated_host_listings_count_private_rooms": {
+      "dtype": "int64",
+      "total_rows": 490,
+      "non_null_count": 490,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "unique_count": 9
+    },
+    "calculated_host_listings_count_shared_rooms": {
+      "dtype": "int64",
+      "total_rows": 490,
+      "non_null_count": 490,
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "unique_count": 2
+    },
+    "reviews_per_month": {
+      "dtype": "float64",
+      "total_rows": 490,
+      "non_null_count": 430,
+      "missing_count": 60,
+      "missing_pct": 12.2449,
+      "unique_count": 253
+    }
+  },
+  "correlation_matrix": {
+    "target_columns": [
+      "price",
+      "minimum_nights",
+      "availability_365",
+      "number_of_reviews"
+    ],
+    "computed_numeric_columns": [
+      "minimum_nights",
+      "availability_365",
+      "number_of_reviews"
+    ],
+    "excluded_columns": [
+      "price"
+    ],
+    "price_note": "price column is string-formatted in raw dataset (e.g. '$120.00') and excluded from numeric correlation calculation; pending Sprint 6 normalization.",
+    "matrix": {
+      "minimum_nights": {
+        "minimum_nights": 1.0,
+        "availability_365": 0.018787,
+        "number_of_reviews": -0.127908
+      },
+      "availability_365": {
+        "minimum_nights": 0.018787,
+        "availability_365": 1.0,
+        "number_of_reviews": -0.071093
+      },
+      "number_of_reviews": {
+        "minimum_nights": -0.127908,
+        "availability_365": -0.071093,
+        "number_of_reviews": 1.0
+      }
+    }
+  },
+  "distribution_stats": {
+    "id": {
+      "count": 490,
+      "mean": 9.617548428651941e+17,
+      "std": 5.800836884520755e+17,
+      "min": 2992450.0,
+      "25%": 6.9049125e+17,
+      "50%": 1.112065e+18,
+      "75%": 1.4582975e+18,
+      "max": 1.70148e+18
+    },
+    "scrape_id": {
+      "count": 490,
+      "mean": 20260600000000.0,
+      "std": 0.0,
+      "min": 20260600000000.0,
+      "25%": 20260600000000.0,
+      "50%": 20260600000000.0,
+      "75%": 20260600000000.0,
+      "max": 20260600000000.0
+    },
+    "neighborhood_overview": {
+      "count": 0,
+      "mean": null,
+      "std": null,
+      "min": null,
+      "25%": null,
+      "50%": null,
+      "75%": null,
+      "max": null
+    },
+    "host_id": {
+      "count": 490,
+      "mean": 6840571695121235.0,
+      "std": 1.0696236090138144e+17,
+      "min": 649068.0,
+      "25%": 47625981.0,
+      "50%": 232967878.0,
+      "75%": 466790114.0,
+      "max": 1.67692e+18
+    },
+    "host_profile_id": {
+      "count": 490,
+      "mean": 1.472998530612245e+18,
+      "std": 2.8192569621897964e+16,
+      "min": 1.46252e+18,
+      "25%": 1.46357e+18,
+      "50%": 1.468235e+18,
+      "75%": 1.4697525e+18,
+      "max": 1.67692e+18
+    },
+    "host_since": {
+      "count": 0,
+      "mean": null,
+      "std": null,
+      "min": null,
+      "25%": null,
+      "50%": null,
+      "75%": null,
+      "max": null
+    },
+    "hosts_time_as_user_years": {
+      "count": 490,
+      "mean": 6.75102,
+      "std": 3.623832,
+      "min": 0.0,
+      "25%": 3.0,
+      "50%": 7.0,
+      "75%": 10.0,
+      "max": 15.0
+    },
+    "hosts_time_as_user_months": {
+      "count": 490,
+      "mean": 6.177551,
+      "std": 3.711903,
+      "min": 0.0,
+      "25%": 3.0,
+      "50%": 6.0,
+      "75%": 10.0,
+      "max": 11.0
+    },
+    "hosts_time_as_host_years": {
+      "count": 490,
+      "mean": 4.240816,
+      "std": 3.062934,
+      "min": 0.0,
+      "25%": 2.0,
+      "50%": 4.0,
+      "75%": 7.0,
+      "max": 13.0
+    },
+    "hosts_time_as_host_months": {
+      "count": 490,
+      "mean": 6.240816,
+      "std": 3.585241,
+      "min": 0.0,
+      "25%": 3.0,
+      "50%": 7.0,
+      "75%": 10.0,
+      "max": 11.0
+    },
+    "host_response_time": {
+      "count": 0,
+      "mean": null,
+      "std": null,
+      "min": null,
+      "25%": null,
+      "50%": null,
+      "75%": null,
+      "max": null
+    },
+    "host_response_rate": {
+      "count": 0,
+      "mean": null,
+      "std": null,
+      "min": null,
+      "25%": null,
+      "50%": null,
+      "75%": null,
+      "max": null
+    },
+    "host_acceptance_rate": {
+      "count": 0,
+      "mean": null,
+      "std": null,
+      "min": null,
+      "25%": null,
+      "50%": null,
+      "75%": null,
+      "max": null
+    },
+    "host_thumbnail_url": {
+      "count": 0,
+      "mean": null,
+      "std": null,
+      "min": null,
+      "25%": null,
+      "50%": null,
+      "75%": null,
+      "max": null
+    },
+    "host_neighbourhood": {
+      "count": 0,
+      "mean": null,
+      "std": null,
+      "min": null,
+      "25%": null,
+      "50%": null,
+      "75%": null,
+      "max": null
+    },
+    "host_listings_count": {
+      "count": 490,
+      "mean": 31.846939,
+      "std": 154.636519,
+      "min": 1.0,
+      "25%": 2.0,
+      "50%": 6.0,
+      "75%": 16.0,
+      "max": 1658.0
+    },
+    "host_total_listings_count": {
+      "count": 0,
+      "mean": null,
+      "std": null,
+      "min": null,
+      "25%": null,
+      "50%": null,
+      "75%": null,
+      "max": null
+    },
+    "host_verifications": {
+      "count": 0,
+      "mean": null,
+      "std": null,
+      "min": null,
+      "25%": null,
+      "50%": null,
+      "75%": null,
+      "max": null
+    },
+    "neighbourhood": {
+      "count": 0,
+      "mean": null,
+      "std": null,
+      "min": null,
+      "25%": null,
+      "50%": null,
+      "75%": null,
+      "max": null
+    },
+    "neighbourhood_group_cleansed": {
+      "count": 0,
+      "mean": null,
+      "std": null,
+      "min": null,
+      "25%": null,
+      "50%": null,
+      "75%": null,
+      "max": null
+    },
+    "latitude": {
+      "count": 490,
+      "mean": 42.658781,
+      "std": 0.010441,
+      "min": 42.63066,
+      "25%": 42.652778,
+      "50%": 42.657355,
+      "75%": 42.664338,
+      "max": 42.7149
+    },
+    "longitude": {
+      "count": 490,
+      "mean": -73.776774,
+      "std": 0.01819,
+      "min": -73.87649,
+      "25%": -73.787773,
+      "50%": -73.774617,
+      "75%": -73.764138,
+      "max": -73.73825
+    },
+    "accommodates": {
+      "count": 490,
+      "mean": 3.395918,
+      "std": 2.468282,
+      "min": 1.0,
+      "25%": 2.0,
+      "50%": 2.0,
+      "75%": 4.0,
+      "max": 16.0
+    },
+    "bathrooms": {
+      "count": 445,
+      "mean": 1.246067,
+      "std": 0.629252,
+      "min": 0.5,
+      "25%": 1.0,
+      "50%": 1.0,
+      "75%": 1.0,
+      "max": 7.0
+    },
+    "bedrooms": {
+      "count": 378,
+      "mean": 1.833333,
+      "std": 1.212775,
+      "min": 1.0,
+      "25%": 1.0,
+      "50%": 1.0,
+      "75%": 2.0,
+      "max": 9.0
+    },
+    "beds": {
+      "count": 446,
+      "mean": 1.865471,
+      "std": 1.335705,
+      "min": 1.0,
+      "25%": 1.0,
+      "50%": 1.0,
+      "75%": 2.0,
+      "max": 10.0
+    },
+    "price_quote_total_price": {
+      "count": 458,
+      "mean": 594.233712,
+      "std": 781.259323,
+      "min": 34.92,
+      "25%": 166.0,
+      "50%": 283.5,
+      "75%": 625.0,
+      "max": 5427.64
+    },
+    "price_quote_price_per_night": {
+      "count": 458,
+      "mean": 177.127293,
+      "std": 157.34892,
+      "min": 13.18,
+      "25%": 90.0,
+      "50%": 145.665,
+      "75%": 209.625,
+      "max": 1701.0
+    },
+    "minimum_nights": {
+      "count": 489,
+      "mean": 6.844581,
+      "std": 19.880802,
+      "min": 1.0,
+      "25%": 1.0,
+      "50%": 1.0,
+      "75%": 3.0,
+      "max": 365.0
+    },
+    "maximum_nights": {
+      "count": 489,
+      "mean": 596.163599,
+      "std": 422.649593,
+      "min": 4.0,
+      "25%": 365.0,
+      "50%": 365.0,
+      "75%": 1125.0,
+      "max": 1125.0
+    },
+    "minimum_minimum_nights": {
+      "count": 489,
+      "mean": 6.844581,
+      "std": 19.880802,
+      "min": 1.0,
+      "25%": 1.0,
+      "50%": 1.0,
+      "75%": 3.0,
+      "max": 365.0
+    },
+    "maximum_minimum_nights": {
+      "count": 489,
+      "mean": 9.333333,
+      "std": 30.622526,
+      "min": 1.0,
+      "25%": 1.0,
+      "50%": 2.0,
+      "75%": 5.0,
+      "max": 365.0
+    },
+    "minimum_maximum_nights": {
+      "count": 489,
+      "mean": 581.865031,
+      "std": 429.972929,
+      "min": 1.0,
+      "25%": 365.0,
+      "50%": 365.0,
+      "75%": 1125.0,
+      "max": 1125.0
+    },
+    "maximum_maximum_nights": {
+      "count": 489,
+      "mean": 596.163599,
+      "std": 422.649593,
+      "min": 4.0,
+      "25%": 365.0,
+      "50%": 365.0,
+      "75%": 1125.0,
+      "max": 1125.0
+    },
+    "minimum_nights_avg_ntm": {
+      "count": 490,
+      "mean": 8.583061,
+      "std": 28.451078,
+      "min": 1.0,
+      "25%": 1.0,
+      "50%": 2.0,
+      "75%": 5.0,
+      "max": 365.0
+    },
+    "maximum_nights_avg_ntm": {
+      "count": 490,
+      "mean": 587.754898,
+      "std": 426.514096,
+      "min": 4.0,
+      "25%": 365.0,
+      "50%": 365.0,
+      "75%": 1125.0,
+      "max": 1125.0
+    },
+    "calendar_updated": {
+      "count": 0,
+      "mean": null,
+      "std": null,
+      "min": null,
+      "25%": null,
+      "50%": null,
+      "75%": null,
+      "max": null
+    },
+    "availability_30": {
+      "count": 490,
+      "mean": 14.07551,
+      "std": 11.051118,
+      "min": 0.0,
+      "25%": 0.0,
+      "50%": 14.5,
+      "75%": 25.0,
+      "max": 30.0
+    },
+    "availability_60": {
+      "count": 490,
+      "mean": 31.889796,
+      "std": 21.292973,
+      "min": 0.0,
+      "25%": 11.25,
+      "50%": 36.0,
+      "75%": 52.0,
+      "max": 60.0
+    },
+    "availability_90": {
+      "count": 490,
+      "mean": 54.416327,
+      "std": 30.099395,
+      "min": 0.0,
+      "25%": 32.0,
+      "50%": 62.0,
+      "75%": 80.0,
+      "max": 90.0
+    },
+    "availability_365": {
+      "count": 490,
+      "mean": 242.893878,
+      "std": 116.600681,
+      "min": 0.0,
+      "25%": 164.5,
+      "50%": 284.5,
+      "75%": 347.75,
+      "max": 365.0
+    },
+    "number_of_reviews": {
+      "count": 490,
+      "mean": 59.277551,
+      "std": 112.191009,
+      "min": 0.0,
+      "25%": 2.0,
+      "50%": 15.0,
+      "75%": 66.0,
+      "max": 996.0
+    },
+    "number_of_reviews_ltm": {
+      "count": 490,
+      "mean": 13.032653,
+      "std": 18.934473,
+      "min": 0.0,
+      "25%": 1.0,
+      "50%": 5.0,
+      "75%": 17.0,
+      "max": 116.0
+    },
+    "number_of_reviews_l30d": {
+      "count": 490,
+      "mean": 0.981633,
+      "std": 1.787731,
+      "min": 0.0,
+      "25%": 0.0,
+      "50%": 0.0,
+      "75%": 1.0,
+      "max": 13.0
+    },
+    "availability_eoy": {
+      "count": 490,
+      "mean": 136.216327,
+      "std": 63.960703,
+      "min": 0.0,
+      "25%": 93.0,
+      "50%": 162.0,
+      "75%": 187.0,
+      "max": 199.0
+    },
+    "number_of_reviews_ly": {
+      "count": 490,
+      "mean": 12.210204,
+      "std": 19.392056,
+      "min": 0.0,
+      "25%": 0.0,
+      "50%": 3.0,
+      "75%": 16.75,
+      "max": 126.0
+    },
+    "estimated_occupancy_l365d": {
+      "count": 490,
+      "mean": 76.295918,
+      "std": 83.283217,
+      "min": 0.0,
+      "25%": 6.0,
+      "50%": 48.0,
+      "75%": 120.0,
+      "max": 255.0
+    },
+    "estimated_revenue_l365d": {
+      "count": 458,
+      "mean": 14465.146288,
+      "std": 21340.235817,
+      "min": 0.0,
+      "25%": 1012.0,
+      "50%": 5850.0,
+      "75%": 19125.0,
+      "max": 149685.0
+    },
+    "review_scores_rating": {
+      "count": 430,
+      "mean": 4.707186,
+      "std": 0.488053,
+      "min": 1.0,
+      "25%": 4.67,
+      "50%": 4.86,
+      "75%": 4.97,
+      "max": 5.0
+    },
+    "review_scores_accuracy": {
+      "count": 430,
+      "mean": 4.745558,
+      "std": 0.469592,
+      "min": 1.0,
+      "25%": 4.73,
+      "50%": 4.9,
+      "75%": 5.0,
+      "max": 5.0
+    },
+    "review_scores_cleanliness": {
+      "count": 430,
+      "mean": 4.734535,
+      "std": 0.437557,
+      "min": 1.0,
+      "25%": 4.67,
+      "50%": 4.87,
+      "75%": 4.99,
+      "max": 5.0
+    },
+    "review_scores_checkin": {
+      "count": 430,
+      "mean": 4.80886,
+      "std": 0.414455,
+      "min": 1.0,
+      "25%": 4.8,
+      "50%": 4.935,
+      "75%": 5.0,
+      "max": 5.0
+    },
+    "review_scores_communication": {
+      "count": 430,
+      "mean": 4.813628,
+      "std": 0.443404,
+      "min": 1.0,
+      "25%": 4.83,
+      "50%": 4.96,
+      "75%": 5.0,
+      "max": 5.0
+    },
+    "review_scores_location": {
+      "count": 430,
+      "mean": 4.621651,
+      "std": 0.500981,
+      "min": 1.0,
+      "25%": 4.5,
+      "50%": 4.78,
+      "75%": 4.93,
+      "max": 5.0
+    },
+    "review_scores_value": {
+      "count": 430,
+      "mean": 4.667791,
+      "std": 0.491383,
+      "min": 1.0,
+      "25%": 4.63,
+      "50%": 4.805,
+      "75%": 4.9375,
+      "max": 5.0
+    },
+    "license": {
+      "count": 0,
+      "mean": null,
+      "std": null,
+      "min": null,
+      "25%": null,
+      "50%": null,
+      "75%": null,
+      "max": null
+    },
+    "instant_bookable": {
+      "count": 0,
+      "mean": null,
+      "std": null,
+      "min": null,
+      "25%": null,
+      "50%": null,
+      "75%": null,
+      "max": null
+    },
+    "calculated_host_listings_count": {
+      "count": 490,
+      "mean": 7.738776,
+      "std": 7.717211,
+      "min": 1.0,
+      "25%": 2.0,
+      "50%": 5.0,
+      "75%": 11.0,
+      "max": 29.0
+    },
+    "calculated_host_listings_count_entire_homes": {
+      "count": 490,
+      "mean": 5.469388,
+      "std": 7.478126,
+      "min": 0.0,
+      "25%": 1.0,
+      "50%": 2.0,
+      "75%": 7.0,
+      "max": 29.0
+    },
+    "calculated_host_listings_count_private_rooms": {
+      "count": 490,
+      "mean": 2.12449,
+      "std": 4.296145,
+      "min": 0.0,
+      "25%": 0.0,
+      "50%": 0.0,
+      "75%": 2.0,
+      "max": 17.0
+    },
+    "calculated_host_listings_count_shared_rooms": {
+      "count": 490,
+      "mean": 0.012245,
+      "std": 0.110089,
+      "min": 0.0,
+      "25%": 0.0,
+      "50%": 0.0,
+      "75%": 0.0,
+      "max": 1.0
+    },
+    "reviews_per_month": {
+      "count": 430,
+      "mean": 1.750395,
+      "std": 1.851197,
+      "min": 0.04,
+      "25%": 0.37,
+      "50%": 1.185,
+      "75%": 2.4275,
+      "max": 10.43
+    }
+  },
+  "suspicious_rules_analysis": {
+    "pii_columns": {
+      "flagged": true,
+      "pii_columns_found": [
+        "listing_url",
+        "host_id",
+        "host_url",
+        "host_name",
+        "host_location",
+        "host_about",
+        "host_thumbnail_url",
+        "host_picture_url",
+        "latitude",
+        "longitude"
+      ],
+      "required_pii_checked": [
+        "host_name",
+        "host_id",
+        "latitude",
+        "longitude"
+      ],
+      "all_required_pii_present": true,
+      "details": {
+        "listing_url": {
+          "category": "Location PII (URL)",
+          "reason": "Direct web link to specific property"
+        },
+        "host_id": {
+          "category": "Direct Identifier (ID)",
+          "reason": "Unique system identifier for host identity"
+        },
+        "host_url": {
+          "category": "Direct Identifier (URL)",
+          "reason": "Link to host profile entity"
+        },
+        "host_name": {
+          "category": "Direct Identifier (Name)",
+          "reason": "Contains full or first name of listing host"
+        },
+        "host_location": {
+          "category": "Location PII",
+          "reason": "Free-form text of host home/residence location"
+        },
+        "host_about": {
+          "category": "Quasi-Identifier / Free Text",
+          "reason": "Bio text containing potential PII details"
+        },
+        "host_thumbnail_url": {
+          "category": "Biometric / Media PII",
+          "reason": "Image URL of host face profile picture"
+        },
+        "host_picture_url": {
+          "category": "Biometric / Media PII",
+          "reason": "Image URL of host face profile picture"
+        },
+        "latitude": {
+          "category": "Location PII",
+          "reason": "Exact GPS latitude coordinate revealing physical address"
+        },
+        "longitude": {
+          "category": "Location PII",
+          "reason": "Exact GPS longitude coordinate revealing physical address"
+        }
+      }
+    },
+    "format_inconsistencies": {
+      "flagged": true,
+      "columns": {
+        "bathrooms_text": {
+          "flagged": true,
+          "reason": "Mixed numeric and textual values requiring parsing and normalization (e.g. '1.5 baths' vs 'Half-bath' vs 'Shared half-bath')",
+          "total_rows": 490,
+          "null_count": 4,
+          "unique_patterns_count": 18,
+          "pattern_breakdown": {
+            "standard_numeric_bath": 362,
+            "half_bath_text": 1,
+            "shared_or_private_text": 123,
+            "other_unclassified": 0
+          },
+          "sample_variations": [
+            "1 bath",
+            "1 private bath",
+            "2 baths",
+            "1.5 shared baths",
+            "1 shared bath",
+            "1.5 baths",
+            "5.5 baths",
+            "2.5 baths",
+            "3.5 baths",
+            "7 shared baths"
+          ]
+        }
+      }
+    },
+    "suspicious_rows": {
+      "zero_price_rows": {
+        "flagged": false,
+        "count": 0,
+        "pct": 0.0,
+        "criteria": "price == \"$0.00\"",
+        "sample_row_indices": []
+      },
+      "extreme_minimum_nights": {
+        "flagged": false,
+        "count": 0,
+        "pct": 0.0,
+        "criteria": "minimum_nights > 365",
+        "sample_row_indices": []
+      }
+    }
+  },
+  "visualizations": {
+    "missing_value_heatmap": "heatmap_missing.png",
+    "outliers_boxplot": "outlier_min_nights.png",
+    "correlation_heatmap": "correlation_heatmap.png"
+  }
+}
