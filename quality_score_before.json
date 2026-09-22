@@ -1,0 +1,216 @@
+{
+  "timestamp": "2026-09-22T12:38:52.119399",
+  "dataset_summary": {
+    "total_rows": 490,
+    "total_columns": 90,
+    "total_cells": 44100,
+    "duplicate_rows": 0
+  },
+  "overall_quality_score": 94.45,
+  "sub_scores": {
+    "completeness_score": 84.66,
+    "consistency_score": 98.73,
+    "validity_score": 99.96
+  },
+  "sub_score_details": {
+    "completeness": {
+      "overall_cell_completeness_pct": 81.29,
+      "key_columns_completeness_pct": 88.02,
+      "missing_value_gaps": {
+        "description": {
+          "missing_count": 9,
+          "missing_pct": 1.84
+        },
+        "neighborhood_overview": {
+          "missing_count": 490,
+          "missing_pct": 100.0
+        },
+        "host_since": {
+          "missing_count": 490,
+          "missing_pct": 100.0
+        },
+        "host_location": {
+          "missing_count": 142,
+          "missing_pct": 28.98
+        },
+        "host_about": {
+          "missing_count": 230,
+          "missing_pct": 46.94
+        },
+        "host_response_time": {
+          "missing_count": 490,
+          "missing_pct": 100.0
+        },
+        "host_response_rate": {
+          "missing_count": 490,
+          "missing_pct": 100.0
+        },
+        "host_acceptance_rate": {
+          "missing_count": 490,
+          "missing_pct": 100.0
+        },
+        "host_thumbnail_url": {
+          "missing_count": 490,
+          "missing_pct": 100.0
+        },
+        "host_neighbourhood": {
+          "missing_count": 490,
+          "missing_pct": 100.0
+        },
+        "host_total_listings_count": {
+          "missing_count": 490,
+          "missing_pct": 100.0
+        },
+        "host_verifications": {
+          "missing_count": 490,
+          "missing_pct": 100.0
+        },
+        "neighbourhood": {
+          "missing_count": 490,
+          "missing_pct": 100.0
+        },
+        "neighbourhood_group_cleansed": {
+          "missing_count": 490,
+          "missing_pct": 100.0
+        },
+        "bathrooms": {
+          "missing_count": 45,
+          "missing_pct": 9.18
+        },
+        "bathrooms_text": {
+          "missing_count": 4,
+          "missing_pct": 0.82
+        },
+        "bedrooms": {
+          "missing_count": 112,
+          "missing_pct": 22.86
+        },
+        "beds": {
+          "missing_count": 44,
+          "missing_pct": 8.98
+        },
+        "price": {
+          "missing_count": 32,
+          "missing_pct": 6.53
+        },
+        "price_quote_checkin_date": {
+          "missing_count": 22,
+          "missing_pct": 4.49
+        },
+        "price_quote_checkout_date": {
+          "missing_count": 22,
+          "missing_pct": 4.49
+        },
+        "price_quote_total_price": {
+          "missing_count": 32,
+          "missing_pct": 6.53
+        },
+        "price_quote_price_per_night": {
+          "missing_count": 32,
+          "missing_pct": 6.53
+        },
+        "price_quote_raw": {
+          "missing_count": 22,
+          "missing_pct": 4.49
+        },
+        "minimum_nights": {
+          "missing_count": 1,
+          "missing_pct": 0.2
+        },
+        "maximum_nights": {
+          "missing_count": 1,
+          "missing_pct": 0.2
+        },
+        "minimum_minimum_nights": {
+          "missing_count": 1,
+          "missing_pct": 0.2
+        },
+        "maximum_minimum_nights": {
+          "missing_count": 1,
+          "missing_pct": 0.2
+        },
+        "minimum_maximum_nights": {
+          "missing_count": 1,
+          "missing_pct": 0.2
+        },
+        "maximum_maximum_nights": {
+          "missing_count": 1,
+          "missing_pct": 0.2
+        },
+        "calendar_updated": {
+          "missing_count": 490,
+          "missing_pct": 100.0
+        },
+        "has_availability": {
+          "missing_count": 5,
+          "missing_pct": 1.02
+        },
+        "estimated_revenue_l365d": {
+          "missing_count": 32,
+          "missing_pct": 6.53
+        },
+        "first_review": {
+          "missing_count": 60,
+          "missing_pct": 12.24
+        },
+        "last_review": {
+          "missing_count": 60,
+          "missing_pct": 12.24
+        },
+        "review_scores_rating": {
+          "missing_count": 60,
+          "missing_pct": 12.24
+        },
+        "review_scores_accuracy": {
+          "missing_count": 60,
+          "missing_pct": 12.24
+        },
+        "review_scores_cleanliness": {
+          "missing_count": 60,
+          "missing_pct": 12.24
+        },
+        "review_scores_checkin": {
+          "missing_count": 60,
+          "missing_pct": 12.24
+        },
+        "review_scores_communication": {
+          "missing_count": 60,
+          "missing_pct": 12.24
+        },
+        "review_scores_location": {
+          "missing_count": 60,
+          "missing_pct": 12.24
+        },
+        "review_scores_value": {
+          "missing_count": 60,
+          "missing_pct": 12.24
+        },
+        "license": {
+          "missing_count": 490,
+          "missing_pct": 100.0
+        },
+        "instant_bookable": {
+          "missing_count": 490,
+          "missing_pct": 100.0
+        },
+        "reviews_per_month": {
+          "missing_count": 60,
+          "missing_pct": 12.24
+        }
+      }
+    },
+    "consistency": {
+      "id_uniqueness_pct": 95.31,
+      "price_format_consistency_pct": 100.0,
+      "bathrooms_format_consistency_pct": 99.79,
+      "min_max_nights_logic_pct": 99.8
+    },
+    "validity": {
+      "price_validity_pct": 100.0,
+      "minimum_nights_validity_pct": 99.8,
+      "availability_365_validity_pct": 100.0,
+      "room_type_validity_pct": 100.0,
+      "geo_coordinates_validity_pct": 100.0
+    }
+  }
+}

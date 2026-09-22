@@ -1,0 +1,669 @@
+{
+  "schema_version": "1.0",
+  "dataset_name": "listings.csv.gz",
+  "total_columns": 90,
+  "key_columns": [
+    "id",
+    "price",
+    "minimum_nights",
+    "availability_365",
+    "room_type",
+    "bathrooms_text",
+    "latitude",
+    "longitude",
+    "review_scores_rating",
+    "license"
+  ],
+  "columns": {
+    "id": {
+      "expected_dtype": "integer",
+      "semantic_type": "ID",
+      "is_nullable": false,
+      "is_unique": true,
+      "description": "Unique identifier for listing",
+      "is_key_column": true
+    },
+    "listing_url": {
+      "expected_dtype": "string",
+      "semantic_type": "free text",
+      "is_nullable": false,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'listing_url'"
+    },
+    "scrape_id": {
+      "expected_dtype": "float",
+      "semantic_type": "numeric",
+      "is_nullable": false,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'scrape_id'"
+    },
+    "last_scraped": {
+      "expected_dtype": "categorical",
+      "semantic_type": "categorical",
+      "is_nullable": false,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'last_scraped'"
+    },
+    "source": {
+      "expected_dtype": "categorical",
+      "semantic_type": "categorical",
+      "is_nullable": false,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'source'"
+    },
+    "name": {
+      "expected_dtype": "string",
+      "semantic_type": "free text",
+      "is_nullable": false,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'name'"
+    },
+    "description": {
+      "expected_dtype": "string",
+      "semantic_type": "free text",
+      "is_nullable": true,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'description'"
+    },
+    "neighborhood_overview": {
+      "expected_dtype": "float",
+      "semantic_type": "numeric",
+      "is_nullable": true,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'neighborhood_overview'"
+    },
+    "picture_url": {
+      "expected_dtype": "string",
+      "semantic_type": "free text",
+      "is_nullable": false,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'picture_url'"
+    },
+    "host_id": {
+      "expected_dtype": "float",
+      "semantic_type": "numeric",
+      "is_nullable": false,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'host_id'"
+    },
+    "host_url": {
+      "expected_dtype": "string",
+      "semantic_type": "free text",
+      "is_nullable": false,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'host_url'"
+    },
+    "host_profile_id": {
+      "expected_dtype": "float",
+      "semantic_type": "numeric",
+      "is_nullable": false,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'host_profile_id'"
+    },
+    "host_profile_url": {
+      "expected_dtype": "string",
+      "semantic_type": "free text",
+      "is_nullable": false,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'host_profile_url'"
+    },
+    "host_name": {
+      "expected_dtype": "string",
+      "semantic_type": "free text",
+      "is_nullable": false,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'host_name'"
+    },
+    "host_since": {
+      "expected_dtype": "float",
+      "semantic_type": "numeric",
+      "is_nullable": true,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'host_since'"
+    },
+    "hosts_time_as_user_years": {
+      "expected_dtype": "integer",
+      "semantic_type": "numeric",
+      "is_nullable": false,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'hosts_time_as_user_years'"
+    },
+    "hosts_time_as_user_months": {
+      "expected_dtype": "integer",
+      "semantic_type": "numeric",
+      "is_nullable": false,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'hosts_time_as_user_months'"
+    },
+    "hosts_time_as_host_years": {
+      "expected_dtype": "integer",
+      "semantic_type": "numeric",
+      "is_nullable": false,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'hosts_time_as_host_years'"
+    },
+    "hosts_time_as_host_months": {
+      "expected_dtype": "integer",
+      "semantic_type": "numeric",
+      "is_nullable": false,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'hosts_time_as_host_months'"
+    },
+    "host_location": {
+      "expected_dtype": "string",
+      "semantic_type": "free text",
+      "is_nullable": true,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'host_location'"
+    },
+    "host_about": {
+      "expected_dtype": "string",
+      "semantic_type": "free text",
+      "is_nullable": true,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'host_about'"
+    },
+    "host_response_time": {
+      "expected_dtype": "float",
+      "semantic_type": "numeric",
+      "is_nullable": true,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'host_response_time'"
+    },
+    "host_response_rate": {
+      "expected_dtype": "float",
+      "semantic_type": "numeric",
+      "is_nullable": true,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'host_response_rate'"
+    },
+    "host_acceptance_rate": {
+      "expected_dtype": "float",
+      "semantic_type": "numeric",
+      "is_nullable": true,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'host_acceptance_rate'"
+    },
+    "host_is_superhost": {
+      "expected_dtype": "categorical",
+      "semantic_type": "categorical",
+      "is_nullable": false,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'host_is_superhost'"
+    },
+    "host_thumbnail_url": {
+      "expected_dtype": "float",
+      "semantic_type": "numeric",
+      "is_nullable": true,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'host_thumbnail_url'"
+    },
+    "host_picture_url": {
+      "expected_dtype": "string",
+      "semantic_type": "free text",
+      "is_nullable": false,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'host_picture_url'"
+    },
+    "host_neighbourhood": {
+      "expected_dtype": "float",
+      "semantic_type": "numeric",
+      "is_nullable": true,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'host_neighbourhood'"
+    },
+    "host_listings_count": {
+      "expected_dtype": "integer",
+      "semantic_type": "numeric",
+      "is_nullable": false,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'host_listings_count'"
+    },
+    "host_total_listings_count": {
+      "expected_dtype": "float",
+      "semantic_type": "numeric",
+      "is_nullable": true,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'host_total_listings_count'"
+    },
+    "host_verifications": {
+      "expected_dtype": "float",
+      "semantic_type": "numeric",
+      "is_nullable": true,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'host_verifications'"
+    },
+    "host_has_profile_pic": {
+      "expected_dtype": "categorical",
+      "semantic_type": "categorical",
+      "is_nullable": false,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'host_has_profile_pic'"
+    },
+    "host_identity_verified": {
+      "expected_dtype": "categorical",
+      "semantic_type": "categorical",
+      "is_nullable": false,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'host_identity_verified'"
+    },
+    "neighbourhood": {
+      "expected_dtype": "float",
+      "semantic_type": "numeric",
+      "is_nullable": true,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'neighbourhood'"
+    },
+    "neighbourhood_cleansed": {
+      "expected_dtype": "string",
+      "semantic_type": "free text",
+      "is_nullable": false,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'neighbourhood_cleansed'"
+    },
+    "neighbourhood_group_cleansed": {
+      "expected_dtype": "float",
+      "semantic_type": "numeric",
+      "is_nullable": true,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'neighbourhood_group_cleansed'"
+    },
+    "latitude": {
+      "expected_dtype": "float",
+      "semantic_type": "numeric",
+      "is_nullable": false,
+      "min_value": -90.0,
+      "max_value": 90.0,
+      "description": "GPS Latitude coordinate",
+      "is_key_column": true
+    },
+    "longitude": {
+      "expected_dtype": "float",
+      "semantic_type": "numeric",
+      "is_nullable": false,
+      "min_value": -180.0,
+      "max_value": 180.0,
+      "description": "GPS Longitude coordinate",
+      "is_key_column": true
+    },
+    "property_type": {
+      "expected_dtype": "string",
+      "semantic_type": "free text",
+      "is_nullable": false,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'property_type'"
+    },
+    "room_type": {
+      "expected_dtype": "categorical",
+      "semantic_type": "categorical",
+      "is_nullable": false,
+      "allowed_values": [
+        "Entire home/apt",
+        "Private room",
+        "Hotel room",
+        "Shared room"
+      ],
+      "description": "Categorical listing room type from fixed set",
+      "is_key_column": true
+    },
+    "accommodates": {
+      "expected_dtype": "integer",
+      "semantic_type": "numeric",
+      "is_nullable": false,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'accommodates'"
+    },
+    "bathrooms": {
+      "expected_dtype": "float",
+      "semantic_type": "numeric",
+      "is_nullable": true,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'bathrooms'"
+    },
+    "bathrooms_text": {
+      "expected_dtype": "string",
+      "semantic_type": "text",
+      "is_nullable": true,
+      "format_pattern": "^\\d+(\\.\\d+)?\\s+",
+      "description": "Bathrooms textual descriptor, expects numeric quantity prefix",
+      "is_key_column": true
+    },
+    "bedrooms": {
+      "expected_dtype": "float",
+      "semantic_type": "numeric",
+      "is_nullable": true,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'bedrooms'"
+    },
+    "beds": {
+      "expected_dtype": "float",
+      "semantic_type": "numeric",
+      "is_nullable": true,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'beds'"
+    },
+    "amenities": {
+      "expected_dtype": "string",
+      "semantic_type": "free text",
+      "is_nullable": false,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'amenities'"
+    },
+    "price": {
+      "expected_dtype": "float",
+      "semantic_type": "numeric",
+      "is_nullable": false,
+      "min_value": 0.0,
+      "format_pattern": "^\\$\\d{1,3}(,\\d{3})*(\\.\\d{2})?$",
+      "description": "Listing price per night, numeric >= 0 after stripping currency symbols",
+      "is_key_column": true
+    },
+    "price_quote_checkin_date": {
+      "expected_dtype": "string",
+      "semantic_type": "free text",
+      "is_nullable": true,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'price_quote_checkin_date'"
+    },
+    "price_quote_checkout_date": {
+      "expected_dtype": "string",
+      "semantic_type": "free text",
+      "is_nullable": true,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'price_quote_checkout_date'"
+    },
+    "price_quote_total_price": {
+      "expected_dtype": "float",
+      "semantic_type": "numeric",
+      "is_nullable": true,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'price_quote_total_price'"
+    },
+    "price_quote_price_per_night": {
+      "expected_dtype": "float",
+      "semantic_type": "numeric",
+      "is_nullable": true,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'price_quote_price_per_night'"
+    },
+    "price_quote_raw": {
+      "expected_dtype": "string",
+      "semantic_type": "free text",
+      "is_nullable": true,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'price_quote_raw'"
+    },
+    "minimum_nights": {
+      "expected_dtype": "integer",
+      "semantic_type": "numeric",
+      "is_nullable": false,
+      "min_value": 1,
+      "max_value": 365,
+      "description": "Reasonable integer range 1 to 365",
+      "is_key_column": true
+    },
+    "maximum_nights": {
+      "expected_dtype": "float",
+      "semantic_type": "numeric",
+      "is_nullable": true,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'maximum_nights'"
+    },
+    "minimum_minimum_nights": {
+      "expected_dtype": "float",
+      "semantic_type": "numeric",
+      "is_nullable": true,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'minimum_minimum_nights'"
+    },
+    "maximum_minimum_nights": {
+      "expected_dtype": "float",
+      "semantic_type": "numeric",
+      "is_nullable": true,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'maximum_minimum_nights'"
+    },
+    "minimum_maximum_nights": {
+      "expected_dtype": "float",
+      "semantic_type": "numeric",
+      "is_nullable": true,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'minimum_maximum_nights'"
+    },
+    "maximum_maximum_nights": {
+      "expected_dtype": "float",
+      "semantic_type": "numeric",
+      "is_nullable": true,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'maximum_maximum_nights'"
+    },
+    "minimum_nights_avg_ntm": {
+      "expected_dtype": "float",
+      "semantic_type": "numeric",
+      "is_nullable": false,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'minimum_nights_avg_ntm'"
+    },
+    "maximum_nights_avg_ntm": {
+      "expected_dtype": "float",
+      "semantic_type": "numeric",
+      "is_nullable": false,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'maximum_nights_avg_ntm'"
+    },
+    "calendar_updated": {
+      "expected_dtype": "float",
+      "semantic_type": "numeric",
+      "is_nullable": true,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'calendar_updated'"
+    },
+    "has_availability": {
+      "expected_dtype": "string",
+      "semantic_type": "free text",
+      "is_nullable": true,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'has_availability'"
+    },
+    "availability_30": {
+      "expected_dtype": "integer",
+      "semantic_type": "numeric",
+      "is_nullable": false,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'availability_30'"
+    },
+    "availability_60": {
+      "expected_dtype": "integer",
+      "semantic_type": "numeric",
+      "is_nullable": false,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'availability_60'"
+    },
+    "availability_90": {
+      "expected_dtype": "integer",
+      "semantic_type": "numeric",
+      "is_nullable": false,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'availability_90'"
+    },
+    "availability_365": {
+      "expected_dtype": "integer",
+      "semantic_type": "numeric",
+      "is_nullable": false,
+      "min_value": 0,
+      "max_value": 365,
+      "description": "Availability in days per year [0, 365]",
+      "is_key_column": true
+    },
+    "calendar_last_scraped": {
+      "expected_dtype": "categorical",
+      "semantic_type": "categorical",
+      "is_nullable": false,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'calendar_last_scraped'"
+    },
+    "number_of_reviews": {
+      "expected_dtype": "integer",
+      "semantic_type": "numeric",
+      "is_nullable": false,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'number_of_reviews'"
+    },
+    "number_of_reviews_ltm": {
+      "expected_dtype": "integer",
+      "semantic_type": "numeric",
+      "is_nullable": false,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'number_of_reviews_ltm'"
+    },
+    "number_of_reviews_l30d": {
+      "expected_dtype": "integer",
+      "semantic_type": "numeric",
+      "is_nullable": false,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'number_of_reviews_l30d'"
+    },
+    "availability_eoy": {
+      "expected_dtype": "integer",
+      "semantic_type": "numeric",
+      "is_nullable": false,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'availability_eoy'"
+    },
+    "number_of_reviews_ly": {
+      "expected_dtype": "integer",
+      "semantic_type": "numeric",
+      "is_nullable": false,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'number_of_reviews_ly'"
+    },
+    "estimated_occupancy_l365d": {
+      "expected_dtype": "integer",
+      "semantic_type": "numeric",
+      "is_nullable": false,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'estimated_occupancy_l365d'"
+    },
+    "estimated_revenue_l365d": {
+      "expected_dtype": "float",
+      "semantic_type": "numeric",
+      "is_nullable": true,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'estimated_revenue_l365d'"
+    },
+    "first_review": {
+      "expected_dtype": "string",
+      "semantic_type": "free text",
+      "is_nullable": true,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'first_review'"
+    },
+    "last_review": {
+      "expected_dtype": "string",
+      "semantic_type": "free text",
+      "is_nullable": true,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'last_review'"
+    },
+    "review_scores_rating": {
+      "expected_dtype": "float",
+      "semantic_type": "numeric",
+      "is_nullable": true,
+      "min_value": 1.0,
+      "max_value": 5.0,
+      "description": "Review score rating between 1.0 and 5.0",
+      "is_key_column": true
+    },
+    "review_scores_accuracy": {
+      "expected_dtype": "float",
+      "semantic_type": "numeric",
+      "is_nullable": true,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'review_scores_accuracy'"
+    },
+    "review_scores_cleanliness": {
+      "expected_dtype": "float",
+      "semantic_type": "numeric",
+      "is_nullable": true,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'review_scores_cleanliness'"
+    },
+    "review_scores_checkin": {
+      "expected_dtype": "float",
+      "semantic_type": "numeric",
+      "is_nullable": true,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'review_scores_checkin'"
+    },
+    "review_scores_communication": {
+      "expected_dtype": "float",
+      "semantic_type": "numeric",
+      "is_nullable": true,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'review_scores_communication'"
+    },
+    "review_scores_location": {
+      "expected_dtype": "float",
+      "semantic_type": "numeric",
+      "is_nullable": true,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'review_scores_location'"
+    },
+    "review_scores_value": {
+      "expected_dtype": "float",
+      "semantic_type": "numeric",
+      "is_nullable": true,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'review_scores_value'"
+    },
+    "license": {
+      "expected_dtype": "string",
+      "semantic_type": "text",
+      "is_nullable": false,
+      "description": "Short-term rental license identifier",
+      "is_key_column": true
+    },
+    "instant_bookable": {
+      "expected_dtype": "float",
+      "semantic_type": "numeric",
+      "is_nullable": true,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'instant_bookable'"
+    },
+    "calculated_host_listings_count": {
+      "expected_dtype": "integer",
+      "semantic_type": "numeric",
+      "is_nullable": false,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'calculated_host_listings_count'"
+    },
+    "calculated_host_listings_count_entire_homes": {
+      "expected_dtype": "integer",
+      "semantic_type": "numeric",
+      "is_nullable": false,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'calculated_host_listings_count_entire_homes'"
+    },
+    "calculated_host_listings_count_private_rooms": {
+      "expected_dtype": "integer",
+      "semantic_type": "numeric",
+      "is_nullable": false,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'calculated_host_listings_count_private_rooms'"
+    },
+    "calculated_host_listings_count_shared_rooms": {
+      "expected_dtype": "integer",
+      "semantic_type": "numeric",
+      "is_nullable": false,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'calculated_host_listings_count_shared_rooms'"
+    },
+    "reviews_per_month": {
+      "expected_dtype": "float",
+      "semantic_type": "numeric",
+      "is_nullable": true,
+      "is_key_column": false,
+      "description": "Inferred schema for column 'reviews_per_month'"
+    }
+  }
+}
