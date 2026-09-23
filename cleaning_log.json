@@ -1,0 +1,32 @@
+{
+  "timestamp": "2026-09-23T14:45:39.544581",
+  "input_file": "imputed_data.parquet",
+  "output_file": "cleaned_data.csv",
+  "before_summary": {
+    "rows": 476,
+    "columns": 91
+  },
+  "after_summary": {
+    "rows": 460,
+    "columns": 96
+  },
+  "normalization_steps": [
+    "Price stripped of $ and commas, cast to float64",
+    "bathrooms_text parsed into numeric bathrooms and bathroom_type flag",
+    "neighbourhood and neighbourhood_cleansed standardized casing and spelling variants",
+    "last_scraped and host_since parsed to ISO YYYY-MM-DD datetimes"
+  ],
+  "transformation_steps": [
+    "room_type label encoded into room_type_encoded",
+    "neighbourhood_group_cleansed label encoded into neighbourhood_group_cleansed_encoded",
+    "host_tenure_days calculated as (last_scraped - host_since) in days",
+    "price_per_bedroom calculated as price / max(bedrooms, 1)"
+  ],
+  "engineered_features": [
+    "bathroom_type",
+    "room_type_encoded",
+    "neighbourhood_group_cleansed_encoded",
+    "host_tenure_days",
+    "price_per_bedroom"
+  ]
+}

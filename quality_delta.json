@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-09-23T14:45:39.659930",
+  "before_score": 94.45,
+  "after_score": 96.08,
+  "overall_delta": 1.63,
+  "sub_score_deltas": {
+    "completeness_delta": 3.59,
+    "consistency_delta": 1.27,
+    "validity_delta": 0.04
+  },
+  "metrics_summary": {
+    "before_sub_scores": {
+      "completeness_score": 84.66,
+      "consistency_score": 98.73,
+      "validity_score": 99.96
+    },
+    "after_sub_scores": {
+      "completeness_score": 88.25,
+      "consistency_score": 100.0,
+      "validity_score": 100.0
+    }
+  },
+  "improvement_verdict": "MEASURABLE_IMPROVEMENT_PASSED"
+}

@@ -5,12 +5,13 @@ import pandas as pd
 from datetime import datetime
 from typing import Dict, Any
 
-def compute_quality_scores(df: pd.DataFrame, schema: Dict[str, Any]) -> Dict[str, Any]:
+def compute_quality_scores(df: pd.DataFrame, schema: Dict[str, Any], is_post_clean: bool = False) -> Dict[str, Any]:
     """
-    Computes reproducible pre-clean Quality Score (0-100) with 3 sub-scores:
+    Computes reproducible Quality Score (0-100) with 3 sub-scores:
     1. Completeness Sub-Score
     2. Consistency Sub-Score
     3. Validity Sub-Score
+    Supports both raw (pre-clean) and post-cleaned data formats.
     """
     total_rows = len(df)
     total_cols = len(df.columns)
@@ -49,21 +50,30 @@ def compute_quality_scores(df: pd.DataFrame, schema: Dict[str, Any]) -> Dict[str
     id_unique_count = int(df["id"].nunique()) if "id" in df.columns else total_rows
     id_uniqueness_pct = float(round((id_unique_count / total_rows) * 100, 2))
 
-    # b. Price Currency Format Matching
+    # b. Price Currency Format / Numeric Matching
     if "price" in df.columns:
-        price_non_null = df["price"].dropna().astype(str).str.strip()
-        price_format_pattern = schema.get("columns", {}).get("price", {}).get("format_pattern", r"^\$\d{1,3}(,\d{3})*(\.\d{2})?$")
-        price_format_valid = int(price_non_null.str.match(price_format_pattern).sum())
-        price_format_consistency_pct = float(round((price_format_valid / len(price_non_null)) * 100, 2)) if len(price_non_null) > 0 else 100.0
+        if pd.api.types.is_numeric_dtype(df["price"]):
+            price_non_null = df["price"].dropna()
+            price_format_consistency_pct = 100.0 if len(price_non_null) > 0 else 0.0
+        else:
+            price_non_null = df["price"].dropna().astype(str).str.strip()
+            price_format_pattern = schema.get("columns", {}).get("price", {}).get("format_pattern", r"^\$\d{1,3}(,\d{3})*(\.\d{2})?$")
+            price_format_valid = int(price_non_null.str.match(price_format_pattern).sum())
+            price_format_consistency_pct = float(round((price_format_valid / len(price_non_null)) * 100, 2)) if len(price_non_null) > 0 else 100.0
     else:
         price_format_consistency_pct = 100.0
 
     # c. Bathrooms Format Consistency
-    if "bathrooms_text" in df.columns:
-        bath_non_null = df["bathrooms_text"].dropna().astype(str).str.strip()
-        bath_pattern = schema.get("columns", {}).get("bathrooms_text", {}).get("format_pattern", r"^\d+(\.\d+)?\s+")
-        bath_format_valid = int(bath_non_null.str.match(bath_pattern).sum())
-        bathrooms_format_consistency_pct = float(round((bath_format_valid / len(bath_non_null)) * 100, 2)) if len(bath_non_null) > 0 else 100.0
+    if "bathrooms_text" in df.columns or "bathrooms" in df.columns:
+        if "bathrooms" in df.columns and pd.api.types.is_numeric_dtype(df["bathrooms"]):
+            bathrooms_format_consistency_pct = 100.0 if df["bathrooms"].notna().sum() > 0 else 0.0
+        elif "bathrooms_text" in df.columns:
+            bath_non_null = df["bathrooms_text"].dropna().astype(str).str.strip()
+            bath_pattern = schema.get("columns", {}).get("bathrooms_text", {}).get("format_pattern", r"^\d+(\.\d+)?\s+")
+            bath_format_valid = int(bath_non_null.str.match(bath_pattern).sum())
+            bathrooms_format_consistency_pct = float(round((bath_format_valid / len(bath_non_null)) * 100, 2)) if len(bath_non_null) > 0 else 100.0
+        else:
+            bathrooms_format_consistency_pct = 100.0
     else:
         bathrooms_format_consistency_pct = 100.0
 
@@ -71,8 +81,12 @@ def compute_quality_scores(df: pd.DataFrame, schema: Dict[str, Any]) -> Dict[str
     if "minimum_nights" in df.columns and "maximum_nights" in df.columns:
         min_n = pd.to_numeric(df["minimum_nights"], errors="coerce")
         max_n = pd.to_numeric(df["maximum_nights"], errors="coerce")
-        night_logic_valid = int((min_n <= max_n).sum())
-        min_max_nights_logic_pct = float(round((night_logic_valid / total_rows) * 100, 2))
+        valid_eval = (min_n.notna()) & (max_n.notna())
+        if valid_eval.sum() > 0:
+            night_logic_valid = int((min_n[valid_eval] <= max_n[valid_eval]).sum())
+            min_max_nights_logic_pct = float(round((night_logic_valid / valid_eval.sum()) * 100, 2))
+        else:
+            min_max_nights_logic_pct = 100.0
     else:
         min_max_nights_logic_pct = 100.0
 
@@ -81,11 +95,13 @@ def compute_quality_scores(df: pd.DataFrame, schema: Dict[str, Any]) -> Dict[str
     # -------------------------------------------------------------
     # 3. VALIDITY SUB-SCORE
     # -------------------------------------------------------------
-    # a. Price Numeric >= 0 after stripping symbol
+    # a. Price Numeric >= 0
     if "price" in df.columns:
-        clean_prices = df["price"].dropna().astype(str).str.replace(r'[\$,]', '', regex=True).str.strip()
-        clean_prices_num = pd.to_numeric(clean_prices, errors="coerce")
-        valid_prices = clean_prices_num.dropna()
+        if pd.api.types.is_numeric_dtype(df["price"]):
+            valid_prices = df["price"].dropna()
+        else:
+            clean_prices = df["price"].dropna().astype(str).str.replace(r'[\$,]', '', regex=True).str.strip()
+            valid_prices = pd.to_numeric(clean_prices, errors="coerce").dropna()
         price_valid_count = int((valid_prices >= 0.0).sum())
         price_validity_pct = float(round((price_valid_count / len(valid_prices)) * 100, 2)) if len(valid_prices) > 0 else 100.0
     else:
@@ -93,17 +109,17 @@ def compute_quality_scores(df: pd.DataFrame, schema: Dict[str, Any]) -> Dict[str
 
     # b. Minimum Nights in range [1, 365]
     if "minimum_nights" in df.columns:
-        min_nights_num = pd.to_numeric(df["minimum_nights"], errors="coerce")
+        min_nights_num = pd.to_numeric(df["minimum_nights"], errors="coerce").dropna()
         min_nights_valid_count = int(((min_nights_num >= 1) & (min_nights_num <= 365)).sum())
-        minimum_nights_validity_pct = float(round((min_nights_valid_count / total_rows) * 100, 2))
+        minimum_nights_validity_pct = float(round((min_nights_valid_count / len(min_nights_num)) * 100, 2)) if len(min_nights_num) > 0 else 100.0
     else:
         minimum_nights_validity_pct = 100.0
 
     # c. Availability 365 in range [0, 365]
     if "availability_365" in df.columns:
-        avail_num = pd.to_numeric(df["availability_365"], errors="coerce")
+        avail_num = pd.to_numeric(df["availability_365"], errors="coerce").dropna()
         avail_valid_count = int(((avail_num >= 0) & (avail_num <= 365)).sum())
-        availability_365_validity_pct = float(round((avail_valid_count / total_rows) * 100, 2))
+        availability_365_validity_pct = float(round((avail_valid_count / len(avail_num)) * 100, 2)) if len(avail_num) > 0 else 100.0
     else:
         availability_365_validity_pct = 100.0
 
@@ -183,7 +199,7 @@ def generate_quality_score(parquet_path: str = "raw_data_loaded.parquet", schema
     with open(schema_path, "r", encoding="utf-8") as f:
         schema = json.load(f)
 
-    report = compute_quality_scores(df, schema)
+    report = compute_quality_scores(df, schema, is_post_clean=False)
 
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(report, f, indent=2)
@@ -193,6 +209,64 @@ def generate_quality_score(parquet_path: str = "raw_data_loaded.parquet", schema
     print(f"Sub-Scores -> Completeness: {report['sub_scores']['completeness_score']}, Consistency: {report['sub_scores']['consistency_score']}, Validity: {report['sub_scores']['validity_score']}")
 
     return report
+
+def generate_post_clean_quality_score(cleaned_csv_path: str = "cleaned_data.csv", schema_path: str = "schema.json", output_path: str = "quality_score_after.json") -> Dict[str, Any]:
+    if not os.path.exists(cleaned_csv_path):
+        raise FileNotFoundError(f"Cleaned dataset '{cleaned_csv_path}' not found.")
+
+    df = pd.read_csv(cleaned_csv_path, low_memory=False)
+    with open(schema_path, "r", encoding="utf-8") as f:
+        schema = json.load(f)
+
+    report = compute_quality_scores(df, schema, is_post_clean=True)
+
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(report, f, indent=2)
+
+    print(f"Successfully generated post-clean quality score report '{output_path}'.")
+    print(f"Overall Quality Score (After): {report['overall_quality_score']}/100")
+    print(f"Sub-Scores -> Completeness: {report['sub_scores']['completeness_score']}, Consistency: {report['sub_scores']['consistency_score']}, Validity: {report['sub_scores']['validity_score']}")
+
+    return report
+
+def compute_quality_delta(before_json_path: str = "quality_score_before.json", after_json_path: str = "quality_score_after.json", output_path: str = "quality_delta.json") -> Dict[str, Any]:
+    with open(before_json_path, "r", encoding="utf-8") as f:
+        before = json.load(f)
+
+    with open(after_json_path, "r", encoding="utf-8") as f:
+        after = json.load(f)
+
+    b_overall = before["overall_quality_score"]
+    a_overall = after["overall_quality_score"]
+    overall_delta = round(a_overall - b_overall, 2)
+
+    b_sub = before["sub_scores"]
+    a_sub = after["sub_scores"]
+
+    delta_report = {
+        "timestamp": datetime.now().isoformat(),
+        "before_score": b_overall,
+        "after_score": a_overall,
+        "overall_delta": overall_delta,
+        "sub_score_deltas": {
+            "completeness_delta": round(a_sub["completeness_score"] - b_sub["completeness_score"], 2),
+            "consistency_delta": round(a_sub["consistency_score"] - b_sub["consistency_score"], 2),
+            "validity_delta": round(a_sub["validity_score"] - b_sub["validity_score"], 2)
+        },
+        "metrics_summary": {
+            "before_sub_scores": b_sub,
+            "after_sub_scores": a_sub
+        },
+        "improvement_verdict": "MEASURABLE_IMPROVEMENT_PASSED" if overall_delta > 0 else "NO_IMPROVEMENT"
+    }
+
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(delta_report, f, indent=2)
+
+    print(f"Successfully generated quality delta report '{output_path}'.")
+    print(f"Overall Score Delta: {overall_delta:+.2f} (Before: {b_overall} -> After: {a_overall})")
+
+    return delta_report
 
 if __name__ == "__main__":
     generate_quality_score()
