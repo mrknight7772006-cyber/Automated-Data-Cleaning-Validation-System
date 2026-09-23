@@ -1,0 +1,213 @@
+{
+  "timestamp": "2026-09-23T22:36:58.426048",
+  "dataset_path": "cleaned_data.csv",
+  "city": "Albany, NY",
+  "bounding_box": {
+    "min_lat": 42.64,
+    "max_lat": 42.71,
+    "min_lon": -73.85,
+    "max_lon": -73.74
+  },
+  "total_rows_validated": 460,
+  "total_rules_evaluated": 7,
+  "total_violations_found": 17,
+  "per_rule_summary": {
+    "price_greater_than_zero": {
+      "rule_category": "numeric_range",
+      "description": "price must be numeric and > 0",
+      "violation_count": 0,
+      "violation_pct": 0.0
+    },
+    "minimum_nights_in_range": {
+      "rule_category": "numeric_range",
+      "description": "minimum_nights must be in range [1, 365]",
+      "violation_count": 0,
+      "violation_pct": 0.0
+    },
+    "availability_365_in_range": {
+      "rule_category": "numeric_range",
+      "description": "availability_365 must be in range [0, 365]",
+      "violation_count": 0,
+      "violation_pct": 0.0
+    },
+    "room_type_valid": {
+      "rule_category": "categorical_consistency",
+      "description": "room_type must belong to allowed categorical set",
+      "violation_count": 0,
+      "violation_pct": 0.0
+    },
+    "neighbourhood_group_valid": {
+      "rule_category": "categorical_consistency",
+      "description": "neighbourhood_group_cleansed must be a valid borough/ward for the city",
+      "violation_count": 0,
+      "violation_pct": 0.0
+    },
+    "coordinate_bounding_box": {
+      "rule_category": "coordinate_sanity",
+      "description": "latitude and longitude must fall within the city real bounding box",
+      "violation_count": 16,
+      "violation_pct": 3.48
+    },
+    "min_nights_le_max_nights": {
+      "rule_category": "cross_field_consistency",
+      "description": "maximum_nights must be greater than or equal to minimum_nights",
+      "violation_count": 1,
+      "violation_pct": 0.22
+    }
+  },
+  "rule_violations": [
+    {
+      "rule_id": "R006",
+      "rule_name": "coordinate_bounding_box",
+      "row_index": 38,
+      "listing_id": 32450400.0,
+      "column": "latitude,longitude",
+      "value": "(42.6761, -73.73825)",
+      "details": "Coordinates (42.6761, -73.73825) fall outside real city bounding box for Albany, NY [lat: 42.64..42.71, lon: -73.85..-73.74]."
+    },
+    {
+      "rule_id": "R006",
+      "rule_name": "coordinate_bounding_box",
+      "row_index": 49,
+      "listing_id": 40828178.0,
+      "column": "latitude,longitude",
+      "value": "(42.67773, -73.73899)",
+      "details": "Coordinates (42.67773, -73.73899) fall outside real city bounding box for Albany, NY [lat: 42.64..42.71, lon: -73.85..-73.74]."
+    },
+    {
+      "rule_id": "R006",
+      "rule_name": "coordinate_bounding_box",
+      "row_index": 52,
+      "listing_id": 42763847.0,
+      "column": "latitude,longitude",
+      "value": "(42.63876, -73.78535)",
+      "details": "Coordinates (42.63876, -73.78535) fall outside real city bounding box for Albany, NY [lat: 42.64..42.71, lon: -73.85..-73.74]."
+    },
+    {
+      "rule_id": "R007",
+      "rule_name": "min_nights_le_max_nights",
+      "row_index": 55,
+      "listing_id": 43736299.0,
+      "column": "minimum_nights,maximum_nights",
+      "value": "minimum_nights=7.0, maximum_nights=nan",
+      "details": "Cross-field violation: minimum_nights (7.0) > maximum_nights (nan) or missing boundary."
+    },
+    {
+      "rule_id": "R006",
+      "rule_name": "coordinate_bounding_box",
+      "row_index": 87,
+      "listing_id": 52152157.0,
+      "column": "latitude,longitude",
+      "value": "(42.63066, -73.77357)",
+      "details": "Coordinates (42.63066, -73.77357) fall outside real city bounding box for Albany, NY [lat: 42.64..42.71, lon: -73.85..-73.74]."
+    },
+    {
+      "rule_id": "R006",
+      "rule_name": "coordinate_bounding_box",
+      "row_index": 116,
+      "listing_id": 6.58638e+17,
+      "column": "latitude,longitude",
+      "value": "(42.6374547, -73.7716647)",
+      "details": "Coordinates (42.6374547, -73.7716647) fall outside real city bounding box for Albany, NY [lat: 42.64..42.71, lon: -73.85..-73.74]."
+    },
+    {
+      "rule_id": "R006",
+      "rule_name": "coordinate_bounding_box",
+      "row_index": 117,
+      "listing_id": 6.62133e+17,
+      "column": "latitude,longitude",
+      "value": "(42.6378819, -73.7715269)",
+      "details": "Coordinates (42.6378819, -73.7715269) fall outside real city bounding box for Albany, NY [lat: 42.64..42.71, lon: -73.85..-73.74]."
+    },
+    {
+      "rule_id": "R006",
+      "rule_name": "coordinate_bounding_box",
+      "row_index": 156,
+      "listing_id": 8.4596e+17,
+      "column": "latitude,longitude",
+      "value": "(42.63504, -73.79833)",
+      "details": "Coordinates (42.63504, -73.79833) fall outside real city bounding box for Albany, NY [lat: 42.64..42.71, lon: -73.85..-73.74]."
+    },
+    {
+      "rule_id": "R006",
+      "rule_name": "coordinate_bounding_box",
+      "row_index": 195,
+      "listing_id": 9.50614e+17,
+      "column": "latitude,longitude",
+      "value": "(42.6376753, -73.7685409)",
+      "details": "Coordinates (42.6376753, -73.7685409) fall outside real city bounding box for Albany, NY [lat: 42.64..42.71, lon: -73.85..-73.74]."
+    },
+    {
+      "rule_id": "R006",
+      "rule_name": "coordinate_bounding_box",
+      "row_index": 222,
+      "listing_id": 1.04357e+18,
+      "column": "latitude,longitude",
+      "value": "(42.63976, -73.75705)",
+      "details": "Coordinates (42.63976, -73.75705) fall outside real city bounding box for Albany, NY [lat: 42.64..42.71, lon: -73.85..-73.74]."
+    },
+    {
+      "rule_id": "R006",
+      "rule_name": "coordinate_bounding_box",
+      "row_index": 224,
+      "listing_id": 1.05647e+18,
+      "column": "latitude,longitude",
+      "value": "(42.7149, -73.87649)",
+      "details": "Coordinates (42.7149, -73.87649) fall outside real city bounding box for Albany, NY [lat: 42.64..42.71, lon: -73.85..-73.74]."
+    },
+    {
+      "rule_id": "R006",
+      "rule_name": "coordinate_bounding_box",
+      "row_index": 291,
+      "listing_id": 1.28498e+18,
+      "column": "latitude,longitude",
+      "value": "(42.67445143, -73.73835701)",
+      "details": "Coordinates (42.67445143, -73.73835701) fall outside real city bounding box for Albany, NY [lat: 42.64..42.71, lon: -73.85..-73.74]."
+    },
+    {
+      "rule_id": "R006",
+      "rule_name": "coordinate_bounding_box",
+      "row_index": 315,
+      "listing_id": 1.36977e+18,
+      "column": "latitude,longitude",
+      "value": "(42.63962652, -73.77330801)",
+      "details": "Coordinates (42.63962652, -73.77330801) fall outside real city bounding box for Albany, NY [lat: 42.64..42.71, lon: -73.85..-73.74]."
+    },
+    {
+      "rule_id": "R006",
+      "rule_name": "coordinate_bounding_box",
+      "row_index": 335,
+      "listing_id": 1.40965e+18,
+      "column": "latitude,longitude",
+      "value": "(42.6722593, -73.73905199)",
+      "details": "Coordinates (42.6722593, -73.73905199) fall outside real city bounding box for Albany, NY [lat: 42.64..42.71, lon: -73.85..-73.74]."
+    },
+    {
+      "rule_id": "R006",
+      "rule_name": "coordinate_bounding_box",
+      "row_index": 397,
+      "listing_id": 1.53732e+18,
+      "column": "latitude,longitude",
+      "value": "(42.63622, -73.76152)",
+      "details": "Coordinates (42.63622, -73.76152) fall outside real city bounding box for Albany, NY [lat: 42.64..42.71, lon: -73.85..-73.74]."
+    },
+    {
+      "rule_id": "R006",
+      "rule_name": "coordinate_bounding_box",
+      "row_index": 426,
+      "listing_id": 1.60949e+18,
+      "column": "latitude,longitude",
+      "value": "(42.63919025, -73.7753294)",
+      "details": "Coordinates (42.63919025, -73.7753294) fall outside real city bounding box for Albany, NY [lat: 42.64..42.71, lon: -73.85..-73.74]."
+    },
+    {
+      "rule_id": "R006",
+      "rule_name": "coordinate_bounding_box",
+      "row_index": 449,
+      "listing_id": 1.67692e+18,
+      "column": "latitude,longitude",
+      "value": "(42.6378758, -73.7594293)",
+      "details": "Coordinates (42.6378758, -73.7594293) fall outside real city bounding box for Albany, NY [lat: 42.64..42.71, lon: -73.85..-73.74]."
+    }
+  ]
+}
