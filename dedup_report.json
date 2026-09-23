@@ -1,0 +1,182 @@
+{
+  "timestamp": "2026-09-23T13:51:31.050196",
+  "before_row_count": 490,
+  "after_row_count": 476,
+  "exact_duplicates_count": 7,
+  "fuzzy_duplicates_count": 7,
+  "total_duplicates_removed": 14,
+  "deduplication_summary": "Processed 490 rows. Removed 7 exact duplicates and 7 fuzzy near-duplicates from the same host at the same address. Final dataset has 476 rows.",
+  "flagged_duplicates": [
+    {
+      "type": "fuzzy",
+      "host_id": 19648678.0,
+      "latitude": 42.6522,
+      "longitude": -73.7672,
+      "retained_id": 3820211.0,
+      "removed_id": 6623339.0,
+      "retained_name": "Restored Precinct in Center Sq. w/Parking",
+      "removed_name": "Center Sq. Loft in Converted Precinct w/ Parking",
+      "similarity": 0.5393258426966292
+    },
+    {
+      "type": "fuzzy",
+      "host_id": 37769478.0,
+      "latitude": 42.6536,
+      "longitude": -73.7702,
+      "retained_id": 1.64928e+18,
+      "removed_id": 1.67244e+18,
+      "retained_name": "Rowhouse 23 Studio",
+      "removed_name": "Rowhouse 18 - 1BDR Park South",
+      "similarity": 0.5106382978723404
+    },
+    {
+      "type": "fuzzy",
+      "host_id": 44434571.0,
+      "latitude": 42.6454,
+      "longitude": -73.7536,
+      "retained_id": 28722270.0,
+      "removed_id": 28868857.0,
+      "retained_name": "Historic Loft Suite @ Downtown Albany",
+      "removed_name": "Cozy Garden 2-Bed Full Amenities @ Downtown Albany",
+      "similarity": 0.5977011494252874
+    },
+    {
+      "type": "fuzzy",
+      "host_id": 98744672.0,
+      "latitude": 42.6543,
+      "longitude": -73.7818,
+      "retained_id": 24606880.0,
+      "removed_id": 27670660.0,
+      "retained_name": "The Western Suite",
+      "removed_name": "The Rock & Roll Suite",
+      "similarity": 0.5789473684210527
+    },
+    {
+      "type": "fuzzy",
+      "host_id": 484673863.0,
+      "latitude": 42.655,
+      "longitude": -73.7757,
+      "retained_id": 8.26302e+17,
+      "removed_id": 1.63364e+18,
+      "retained_name": "2 br apt 2 min walk to albanymed offstreet parking",
+      "removed_name": "2 min walk to albanymed|offst parking| in unit W/D",
+      "similarity": 0.72
+    },
+    {
+      "type": "fuzzy",
+      "host_id": 493882819.0,
+      "latitude": 42.6563,
+      "longitude": -73.7752,
+      "retained_id": 7.95542e+17,
+      "removed_id": 8.03814e+17,
+      "retained_name": "Historic Washington Park Inn | Full Mansion | 7 BR",
+      "removed_name": "Historic Washington Park Inn | Room 5 | Floor 2",
+      "similarity": 0.7422680412371134
+    },
+    {
+      "type": "fuzzy",
+      "host_id": 493882819.0,
+      "latitude": 42.6563,
+      "longitude": -73.7752,
+      "retained_id": 7.95542e+17,
+      "removed_id": 8.03868e+17,
+      "retained_name": "Historic Washington Park Inn | Full Mansion | 7 BR",
+      "removed_name": "Historic Washington Park Inn | Room 1 | 1st Floor",
+      "similarity": 0.7474747474747475
+    },
+    {
+      "type": "exact",
+      "host_id": 705140675.0,
+      "latitude": 42.6455,
+      "longitude": -73.7503,
+      "retained_id": 1.64283e+18,
+      "removed_id": 1.64283e+18,
+      "retained_name": "2 Queen Beds Stay near Times Union Center",
+      "removed_name": "Double Queen Room | Free Parking & Breakfast!",
+      "similarity": 0.2558139534883721
+    },
+    {
+      "type": "exact",
+      "host_id": 705140675.0,
+      "latitude": 42.6455,
+      "longitude": -73.7503,
+      "retained_id": 1.64283e+18,
+      "removed_id": 1.64283e+18,
+      "retained_name": "2 Queen Beds Stay near Times Union Center",
+      "removed_name": "2  Modern Downtown Albany Rooms for Group/Family!",
+      "similarity": 0.24444444444444444
+    },
+    {
+      "type": "exact",
+      "host_id": 705140675.0,
+      "latitude": 42.6455,
+      "longitude": -73.7503,
+      "retained_id": 1.64283e+18,
+      "removed_id": 1.64283e+18,
+      "retained_name": "2 Queen Beds Stay near Times Union Center",
+      "removed_name": "2 Restful Rooms for Downtown Albany Stays",
+      "similarity": 0.2926829268292683
+    },
+    {
+      "type": "exact",
+      "host_id": 705140675.0,
+      "latitude": 42.6455,
+      "longitude": -73.7503,
+      "retained_id": 1.64283e+18,
+      "removed_id": 1.64283e+18,
+      "retained_name": "2 Queen Beds Stay near Times Union Center",
+      "removed_name": "3 Units Near Hudson River w/ Free Parking!",
+      "similarity": 0.3855421686746988
+    },
+    {
+      "type": "exact",
+      "host_id": 705140675.0,
+      "latitude": 42.6455,
+      "longitude": -73.7503,
+      "retained_id": 1.64283e+18,
+      "removed_id": 1.64283e+18,
+      "retained_name": "2 Queen Beds Stay near Times Union Center",
+      "removed_name": "3 Rooms for Family Stay w/ Free On-Site Parking!",
+      "similarity": 0.3146067415730337
+    },
+    {
+      "type": "exact",
+      "host_id": 705140675.0,
+      "latitude": 42.6455,
+      "longitude": -73.7503,
+      "retained_id": 1.64283e+18,
+      "removed_id": 1.64283e+18,
+      "retained_name": "2 Queen Beds Stay near Times Union Center",
+      "removed_name": "King Room near Empire State Plaza w/ Free Parking!",
+      "similarity": 0.24175824175824176
+    },
+    {
+      "type": "exact",
+      "host_id": 705140675.0,
+      "latitude": 42.6455,
+      "longitude": -73.7503,
+      "retained_id": 1.64283e+18,
+      "removed_id": 1.64283e+18,
+      "retained_name": "2 Queen Beds Stay near Times Union Center",
+      "removed_name": "Downtown Albany Room | Free Breakfast & Parking!",
+      "similarity": 0.29213483146067415
+    }
+  ],
+  "imputation_summary": {
+    "ml_method": "knn",
+    "statistical_imputed_cols": [
+      "neighbourhood_group_cleansed",
+      "review_scores_rating"
+    ],
+    "ml_imputed_cols": [
+      "bedrooms",
+      "beds",
+      "review_scores_rating"
+    ],
+    "retained_nan_columns": [
+      "license"
+    ],
+    "total_missing_before": 8251,
+    "total_missing_after": 7375
+  }
+}
