@@ -1,0 +1,16 @@
+{
+  "sample_size": 200,
+  "ground_truth_positives": 20,
+  "ground_truth_negatives": 180,
+  "precision": 0.6667,
+  "recall": 1.0,
+  "f1_score": 0.8,
+  "accuracy": 0.95,
+  "roc_auc": 0.9944,
+  "confusion_matrix": {
+    "true_negatives": 170,
+    "false_positives": 10,
+    "false_negatives": 0,
+    "true_positives": 20
+  }
+}
