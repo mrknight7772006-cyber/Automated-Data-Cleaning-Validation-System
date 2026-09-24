@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-09-23T14:45:39.630756",
+  "timestamp": "2026-09-24T22:30:35.712227",
   "dataset_summary": {
-    "total_rows": 460,
+    "total_rows": 466,
     "total_columns": 96,
-    "total_cells": 44160,
+    "total_cells": 44736,
     "duplicate_rows": 0
   },
   "overall_quality_score": 96.08,
@@ -14,139 +14,139 @@
   },
   "sub_score_details": {
     "completeness": {
-      "overall_cell_completeness_pct": 86.49,
+      "overall_cell_completeness_pct": 86.51,
       "key_columns_completeness_pct": 90.0,
       "missing_value_gaps": {
         "description": {
           "missing_count": 9,
-          "missing_pct": 1.96
+          "missing_pct": 1.93
         },
         "neighborhood_overview": {
-          "missing_count": 460,
+          "missing_count": 466,
           "missing_pct": 100.0
         },
         "host_location": {
-          "missing_count": 125,
-          "missing_pct": 27.17
+          "missing_count": 127,
+          "missing_pct": 27.25
         },
         "host_about": {
-          "missing_count": 211,
-          "missing_pct": 45.87
+          "missing_count": 213,
+          "missing_pct": 45.71
         },
         "host_response_time": {
-          "missing_count": 460,
+          "missing_count": 466,
           "missing_pct": 100.0
         },
         "host_response_rate": {
-          "missing_count": 460,
+          "missing_count": 466,
           "missing_pct": 100.0
         },
         "host_acceptance_rate": {
-          "missing_count": 460,
+          "missing_count": 466,
           "missing_pct": 100.0
         },
         "host_thumbnail_url": {
-          "missing_count": 460,
+          "missing_count": 466,
           "missing_pct": 100.0
         },
         "host_neighbourhood": {
-          "missing_count": 460,
+          "missing_count": 466,
           "missing_pct": 100.0
         },
         "host_total_listings_count": {
-          "missing_count": 460,
+          "missing_count": 466,
           "missing_pct": 100.0
         },
         "host_verifications": {
-          "missing_count": 460,
+          "missing_count": 466,
           "missing_pct": 100.0
         },
         "price_quote_checkin_date": {
           "missing_count": 22,
-          "missing_pct": 4.78
+          "missing_pct": 4.72
         },
         "price_quote_checkout_date": {
           "missing_count": 22,
-          "missing_pct": 4.78
+          "missing_pct": 4.72
         },
         "price_quote_total_price": {
           "missing_count": 31,
-          "missing_pct": 6.74
+          "missing_pct": 6.65
         },
         "price_quote_price_per_night": {
           "missing_count": 31,
-          "missing_pct": 6.74
+          "missing_pct": 6.65
         },
         "price_quote_raw": {
           "missing_count": 22,
-          "missing_pct": 4.78
+          "missing_pct": 4.72
         },
         "maximum_nights": {
           "missing_count": 1,
-          "missing_pct": 0.22
+          "missing_pct": 0.21
         },
         "minimum_minimum_nights": {
           "missing_count": 1,
-          "missing_pct": 0.22
+          "missing_pct": 0.21
         },
         "maximum_minimum_nights": {
           "missing_count": 1,
-          "missing_pct": 0.22
+          "missing_pct": 0.21
         },
         "minimum_maximum_nights": {
           "missing_count": 1,
-          "missing_pct": 0.22
+          "missing_pct": 0.21
         },
         "maximum_maximum_nights": {
           "missing_count": 1,
-          "missing_pct": 0.22
+          "missing_pct": 0.21
         },
         "calendar_updated": {
-          "missing_count": 460,
+          "missing_count": 466,
           "missing_pct": 100.0
         },
         "has_availability": {
           "missing_count": 5,
-          "missing_pct": 1.09
+          "missing_pct": 1.07
         },
         "first_review": {
           "missing_count": 53,
-          "missing_pct": 11.52
+          "missing_pct": 11.37
         },
         "last_review": {
           "missing_count": 53,
-          "missing_pct": 11.52
+          "missing_pct": 11.37
         },
         "review_scores_accuracy": {
           "missing_count": 53,
-          "missing_pct": 11.52
+          "missing_pct": 11.37
         },
         "review_scores_cleanliness": {
           "missing_count": 53,
-          "missing_pct": 11.52
+          "missing_pct": 11.37
         },
         "review_scores_checkin": {
           "missing_count": 53,
-          "missing_pct": 11.52
+          "missing_pct": 11.37
         },
         "review_scores_communication": {
           "missing_count": 53,
-          "missing_pct": 11.52
+          "missing_pct": 11.37
         },
         "review_scores_location": {
           "missing_count": 53,
-          "missing_pct": 11.52
+          "missing_pct": 11.37
         },
         "review_scores_value": {
           "missing_count": 53,
-          "missing_pct": 11.52
+          "missing_pct": 11.37
         },
         "license": {
-          "missing_count": 460,
+          "missing_count": 466,
           "missing_pct": 100.0
         },
         "instant_bookable": {
-          "missing_count": 460,
+          "missing_count": 466,
           "missing_pct": 100.0
         }
       }

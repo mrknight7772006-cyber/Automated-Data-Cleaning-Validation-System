@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-09-23T14:45:39.544581",
-  "input_file": "imputed_data.parquet",
-  "output_file": "cleaned_data.csv",
+  "timestamp": "2026-09-24T22:30:35.601496",
+  "input_file": "output/imputed_data.parquet",
+  "output_file": "output/cleaned_data.csv",
   "before_summary": {
-    "rows": 476,
+    "rows": 482,
     "columns": 91
   },
   "after_summary": {
-    "rows": 460,
+    "rows": 466,
     "columns": 96
   },
   "normalization_steps": [

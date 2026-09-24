@@ -14,9 +14,9 @@ class ValidationAPI:
     Runs rule validation, AI anomaly detection, NLP column classification,
     and statistical error detection, producing a unified validation_report.json.
     """
-    def run_validation_pipeline(self, input_path="cleaned_data.csv", output_path="validation_report.json"):
+    def run_validation_pipeline(self, input_path="cleaned_data.csv", output_path="validation_report.json", contamination=0.05):
         print("==================================================")
-        print("RUNNING UNIFIED VALIDATION PIPELINE")
+        print(f"RUNNING UNIFIED VALIDATION PIPELINE (Contamination={contamination})")
         print("==================================================")
         
         if not os.path.exists(input_path):
@@ -25,7 +25,6 @@ class ValidationAPI:
         df = pd.read_csv(input_path, low_memory=False)
         total_rows = len(df)
         
-        # 1. Rule Validation
         validator = RuleValidator(input_path)
         rv_res = validator.validate_dataframe(df)
         if isinstance(rv_res, tuple):
@@ -34,20 +33,16 @@ class ValidationAPI:
             rv_report = rv_res
             rule_violations = rv_report.get("rule_violations", [])
         
-        # 2. Anomaly Detection
-        anom_report = detect_anomalies(input_path, "anomaly_report.json", contamination=0.05)
+        anom_report = detect_anomalies(input_path, "anomaly_report.json", contamination=contamination)
         anomaly_flagged_rows = anom_report.get("flagged_rows", [])
         
-        # 3. NLP Column Classification
         nlp_report = run_nlp_classification(input_path, "nlp_classification_report.json")
         nlp_issues = nlp_report.get("flagged_text_issues", [])
         
-        # 4. Error Detection & Data Drift
         err_detector = ErrorDetector(df)
         stat_errors = err_detector.detect_statistical_errors()
         drift_report = err_detector.detect_data_drift()
         
-        # 5. Validation Scoring
         scorer = ValidationScorer()
         scoring_res = scorer.score_dataset(
             total_rows=total_rows,
@@ -57,7 +52,6 @@ class ValidationAPI:
             statistical_errors=stat_errors
         )
         
-        # 6. Master Row-by-Row Log
         row_log = []
         for idx in range(total_rows):
             listing_id = int(df.loc[idx, 'id']) if 'id' in df.columns and pd.notna(df.loc[idx, 'id']) else idx

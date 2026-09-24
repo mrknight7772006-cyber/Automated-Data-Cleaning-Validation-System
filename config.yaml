@@ -1,0 +1,30 @@
+# Pipeline Configuration for Data Cleaning & Validation System
+pipeline:
+  city_name: "Albany"
+  input_path: "listings.csv.gz"
+  output_dir: "output"
+  log_level: "INFO"
+
+profiling:
+  output_json: "output/profiling_report.json"
+  parquet_cache: "output/raw_data_loaded.parquet"
+  generate_visualizations: true
+
+cleaning:
+  imputation_method: "median"  # Options: median, knn, mean, iterative
+  deduplication_threshold: 0.85
+  output_cleaned_csv: "output/cleaned_data.csv"
+  output_imputed_parquet: "output/imputed_data.parquet"
+  cleaning_log_json: "output/cleaning_log.json"
+  quality_score_before: "output/quality_score_before.json"
+  quality_score_after: "output/quality_score_after.json"
+  quality_delta_json: "output/quality_delta.json"
+
+validation:
+  contamination: 0.05        # Anomaly contamination threshold (0.01 to 0.20)
+  output_report: "output/validation_report.json"
+  anomaly_report: "output/anomaly_report.json"
+  nlp_report: "output/nlp_classification_report.json"
+  evaluation_metrics: "output/evaluation_metrics.json"
+  roc_curve: "output/roc_curve.png"
+  eval_sample_size: 200

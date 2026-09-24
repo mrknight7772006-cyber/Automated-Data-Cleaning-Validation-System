@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-24T16:33:56.471377+00:00",
+  "timestamp": "2026-09-24T17:00:39.821436+00:00",
   "dataset_path": "cleaned_data.csv",
   "features_evaluated": [
     "price",
@@ -14,22 +14,22 @@
     "autoencoder_architecture": "MLP (4-2-4)"
   },
   "summary": {
-    "total_rows_evaluated": 460,
-    "isolation_forest_anomalies_count": 23,
-    "isolation_forest_anomalies_pct": 5.0,
-    "local_outlier_factor_anomalies_count": 23,
-    "local_outlier_factor_anomalies_pct": 5.0,
-    "autoencoder_anomalies_count": 23,
-    "autoencoder_anomalies_pct": 5.0,
-    "total_union_flagged_count": 32,
-    "total_consensus_anomalies_count": 19
+    "total_rows_evaluated": 466,
+    "isolation_forest_anomalies_count": 24,
+    "isolation_forest_anomalies_pct": 5.15,
+    "local_outlier_factor_anomalies_count": 24,
+    "local_outlier_factor_anomalies_pct": 5.15,
+    "autoencoder_anomalies_count": 24,
+    "autoencoder_anomalies_pct": 5.15,
+    "total_union_flagged_count": 33,
+    "total_consensus_anomalies_count": 22
   },
   "overlap_statistics": {
-    "both_if_and_lof_count": 14,
+    "both_if_and_lof_count": 15,
     "all_three_models_count": 14,
-    "jaccard_similarity_if_lof": 0.4375,
-    "pct_if_anomalies_in_lof": 60.87,
-    "pct_lof_anomalies_in_if": 60.87
+    "jaccard_similarity_if_lof": 0.4545,
+    "pct_if_anomalies_in_lof": 62.5,
+    "pct_lof_anomalies_in_if": 62.5
   },
   "flagged_rows": [
     {
@@ -42,12 +42,12 @@
         "number_of_reviews": 406
       },
       "scores": {
-        "isolation_forest_decision_score": -0.017371641516600533,
-        "isolation_forest_anomaly_score": 0.6184954630741987,
-        "lof_negative_factor": -1.4372118917819565,
-        "lof_anomaly_score": 0.023148557344587088,
-        "autoencoder_mse_loss": 3.09165168137407,
-        "autoencoder_anomaly_score": 0.040187925881638886
+        "isolation_forest_decision_score": -0.014018591172752837,
+        "isolation_forest_anomaly_score": 0.6122248195368641,
+        "lof_negative_factor": -1.4280013868680737,
+        "lof_anomaly_score": 0.022744558987013854,
+        "autoencoder_mse_loss": 2.9236487332884638,
+        "autoencoder_anomaly_score": 0.03744471078282252
       },
       "flagged_by": {
         "isolation_forest": true,
@@ -56,11 +56,11 @@
       },
       "anomaly_consensus": true,
       "anomaly_reasons": [
-        "Reviews count (406) exceeds 95th percentile (249)"
+        "Reviews count (406) exceeds 95th percentile (258)"
       ]
     },
     {
-      "row_index": 3,
+      "row_index": 4,
       "listing_id": 9501054,
       "feature_values": {
         "price": 86.0,
@@ -69,12 +69,12 @@
         "number_of_reviews": 469
       },
       "scores": {
-        "isolation_forest_decision_score": 0.0001987419812163882,
-        "isolation_forest_anomaly_score": 0.5653996599798449,
-        "lof_negative_factor": -1.398886807861334,
-        "lof_anomaly_score": 0.02129052754710975,
-        "autoencoder_mse_loss": 3.4608781160112367,
-        "autoencoder_anomaly_score": 0.04500372196979281
+        "isolation_forest_decision_score": 0.01092648954463693,
+        "isolation_forest_anomaly_score": 0.5362008521909003,
+        "lof_negative_factor": -1.337234306823069,
+        "lof_anomaly_score": 0.01836164807483725,
+        "autoencoder_mse_loss": 3.2024654193276874,
+        "autoencoder_anomaly_score": 0.04103292830984975
       },
       "flagged_by": {
         "isolation_forest": false,
@@ -83,11 +83,11 @@
       },
       "anomaly_consensus": false,
       "anomaly_reasons": [
-        "Reviews count (469) exceeds 95th percentile (249)"
+        "Reviews count (469) exceeds 95th percentile (258)"
       ]
     },
     {
-      "row_index": 4,
+      "row_index": 5,
       "listing_id": 10768745,
       "feature_values": {
         "price": 58.0,
@@ -96,12 +96,12 @@
         "number_of_reviews": 906
       },
       "scores": {
-        "isolation_forest_decision_score": -0.122570071996142,
-        "isolation_forest_anomaly_score": 0.9363937691226012,
-        "lof_negative_factor": -2.703813341599863,
-        "lof_anomaly_score": 0.08455437814236795,
-        "autoencoder_mse_loss": 14.917638721599788,
-        "autoencoder_anomaly_score": 0.1944334965782318
+        "isolation_forest_decision_score": -0.11223122011021269,
+        "isolation_forest_anomaly_score": 0.9115429007206077,
+        "lof_negative_factor": -2.5046571797797994,
+        "lof_anomaly_score": 0.07473352261866545,
+        "autoencoder_mse_loss": 13.876387766845378,
+        "autoencoder_anomaly_score": 0.178400443122441
       },
       "flagged_by": {
         "isolation_forest": true,
@@ -110,38 +110,11 @@
       },
       "anomaly_consensus": true,
       "anomaly_reasons": [
-        "Reviews count (906) exceeds 95th percentile (249)"
+        "Reviews count (906) exceeds 95th percentile (258)"
       ]
     },
     {
-      "row_index": 6,
-      "listing_id": 11639446,
-      "feature_values": {
-        "price": 62.87,
-        "minimum_nights": 15.0,
-        "availability_365": 364,
-        "number_of_reviews": 231
-      },
-      "scores": {
-        "isolation_forest_decision_score": -0.0037760976431105986,
-        "isolation_forest_anomaly_score": 0.5774111964412502,
-        "lof_negative_factor": -1.5292005605231593,
-        "lof_anomaly_score": 0.027608239361342088,
-        "autoencoder_mse_loss": 0.7003699846101574,
-        "autoencoder_anomaly_score": 0.008998596081170344
-      },
-      "flagged_by": {
-        "isolation_forest": true,
-        "local_outlier_factor": false,
-        "autoencoder": false
-      },
-      "anomaly_consensus": false,
-      "anomaly_reasons": [
-        "Multi-dimensional feature outlier"
-      ]
-    },
-    {
-      "row_index": 12,
+      "row_index": 13,
       "listing_id": 16531782,
       "feature_values": {
         "price": 92.0,
@@ -150,25 +123,25 @@
         "number_of_reviews": 604
       },
       "scores": {
-        "isolation_forest_decision_score": -0.03663550803173754,
-        "isolation_forest_anomaly_score": 0.6767087891208792,
-        "lof_negative_factor": -1.8165326242235071,
-        "lof_anomaly_score": 0.04153832069480076,
-        "autoencoder_mse_loss": 6.045552117431932,
-        "autoencoder_anomaly_score": 0.07871545487273808
+        "isolation_forest_decision_score": -0.014944908850041516,
+        "isolation_forest_anomaly_score": 0.6150479150260317,
+        "lof_negative_factor": -1.7249873249135135,
+        "lof_anomaly_score": 0.03708525285947251,
+        "autoencoder_mse_loss": 5.584342097810441,
+        "autoencoder_anomaly_score": 0.07168637221365862
       },
       "flagged_by": {
         "isolation_forest": true,
-        "local_outlier_factor": true,
+        "local_outlier_factor": false,
         "autoencoder": true
       },
       "anomaly_consensus": true,
       "anomaly_reasons": [
-        "Reviews count (604) exceeds 95th percentile (249)"
+        "Reviews count (604) exceeds 95th percentile (258)"
       ]
     },
     {
-      "row_index": 23,
+      "row_index": 24,
       "listing_id": 21449583,
       "feature_values": {
         "price": 845.75,
@@ -177,12 +150,12 @@
         "number_of_reviews": 9
       },
       "scores": {
-        "isolation_forest_decision_score": -0.02064821418922269,
-        "isolation_forest_anomaly_score": 0.628396912150225,
-        "lof_negative_factor": -2.217699158235028,
-        "lof_anomaly_score": 0.0609871854510505,
-        "autoencoder_mse_loss": 4.0059537101415765,
-        "autoencoder_anomaly_score": 0.05211310707257017
+        "isolation_forest_decision_score": -0.007283619935189001,
+        "isolation_forest_anomaly_score": 0.5916989595790882,
+        "lof_negative_factor": -2.2325136670473955,
+        "lof_anomaly_score": 0.06159240613632941,
+        "autoencoder_mse_loss": 4.164659932996472,
+        "autoencoder_anomaly_score": 0.053415842931645655
       },
       "flagged_by": {
         "isolation_forest": true,
@@ -191,11 +164,11 @@
       },
       "anomaly_consensus": true,
       "anomaly_reasons": [
-        "Price ($845.75) exceeds 95th percentile ($371.74)"
+        "Price ($845.75) exceeds 95th percentile ($370.78)"
       ]
     },
     {
-      "row_index": 29,
+      "row_index": 30,
       "listing_id": 25549565,
       "feature_values": {
         "price": 115.0,
@@ -204,12 +177,12 @@
         "number_of_reviews": 996
       },
       "scores": {
-        "isolation_forest_decision_score": -0.12108938570568717,
-        "isolation_forest_anomaly_score": 0.9319192949181954,
-        "lof_negative_factor": -3.078613415622136,
-        "lof_anomaly_score": 0.10272497646571226,
-        "autoencoder_mse_loss": 18.268716433034875,
-        "autoencoder_anomaly_score": 0.23814138263381066
+        "isolation_forest_decision_score": -0.11006725546752605,
+        "isolation_forest_anomaly_score": 0.904947885887934,
+        "lof_negative_factor": -2.80191749595301,
+        "lof_anomaly_score": 0.08908746551147019,
+        "autoencoder_mse_loss": 17.063194014737306,
+        "autoencoder_anomaly_score": 0.21941288823957814
       },
       "flagged_by": {
         "isolation_forest": true,
@@ -218,11 +191,11 @@
       },
       "anomaly_consensus": true,
       "anomaly_reasons": [
-        "Reviews count (996) exceeds 95th percentile (249)"
+        "Reviews count (996) exceeds 95th percentile (258)"
       ]
     },
     {
-      "row_index": 33,
+      "row_index": 35,
       "listing_id": 28722270,
       "feature_values": {
         "price": 142.0,
@@ -231,12 +204,12 @@
         "number_of_reviews": 749
       },
       "scores": {
-        "isolation_forest_decision_score": -0.09219630941308787,
-        "isolation_forest_anomaly_score": 0.8446075359111934,
-        "lof_negative_factor": -2.254547013463008,
-        "lof_anomaly_score": 0.06277359805561307,
-        "autoencoder_mse_loss": 9.741353406882965,
-        "autoencoder_anomaly_score": 0.12691954787009502
+        "isolation_forest_decision_score": -0.08767204020463182,
+        "isolation_forest_anomaly_score": 0.8366950254085048,
+        "lof_negative_factor": -2.065290548490381,
+        "lof_anomaly_score": 0.05351762802593589,
+        "autoencoder_mse_loss": 9.017964240902065,
+        "autoencoder_anomaly_score": 0.11587520226559078
       },
       "flagged_by": {
         "isolation_forest": true,
@@ -245,11 +218,38 @@
       },
       "anomaly_consensus": true,
       "anomaly_reasons": [
-        "Reviews count (749) exceeds 95th percentile (249)"
+        "Reviews count (749) exceeds 95th percentile (258)"
       ]
     },
     {
-      "row_index": 39,
+      "row_index": 36,
+      "listing_id": 28868857,
+      "feature_values": {
+        "price": 119.0,
+        "minimum_nights": 1.0,
+        "availability_365": 338,
+        "number_of_reviews": 692
+      },
+      "scores": {
+        "isolation_forest_decision_score": -0.052886874053880595,
+        "isolation_forest_anomaly_score": 0.7306818853618146,
+        "lof_negative_factor": -1.9026562223381895,
+        "lof_anomaly_score": 0.04566443100303399,
+        "autoencoder_mse_loss": 7.5511905280832865,
+        "autoencoder_anomaly_score": 0.09699863063967759
+      },
+      "flagged_by": {
+        "isolation_forest": true,
+        "local_outlier_factor": true,
+        "autoencoder": true
+      },
+      "anomaly_consensus": true,
+      "anomaly_reasons": [
+        "Reviews count (692) exceeds 95th percentile (258)"
+      ]
+    },
+    {
+      "row_index": 42,
       "listing_id": 32993402,
       "feature_values": {
         "price": 188.0,
@@ -258,25 +258,25 @@
         "number_of_reviews": 488
       },
       "scores": {
-        "isolation_forest_decision_score": 0.0013384852421679527,
-        "isolation_forest_anomaly_score": 0.5619554788230067,
-        "lof_negative_factor": -1.7006596231765347,
-        "lof_anomaly_score": 0.03592070772063719,
-        "autoencoder_mse_loss": 3.851932688705345,
-        "autoencoder_anomaly_score": 0.050104221026112075
+        "isolation_forest_decision_score": -0.0009406487438459177,
+        "isolation_forest_anomaly_score": 0.572367780009447,
+        "lof_negative_factor": -1.615582075500979,
+        "lof_anomaly_score": 0.031802352260909196,
+        "autoencoder_mse_loss": 3.5538037705267356,
+        "autoencoder_anomaly_score": 0.04555445981357017
       },
       "flagged_by": {
-        "isolation_forest": false,
+        "isolation_forest": true,
         "local_outlier_factor": false,
         "autoencoder": true
       },
-      "anomaly_consensus": false,
+      "anomaly_consensus": true,
       "anomaly_reasons": [
-        "Reviews count (488) exceeds 95th percentile (249)"
+        "Reviews count (488) exceeds 95th percentile (258)"
       ]
     },
     {
-      "row_index": 40,
+      "row_index": 43,
       "listing_id": 33558235,
       "feature_values": {
         "price": 186.0,
@@ -285,12 +285,12 @@
         "number_of_reviews": 505
       },
       "scores": {
-        "isolation_forest_decision_score": -0.008721874193770796,
-        "isolation_forest_anomaly_score": 0.5923567995304003,
-        "lof_negative_factor": -1.7046723258546337,
-        "lof_anomaly_score": 0.03611524665914981,
-        "autoencoder_mse_loss": 4.15389145051953,
-        "autoencoder_anomaly_score": 0.05404264928452631
+        "isolation_forest_decision_score": -0.011233830507007991,
+        "isolation_forest_anomaly_score": 0.6037378334125288,
+        "lof_negative_factor": -1.5760155937238962,
+        "lof_anomaly_score": 0.02989178771866294,
+        "autoencoder_mse_loss": 3.8339421400424554,
+        "autoencoder_anomaly_score": 0.04915968668061545
       },
       "flagged_by": {
         "isolation_forest": true,
@@ -299,11 +299,11 @@
       },
       "anomaly_consensus": true,
       "anomaly_reasons": [
-        "Reviews count (505) exceeds 95th percentile (249)"
+        "Reviews count (505) exceeds 95th percentile (258)"
       ]
     },
     {
-      "row_index": 44,
+      "row_index": 47,
       "listing_id": 38321579,
       "feature_values": {
         "price": 75.0,
@@ -312,12 +312,12 @@
         "number_of_reviews": 490
       },
       "scores": {
-        "isolation_forest_decision_score": -0.008738908563673209,
-        "isolation_forest_anomaly_score": 0.5924082755582449,
-        "lof_negative_factor": -1.4620150799000426,
-        "lof_anomaly_score": 0.024351035144538926,
-        "autoencoder_mse_loss": 3.832496305397012,
-        "autoencoder_anomaly_score": 0.04985071355773129
+        "isolation_forest_decision_score": -0.0013904474816381907,
+        "isolation_forest_anomaly_score": 0.5737386107933433,
+        "lof_negative_factor": -1.3890923247530886,
+        "lof_anomaly_score": 0.020865739564357867,
+        "autoencoder_mse_loss": 3.5479410848199686,
+        "autoencoder_anomaly_score": 0.04547901027033332
       },
       "flagged_by": {
         "isolation_forest": true,
@@ -326,11 +326,11 @@
       },
       "anomaly_consensus": true,
       "anomaly_reasons": [
-        "Reviews count (490) exceeds 95th percentile (249)"
+        "Reviews count (490) exceeds 95th percentile (258)"
       ]
     },
     {
-      "row_index": 51,
+      "row_index": 54,
       "listing_id": 42567833,
       "feature_values": {
         "price": 77.54,
@@ -339,15 +339,15 @@
         "number_of_reviews": 0
       },
       "scores": {
-        "isolation_forest_decision_score": -0.007714221312922875,
-        "isolation_forest_anomaly_score": 0.589311781249746,
-        "lof_negative_factor": -3.7283886023229704,
-        "lof_anomaly_score": 0.1342265815516154,
-        "autoencoder_mse_loss": 2.468741684780551,
-        "autoencoder_anomaly_score": 0.03206335178982201
+        "isolation_forest_decision_score": 0.002821946231537864,
+        "isolation_forest_anomaly_score": 0.5609006935411618,
+        "lof_negative_factor": -3.736639462117607,
+        "lof_anomaly_score": 0.13422280646683288,
+        "autoencoder_mse_loss": 2.521063965142798,
+        "autoencoder_anomaly_score": 0.032263666055207994
       },
       "flagged_by": {
-        "isolation_forest": true,
+        "isolation_forest": false,
         "local_outlier_factor": true,
         "autoencoder": true
       },
@@ -357,7 +357,7 @@
       ]
     },
     {
-      "row_index": 57,
+      "row_index": 60,
       "listing_id": 44180048,
       "feature_values": {
         "price": 140.0,
@@ -366,12 +366,12 @@
         "number_of_reviews": 401
       },
       "scores": {
-        "isolation_forest_decision_score": 0.04154145199645609,
-        "isolation_forest_anomaly_score": 0.44046645117259964,
-        "lof_negative_factor": -1.4235521177233568,
-        "lof_anomaly_score": 0.022486320902254622,
-        "autoencoder_mse_loss": 2.385461349175416,
-        "autoencoder_anomaly_score": 0.030977131853209203
+        "isolation_forest_decision_score": 0.051273226209961,
+        "isolation_forest_anomaly_score": 0.4132379712320706,
+        "lof_negative_factor": -1.3907661423686157,
+        "lof_anomaly_score": 0.020946563950120303,
+        "autoencoder_mse_loss": 2.19334340416773,
+        "autoencoder_anomaly_score": 0.028046082532633215
       },
       "flagged_by": {
         "isolation_forest": false,
@@ -380,11 +380,11 @@
       },
       "anomaly_consensus": false,
       "anomaly_reasons": [
-        "Reviews count (401) exceeds 95th percentile (249)"
+        "Reviews count (401) exceeds 95th percentile (258)"
       ]
     },
     {
-      "row_index": 75,
+      "row_index": 78,
       "listing_id": 48470454,
       "feature_values": {
         "price": 1040.5,
@@ -393,12 +393,12 @@
         "number_of_reviews": 67
       },
       "scores": {
-        "isolation_forest_decision_score": -0.041102097877916854,
-        "isolation_forest_anomaly_score": 0.6902063416931064,
-        "lof_negative_factor": -2.576017441292571,
-        "lof_anomaly_score": 0.07835873376339712,
-        "autoencoder_mse_loss": 5.716868370483042,
-        "autoencoder_anomaly_score": 0.07442845439198512
+        "isolation_forest_decision_score": -0.040011665652194606,
+        "isolation_forest_anomaly_score": 0.6914427089409544,
+        "lof_negative_factor": -2.5935256925993513,
+        "lof_anomaly_score": 0.07902475655934742,
+        "autoencoder_mse_loss": 6.000224127107116,
+        "autoencoder_anomaly_score": 0.07703854538484411
       },
       "flagged_by": {
         "isolation_forest": true,
@@ -407,11 +407,11 @@
       },
       "anomaly_consensus": true,
       "anomaly_reasons": [
-        "Price ($1040.50) exceeds 95th percentile ($371.74)"
+        "Price ($1040.50) exceeds 95th percentile ($370.78)"
       ]
     },
     {
-      "row_index": 88,
+      "row_index": 91,
       "listing_id": 52241973,
       "feature_values": {
         "price": 118.0,
@@ -420,12 +420,12 @@
         "number_of_reviews": 401
       },
       "scores": {
-        "isolation_forest_decision_score": 0.0018636718463888036,
-        "isolation_forest_anomaly_score": 0.5603684215724369,
-        "lof_negative_factor": -1.3387466886387382,
-        "lof_anomaly_score": 0.01837488791613443,
-        "autoencoder_mse_loss": 2.809890679186343,
-        "autoencoder_anomaly_score": 0.03651293567281651
+        "isolation_forest_decision_score": 0.01747276650743368,
+        "isolation_forest_anomaly_score": 0.5162500670362804,
+        "lof_negative_factor": -1.3627479585141835,
+        "lof_anomaly_score": 0.0195936372756688,
+        "autoencoder_mse_loss": 2.6481332584777735,
+        "autoencoder_anomaly_score": 0.0338989780301426
       },
       "flagged_by": {
         "isolation_forest": false,
@@ -434,11 +434,11 @@
       },
       "anomaly_consensus": false,
       "anomaly_reasons": [
-        "Reviews count (401) exceeds 95th percentile (249)"
+        "Reviews count (401) exceeds 95th percentile (258)"
       ]
     },
     {
-      "row_index": 91,
+      "row_index": 94,
       "listing_id": 52691284,
       "feature_values": {
         "price": 819.0,
@@ -447,12 +447,12 @@
         "number_of_reviews": 113
       },
       "scores": {
-        "isolation_forest_decision_score": -0.008311146902370892,
-        "isolation_forest_anomaly_score": 0.5911156259730698,
-        "lof_negative_factor": -2.082693043110313,
-        "lof_anomaly_score": 0.05444198426472259,
-        "autoencoder_mse_loss": 2.5153729393077007,
-        "autoencoder_anomaly_score": 0.03267156017381335
+        "isolation_forest_decision_score": -0.025034540944388173,
+        "isolation_forest_anomaly_score": 0.6457976195294398,
+        "lof_negative_factor": -2.094069413668593,
+        "lof_anomaly_score": 0.054907286062385915,
+        "autoencoder_mse_loss": 2.6851029895554297,
+        "autoencoder_anomaly_score": 0.034374758152583576
       },
       "flagged_by": {
         "isolation_forest": true,
@@ -461,11 +461,11 @@
       },
       "anomaly_consensus": true,
       "anomaly_reasons": [
-        "Price ($819.00) exceeds 95th percentile ($371.74)"
+        "Price ($819.00) exceeds 95th percentile ($370.78)"
       ]
     },
     {
-      "row_index": 97,
+      "row_index": 100,
       "listing_id": 53860077,
       "feature_values": {
         "price": 700.5,
@@ -474,12 +474,12 @@
         "number_of_reviews": 62
       },
       "scores": {
-        "isolation_forest_decision_score": 0.02801143726976174,
-        "isolation_forest_anomaly_score": 0.48135269579449586,
-        "lof_negative_factor": -1.8698158468886394,
-        "lof_anomaly_score": 0.04412153266173303,
-        "autoencoder_mse_loss": 2.6186413023857673,
-        "autoencoder_anomaly_score": 0.03401848263734206
+        "isolation_forest_decision_score": 0.024971545652188065,
+        "isolation_forest_anomaly_score": 0.49339638509016503,
+        "lof_negative_factor": -1.8842696088521755,
+        "lof_anomaly_score": 0.044776588308900085,
+        "autoencoder_mse_loss": 2.727432920223439,
+        "autoencoder_anomaly_score": 0.034919521098081864
       },
       "flagged_by": {
         "isolation_forest": false,
@@ -488,11 +488,11 @@
       },
       "anomaly_consensus": true,
       "anomaly_reasons": [
-        "Price ($700.50) exceeds 95th percentile ($371.74)"
+        "Price ($700.50) exceeds 95th percentile ($370.78)"
       ]
     },
     {
-      "row_index": 110,
+      "row_index": 113,
       "listing_id": 621960000000000000,
       "feature_values": {
         "price": 1701.0,
@@ -501,12 +501,12 @@
         "number_of_reviews": 18
       },
       "scores": {
-        "isolation_forest_decision_score": -0.09382041672490626,
-        "isolation_forest_anomaly_score": 0.8495154129670996,
-        "lof_negative_factor": -4.2641124064057605,
-        "lof_anomaly_score": 0.16019888713783012,
-        "autoencoder_mse_loss": 11.92867187879224,
-        "autoencoder_anomaly_score": 0.15544859875161926
+        "isolation_forest_decision_score": -0.11994064023708562,
+        "isolation_forest_anomaly_score": 0.9350385434335663,
+        "lof_negative_factor": -4.287665426405804,
+        "lof_anomaly_score": 0.16083044560840168,
+        "autoencoder_mse_loss": 12.726627687988673,
+        "autoencoder_anomaly_score": 0.1636036627523829
       },
       "flagged_by": {
         "isolation_forest": true,
@@ -515,11 +515,11 @@
       },
       "anomaly_consensus": true,
       "anomaly_reasons": [
-        "Price ($1701.00) exceeds 95th percentile ($371.74)"
+        "Price ($1701.00) exceeds 95th percentile ($370.78)"
       ]
     },
     {
-      "row_index": 113,
+      "row_index": 116,
       "listing_id": 634108000000000000,
       "feature_values": {
         "price": 145.67,
@@ -528,12 +528,12 @@
         "number_of_reviews": 103
       },
       "scores": {
-        "isolation_forest_decision_score": -0.03232219249438539,
-        "isolation_forest_anomaly_score": 0.6636744149717024,
-        "lof_negative_factor": -1.6967913397206398,
-        "lof_anomaly_score": 0.03573317033804391,
-        "autoencoder_mse_loss": 0.9738445997640603,
-        "autoencoder_anomaly_score": 0.012565507489238296
+        "isolation_forest_decision_score": -0.039448242295510694,
+        "isolation_forest_anomaly_score": 0.6897255896677892,
+        "lof_negative_factor": -1.7305663142487198,
+        "lof_anomaly_score": 0.037354648032525,
+        "autoencoder_mse_loss": 0.9361433898648659,
+        "autoencoder_anomaly_score": 0.011866609236455352
       },
       "flagged_by": {
         "isolation_forest": true,
@@ -546,7 +546,7 @@
       ]
     },
     {
-      "row_index": 114,
+      "row_index": 117,
       "listing_id": 638901000000000000,
       "feature_values": {
         "price": 1267.0,
@@ -555,12 +555,12 @@
         "number_of_reviews": 10
       },
       "scores": {
-        "isolation_forest_decision_score": -0.050852942609460716,
-        "isolation_forest_anomaly_score": 0.7196723423603084,
-        "lof_negative_factor": -3.1409169221549034,
-        "lof_anomaly_score": 0.10574549879163767,
-        "autoencoder_mse_loss": 9.10368510936325,
-        "autoencoder_anomaly_score": 0.11860248223054262
+        "isolation_forest_decision_score": -0.06646507112354438,
+        "isolation_forest_anomaly_score": 0.7720635277920819,
+        "lof_negative_factor": -3.160888162302517,
+        "lof_anomaly_score": 0.10642124390242934,
+        "autoencoder_mse_loss": 9.523749837037771,
+        "autoencoder_anomaly_score": 0.12238438493594482
       },
       "flagged_by": {
         "isolation_forest": true,
@@ -569,11 +569,11 @@
       },
       "anomaly_consensus": true,
       "anomaly_reasons": [
-        "Price ($1267.00) exceeds 95th percentile ($371.74)"
+        "Price ($1267.00) exceeds 95th percentile ($370.78)"
       ]
     },
     {
-      "row_index": 143,
+      "row_index": 146,
       "listing_id": 795542000000000000,
       "feature_values": {
         "price": 840.0,
@@ -582,25 +582,25 @@
         "number_of_reviews": 9
       },
       "scores": {
-        "isolation_forest_decision_score": 0.000661959671467538,
-        "isolation_forest_anomaly_score": 0.563999866100875,
-        "lof_negative_factor": -2.044287995112992,
-        "lof_anomaly_score": 0.052580077746778295,
-        "autoencoder_mse_loss": 1.8469964292089027,
-        "autoencoder_anomaly_score": 0.023953969338501687
+        "isolation_forest_decision_score": -0.020445493313842156,
+        "isolation_forest_anomaly_score": 0.6318117915753738,
+        "lof_negative_factor": -2.0537053291464638,
+        "lof_anomaly_score": 0.052958207316828154,
+        "autoencoder_mse_loss": 1.996633903492153,
+        "autoencoder_anomaly_score": 0.02551453935964828
       },
       "flagged_by": {
-        "isolation_forest": false,
+        "isolation_forest": true,
         "local_outlier_factor": true,
         "autoencoder": false
       },
-      "anomaly_consensus": false,
+      "anomaly_consensus": true,
       "anomaly_reasons": [
-        "Price ($840.00) exceeds 95th percentile ($371.74)"
+        "Price ($840.00) exceeds 95th percentile ($370.78)"
       ]
     },
     {
-      "row_index": 149,
+      "row_index": 153,
       "listing_id": 813640000000000000,
       "feature_values": {
         "price": 62.8,
@@ -609,12 +609,12 @@
         "number_of_reviews": 24
       },
       "scores": {
-        "isolation_forest_decision_score": 0.15110477022519997,
-        "isolation_forest_anomaly_score": 0.10937792531542617,
-        "lof_negative_factor": -1.970234319623432,
-        "lof_anomaly_score": 0.04898989811514856,
-        "autoencoder_mse_loss": 0.12641336066501982,
-        "autoencoder_anomaly_score": 0.0015125176071812678
+        "isolation_forest_decision_score": 0.1527016926454216,
+        "isolation_forest_anomaly_score": 0.104119131024625,
+        "lof_negative_factor": -1.9771034139053885,
+        "lof_anomaly_score": 0.049259296103233235,
+        "autoencoder_mse_loss": 0.13020872917364534,
+        "autoencoder_anomaly_score": 0.0014946730506699751
       },
       "flagged_by": {
         "isolation_forest": false,
@@ -627,7 +627,7 @@
       ]
     },
     {
-      "row_index": 151,
+      "row_index": 155,
       "listing_id": 821566000000000000,
       "feature_values": {
         "price": 13.25,
@@ -636,12 +636,12 @@
         "number_of_reviews": 3
       },
       "scores": {
-        "isolation_forest_decision_score": -0.07717648704549229,
-        "isolation_forest_anomaly_score": 0.7992192533480318,
-        "lof_negative_factor": -5.048319476081838,
-        "lof_anomaly_score": 0.19821785419001936,
-        "autoencoder_mse_loss": 4.175663761939218,
-        "autoencoder_anomaly_score": 0.05432662410953589
+        "isolation_forest_decision_score": -0.044402060821101985,
+        "isolation_forest_anomaly_score": 0.7048231129868795,
+        "lof_negative_factor": -5.06278420038665,
+        "lof_anomaly_score": 0.19825895527323995,
+        "autoencoder_mse_loss": 4.258836211300725,
+        "autoencoder_anomaly_score": 0.05462783987932466
       },
       "flagged_by": {
         "isolation_forest": true,
@@ -654,7 +654,7 @@
       ]
     },
     {
-      "row_index": 162,
+      "row_index": 166,
       "listing_id": 870457000000000000,
       "feature_values": {
         "price": 13.18,
@@ -663,12 +663,12 @@
         "number_of_reviews": 4
       },
       "scores": {
-        "isolation_forest_decision_score": -0.08459150633861112,
-        "isolation_forest_anomaly_score": 0.8216266415747708,
-        "lof_negative_factor": -3.0150379880097833,
-        "lof_anomaly_score": 0.09964279041921147,
-        "autoencoder_mse_loss": 4.336848827256543,
-        "autoencoder_anomaly_score": 0.056428950308868846
+        "isolation_forest_decision_score": -0.0710552934412273,
+        "isolation_forest_anomaly_score": 0.7860529357857376,
+        "lof_negative_factor": -3.025517171350113,
+        "lof_anomaly_score": 0.0998845238367043,
+        "autoencoder_mse_loss": 4.4203600391766456,
+        "autoencoder_anomaly_score": 0.05670656277948628
       },
       "flagged_by": {
         "isolation_forest": true,
@@ -681,7 +681,7 @@
       ]
     },
     {
-      "row_index": 165,
+      "row_index": 169,
       "listing_id": 887168000000000000,
       "feature_values": {
         "price": 48.71,
@@ -690,12 +690,12 @@
         "number_of_reviews": 32
       },
       "scores": {
-        "isolation_forest_decision_score": 0.13273254835013215,
-        "isolation_forest_anomaly_score": 0.16489679746785146,
-        "lof_negative_factor": -2.200783413364459,
-        "lof_anomaly_score": 0.060167097018077,
-        "autoencoder_mse_loss": 0.13217702497988923,
-        "autoencoder_anomaly_score": 0.0015876927015329397
+        "isolation_forest_decision_score": 0.12146131673342364,
+        "isolation_forest_anomaly_score": 0.19932897801276042,
+        "lof_negative_factor": -2.3121665094728927,
+        "lof_anomaly_score": 0.06543863884624469,
+        "autoencoder_mse_loss": 0.13740012657843542,
+        "autoencoder_anomaly_score": 0.001587222383273605
       },
       "flagged_by": {
         "isolation_forest": false,
@@ -708,7 +708,7 @@
       ]
     },
     {
-      "row_index": 212,
+      "row_index": 216,
       "listing_id": 1012860000000000000,
       "feature_values": {
         "price": 1265.0,
@@ -717,12 +717,12 @@
         "number_of_reviews": 11
       },
       "scores": {
-        "isolation_forest_decision_score": -0.040632613458161604,
-        "isolation_forest_anomaly_score": 0.6887876104337523,
-        "lof_negative_factor": -3.111119205281748,
-        "lof_anomaly_score": 0.10430088236335311,
-        "autoencoder_mse_loss": 8.60235709241096,
-        "autoencoder_anomaly_score": 0.11206369389786734
+        "isolation_forest_decision_score": -0.06563589521500002,
+        "isolation_forest_anomaly_score": 0.7695364867730768,
+        "lof_negative_factor": -3.1310732461632105,
+        "lof_anomaly_score": 0.10498155760616637,
+        "autoencoder_mse_loss": 9.022584020229843,
+        "autoencoder_anomaly_score": 0.11593465628676294
       },
       "flagged_by": {
         "isolation_forest": true,
@@ -731,11 +731,11 @@
       },
       "anomaly_consensus": true,
       "anomaly_reasons": [
-        "Price ($1265.00) exceeds 95th percentile ($371.74)"
+        "Price ($1265.00) exceeds 95th percentile ($370.78)"
       ]
     },
     {
-      "row_index": 247,
+      "row_index": 251,
       "listing_id": 1136430000000000000,
       "feature_values": {
         "price": 78.17,
@@ -744,12 +744,12 @@
         "number_of_reviews": 0
       },
       "scores": {
-        "isolation_forest_decision_score": 0.15820289956334105,
-        "isolation_forest_anomaly_score": 0.08792814434035404,
-        "lof_negative_factor": -1.9774795482651075,
-        "lof_anomaly_score": 0.049341152419865836,
-        "autoencoder_mse_loss": 0.17386410850178802,
-        "autoencoder_anomaly_score": 0.0021314145884790536
+        "isolation_forest_decision_score": 0.16127698357199072,
+        "isolation_forest_anomaly_score": 0.07798461397216437,
+        "lof_negative_factor": -1.9964126001746103,
+        "lof_anomaly_score": 0.05019168748524817,
+        "autoencoder_mse_loss": 0.1763682171252028,
+        "autoencoder_anomaly_score": 0.002088720293893719
       },
       "flagged_by": {
         "isolation_forest": false,
@@ -762,7 +762,7 @@
       ]
     },
     {
-      "row_index": 277,
+      "row_index": 281,
       "listing_id": 1242230000000000000,
       "feature_values": {
         "price": 69.0,
@@ -771,12 +771,12 @@
         "number_of_reviews": 40
       },
       "scores": {
-        "isolation_forest_decision_score": 0.16083414547331537,
-        "isolation_forest_anomaly_score": 0.07997680311059778,
-        "lof_negative_factor": -2.108300923905968,
-        "lof_anomaly_score": 0.055683474189888074,
-        "autoencoder_mse_loss": 0.12858536324641584,
-        "autoencoder_anomaly_score": 0.0015408468939107675
+        "isolation_forest_decision_score": 0.16237340817584806,
+        "isolation_forest_anomaly_score": 0.07464309148020253,
+        "lof_negative_factor": -2.084285479642547,
+        "lof_anomaly_score": 0.0544348448294465,
+        "autoencoder_mse_loss": 0.13064259028164313,
+        "autoencoder_anomaly_score": 0.0015002566047037323
       },
       "flagged_by": {
         "isolation_forest": false,
@@ -789,7 +789,7 @@
       ]
     },
     {
-      "row_index": 287,
+      "row_index": 291,
       "listing_id": 1273860000000000000,
       "feature_values": {
         "price": 145.67,
@@ -798,12 +798,12 @@
         "number_of_reviews": 0
       },
       "scores": {
-        "isolation_forest_decision_score": -0.1436185494866279,
-        "isolation_forest_anomaly_score": 0.9999999969781078,
-        "lof_negative_factor": -21.586465454196144,
-        "lof_anomaly_score": 0.9999999999515192,
-        "autoencoder_mse_loss": 76.6803135674841,
-        "autoencoder_anomaly_score": 0.999999999986957
+        "isolation_forest_decision_score": -0.14125587486790447,
+        "isolation_forest_anomaly_score": 0.9999999969523462,
+        "lof_negative_factor": -21.66629155791067,
+        "lof_anomaly_score": 0.9999999999517125,
+        "autoencoder_mse_loss": 77.71746316733594,
+        "autoencoder_anomaly_score": 0.9999999999871305
       },
       "flagged_by": {
         "isolation_forest": true,
@@ -816,7 +816,7 @@
       ]
     },
     {
-      "row_index": 321,
+      "row_index": 325,
       "listing_id": 1377450000000000000,
       "feature_values": {
         "price": 145.67,
@@ -825,12 +825,12 @@
         "number_of_reviews": 3
       },
       "scores": {
-        "isolation_forest_decision_score": -0.053859112643843465,
-        "isolation_forest_anomaly_score": 0.7287566638398917,
-        "lof_negative_factor": -1.8137320844624072,
-        "lof_anomaly_score": 0.04140254835478656,
-        "autoencoder_mse_loss": 2.1965338928797546,
-        "autoencoder_anomaly_score": 0.02851296347407459
+        "isolation_forest_decision_score": -0.043743632306828095,
+        "isolation_forest_anomaly_score": 0.7028164508944248,
+        "lof_negative_factor": -1.815597587879417,
+        "lof_anomaly_score": 0.041460591474657006,
+        "autoencoder_mse_loss": 2.1526986681445273,
+        "autoencoder_anomaly_score": 0.027523007116123405
       },
       "flagged_by": {
         "isolation_forest": true,
@@ -843,7 +843,7 @@
       ]
     },
     {
-      "row_index": 322,
+      "row_index": 326,
       "listing_id": 1377470000000000000,
       "feature_values": {
         "price": 145.67,
@@ -852,39 +852,12 @@
         "number_of_reviews": 2
       },
       "scores": {
-        "isolation_forest_decision_score": -0.044807398693905376,
-        "isolation_forest_anomaly_score": 0.7014033609588224,
-        "lof_negative_factor": -1.8142537632657476,
-        "lof_anomaly_score": 0.04142783974784199,
-        "autoencoder_mse_loss": 2.198811583734111,
-        "autoencoder_anomaly_score": 0.02854267124599296
-      },
-      "flagged_by": {
-        "isolation_forest": true,
-        "local_outlier_factor": false,
-        "autoencoder": false
-      },
-      "anomaly_consensus": false,
-      "anomaly_reasons": [
-        "Minimum nights (56) exceeds 95th percentile (30)"
-      ]
-    },
-    {
-      "row_index": 323,
-      "listing_id": 1377480000000000000,
-      "feature_values": {
-        "price": 145.67,
-        "minimum_nights": 56.0,
-        "availability_365": 0,
-        "number_of_reviews": 2
-      },
-      "scores": {
-        "isolation_forest_decision_score": -0.044807398693905376,
-        "isolation_forest_anomaly_score": 0.7014033609588224,
-        "lof_negative_factor": -1.8142537632657476,
-        "lof_anomaly_score": 0.04142783974784199,
-        "autoencoder_mse_loss": 2.198811583734111,
-        "autoencoder_anomaly_score": 0.02854267124599296
+        "isolation_forest_decision_score": -0.030789314881068508,
+        "isolation_forest_anomaly_score": 0.663336177564275,
+        "lof_negative_factor": -1.816084943821729,
+        "lof_anomaly_score": 0.04148412465074479,
+        "autoencoder_mse_loss": 2.1547236166017227,
+        "autoencoder_anomaly_score": 0.027549067089967343
       },
       "flagged_by": {
         "isolation_forest": true,
@@ -898,6 +871,33 @@
     },
     {
       "row_index": 327,
+      "listing_id": 1377480000000000000,
+      "feature_values": {
+        "price": 145.67,
+        "minimum_nights": 56.0,
+        "availability_365": 0,
+        "number_of_reviews": 2
+      },
+      "scores": {
+        "isolation_forest_decision_score": -0.030789314881068508,
+        "isolation_forest_anomaly_score": 0.663336177564275,
+        "lof_negative_factor": -1.816084943821729,
+        "lof_anomaly_score": 0.04148412465074479,
+        "autoencoder_mse_loss": 2.1547236166017227,
+        "autoencoder_anomaly_score": 0.027549067089967343
+      },
+      "flagged_by": {
+        "isolation_forest": true,
+        "local_outlier_factor": false,
+        "autoencoder": false
+      },
+      "anomaly_consensus": false,
+      "anomaly_reasons": [
+        "Minimum nights (56) exceeds 95th percentile (30)"
+      ]
+    },
+    {
+      "row_index": 331,
       "listing_id": 1383910000000000000,
       "feature_values": {
         "price": 145.67,
@@ -906,16 +906,16 @@
         "number_of_reviews": 1
       },
       "scores": {
-        "isolation_forest_decision_score": -0.05692493634705087,
-        "isolation_forest_anomaly_score": 0.7380212522700604,
-        "lof_negative_factor": -1.8148100301833168,
-        "lof_anomaly_score": 0.04145480799950545,
-        "autoencoder_mse_loss": 2.2011302879483425,
-        "autoencoder_anomaly_score": 0.028572913952465088
+        "isolation_forest_decision_score": -0.04473284733449423,
+        "isolation_forest_anomaly_score": 0.7058312357256882,
+        "lof_negative_factor": -1.8166044266945445,
+        "lof_anomaly_score": 0.041509209154408706,
+        "autoencoder_mse_loss": 2.1567867707009785,
+        "autoencoder_anomaly_score": 0.02757561874942888
       },
       "flagged_by": {
         "isolation_forest": true,
-        "local_outlier_factor": false,
+        "local_outlier_factor": true,
         "autoencoder": true
       },
       "anomaly_consensus": true,
@@ -924,7 +924,7 @@
       ]
     },
     {
-      "row_index": 343,
+      "row_index": 347,
       "listing_id": 1441620000000000000,
       "feature_values": {
         "price": 43.67,
@@ -933,12 +933,12 @@
         "number_of_reviews": 2
       },
       "scores": {
-        "isolation_forest_decision_score": 0.15270017923747764,
-        "isolation_forest_anomaly_score": 0.10455677142419906,
-        "lof_negative_factor": -2.2567459095704017,
-        "lof_anomaly_score": 0.06288020224459687,
-        "autoencoder_mse_loss": 0.21306350410593228,
-        "autoencoder_anomaly_score": 0.0026426897256288185
+        "isolation_forest_decision_score": 0.14935130413940323,
+        "isolation_forest_anomaly_score": 0.11432995492467635,
+        "lof_negative_factor": -2.194298603503648,
+        "lof_anomaly_score": 0.05974709813553918,
+        "autoencoder_mse_loss": 0.21672624908064508,
+        "autoencoder_anomaly_score": 0.002608105986608218
       },
       "flagged_by": {
         "isolation_forest": false,
@@ -951,7 +951,7 @@
       ]
     },
     {
-      "row_index": 431,
+      "row_index": 435,
       "listing_id": 1625790000000000000,
       "feature_values": {
         "price": 71.0,
@@ -960,12 +960,12 @@
         "number_of_reviews": 2
       },
       "scores": {
-        "isolation_forest_decision_score": 0.18069620064641667,
-        "isolation_forest_anomaly_score": 0.0199558154838218,
-        "lof_negative_factor": -1.9245891563375932,
-        "lof_anomaly_score": 0.04677698519181453,
-        "autoencoder_mse_loss": 0.14471587825470855,
-        "autoencoder_anomaly_score": 0.0017512361396135581
+        "isolation_forest_decision_score": 0.18043329067185587,
+        "isolation_forest_anomaly_score": 0.019602823913888193,
+        "lof_negative_factor": -1.9358478177380802,
+        "lof_anomaly_score": 0.04726716853296886,
+        "autoencoder_mse_loss": 0.145916639128361,
+        "autoencoder_anomaly_score": 0.0016968252195848125
       },
       "flagged_by": {
         "isolation_forest": false,
@@ -978,7 +978,7 @@
       ]
     },
     {
-      "row_index": 434,
+      "row_index": 439,
       "listing_id": 1635220000000000000,
       "feature_values": {
         "price": 50.03,
@@ -987,12 +987,12 @@
         "number_of_reviews": 0
       },
       "scores": {
-        "isolation_forest_decision_score": 0.153181499931616,
-        "isolation_forest_anomaly_score": 0.1031022722207876,
-        "lof_negative_factor": -1.8878132888740045,
-        "lof_anomaly_score": 0.04499406260991102,
-        "autoencoder_mse_loss": 0.15470632908106932,
-        "autoencoder_anomaly_score": 0.0018815409322694829
+        "isolation_forest_decision_score": 0.14968691099089737,
+        "isolation_forest_anomaly_score": 0.11330714146465472,
+        "lof_negative_factor": -1.8214507411497691,
+        "lof_anomaly_score": 0.04174322532523971,
+        "autoencoder_mse_loss": 0.15813425873408796,
+        "autoencoder_anomaly_score": 0.0018540592697795478
       },
       "flagged_by": {
         "isolation_forest": false,
