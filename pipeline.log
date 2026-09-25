@@ -107,3 +107,219 @@
 [2026-09-24 22:30:42] [INFO] [PipelineOrchestrator]: Summary: Raw Rows = 490, Cleaned Rows = 466, Health Score = 64.84/100 (Grade: C)
 [2026-09-24 22:30:42] [INFO] [PipelineOrchestrator]: ==================================================
 
+[2026-09-25 11:43:51] [INFO] [PipelineOrchestrator]: ==================================================
+[2026-09-25 11:43:51] [INFO] [PipelineOrchestrator]: STARTING FULL PIPELINE ORCHESTRATION FOR 'ALBANY'
+[2026-09-25 11:43:51] [INFO] [PipelineOrchestrator]: ==================================================
+[2026-09-25 11:43:51] [INFO] [PipelineOrchestrator]: >>> STARTING STAGE 1: Profiling & Metadata Extraction...
+[2026-09-25 11:43:51] [INFO] [PipelineOrchestrator]: Reading raw data from 'listings.csv.gz'...
+[2026-09-25 11:43:52] [INFO] [PipelineOrchestrator]: Loaded raw dataset with 490 rows and 90 columns.
+[2026-09-25 11:43:56] [INFO] [PipelineOrchestrator]: Profiling completed. Report written to 'output/profiling_report.json'. Raw row count: 490.
+[2026-09-25 11:43:56] [INFO] [PipelineOrchestrator]: <<< COMPLETED STAGE 1: Profiling & Metadata Extraction in 4.65s.
+
+[2026-09-25 11:43:56] [INFO] [PipelineOrchestrator]: >>> STARTING STAGE 2: Data Cleaning & Imputation (Method: MEDIAN)...
+[2026-09-25 11:43:56] [INFO] [PipelineOrchestrator]: Applying deduplication (threshold=0.85), schema normalization, and ML imputation ('median')...
+[2026-09-25 11:43:58] [INFO] [PipelineOrchestrator]: Cleaning completed. Output dataset shape: (466, 96). Written to 'output/cleaned_data.csv'. Cleaned row count: 466.
+[2026-09-25 11:43:58] [INFO] [PipelineOrchestrator]: <<< COMPLETED STAGE 2: Data Cleaning & Imputation (Method: MEDIAN) in 2.38s.
+
+[2026-09-25 11:43:58] [INFO] [PipelineOrchestrator]: >>> STARTING STAGE 3: Validation, Anomaly Detection & Scoring (Contamination: 0.05)...
+[2026-09-25 11:43:58] [INFO] [PipelineOrchestrator]: Running rule validator, AI anomaly detector (contamination=0.05), NLP classifier, and error scorer...
+[2026-09-25 11:44:04] [INFO] [PipelineOrchestrator]: Validation completed. Validated row count: 466. Overall Health Score: 71.17/100 (Grade: B).
+[2026-09-25 11:44:04] [INFO] [PipelineOrchestrator]: <<< COMPLETED STAGE 3: Validation, Anomaly Detection & Scoring (Contamination: 0.05) in 5.24s.
+
+[2026-09-25 11:44:04] [INFO] [PipelineOrchestrator]: ==================================================
+[2026-09-25 11:44:04] [INFO] [PipelineOrchestrator]: ALL PIPELINE STAGES COMPLETED SUCCESSFULLY IN 12.27s!
+[2026-09-25 11:44:04] [INFO] [PipelineOrchestrator]: Summary: Raw Rows = 490, Cleaned Rows = 466, Health Score = 71.17/100 (Grade: B)
+[2026-09-25 11:44:04] [INFO] [PipelineOrchestrator]: ==================================================
+
+[2026-09-25 11:44:04] [INFO] [PipelineOrchestrator]: ==================================================
+[2026-09-25 11:44:04] [INFO] [PipelineOrchestrator]: STARTING FULL PIPELINE ORCHESTRATION FOR 'ALBANY'
+[2026-09-25 11:44:04] [INFO] [PipelineOrchestrator]: ==================================================
+[2026-09-25 11:44:04] [INFO] [PipelineOrchestrator]: >>> STARTING STAGE 1: Profiling & Metadata Extraction...
+[2026-09-25 11:44:04] [INFO] [PipelineOrchestrator]: Reading raw data from 'listings.csv.gz'...
+[2026-09-25 11:44:04] [INFO] [PipelineOrchestrator]: Loaded raw dataset with 490 rows and 90 columns.
+[2026-09-25 11:44:07] [INFO] [PipelineOrchestrator]: Profiling completed. Report written to 'output/profiling_report.json'. Raw row count: 490.
+[2026-09-25 11:44:07] [INFO] [PipelineOrchestrator]: <<< COMPLETED STAGE 1: Profiling & Metadata Extraction in 2.85s.
+
+[2026-09-25 11:44:07] [INFO] [PipelineOrchestrator]: >>> STARTING STAGE 2: Data Cleaning & Imputation (Method: MEDIAN)...
+[2026-09-25 11:44:07] [INFO] [PipelineOrchestrator]: Applying deduplication (threshold=0.85), schema normalization, and ML imputation ('median')...
+[2026-09-25 11:44:09] [INFO] [PipelineOrchestrator]: Cleaning completed. Output dataset shape: (466, 96). Written to 'output/cleaned_data.csv'. Cleaned row count: 466.
+[2026-09-25 11:44:09] [INFO] [PipelineOrchestrator]: <<< COMPLETED STAGE 2: Data Cleaning & Imputation (Method: MEDIAN) in 2.14s.
+
+[2026-09-25 11:44:09] [INFO] [PipelineOrchestrator]: >>> STARTING STAGE 3: Validation, Anomaly Detection & Scoring (Contamination: 0.15)...
+[2026-09-25 11:44:09] [INFO] [PipelineOrchestrator]: Running rule validator, AI anomaly detector (contamination=0.15), NLP classifier, and error scorer...
+[2026-09-25 11:44:14] [INFO] [PipelineOrchestrator]: Validation completed. Validated row count: 466. Overall Health Score: 64.84/100 (Grade: C).
+[2026-09-25 11:44:14] [INFO] [PipelineOrchestrator]: <<< COMPLETED STAGE 3: Validation, Anomaly Detection & Scoring (Contamination: 0.15) in 5.54s.
+
+[2026-09-25 11:44:14] [INFO] [PipelineOrchestrator]: ==================================================
+[2026-09-25 11:44:14] [INFO] [PipelineOrchestrator]: ALL PIPELINE STAGES COMPLETED SUCCESSFULLY IN 10.53s!
+[2026-09-25 11:44:14] [INFO] [PipelineOrchestrator]: Summary: Raw Rows = 490, Cleaned Rows = 466, Health Score = 64.84/100 (Grade: C)
+[2026-09-25 11:44:14] [INFO] [PipelineOrchestrator]: ==================================================
+
+[2026-09-25 11:47:25] [INFO] [PipelineOrchestrator]: ==================================================
+[2026-09-25 11:47:25] [INFO] [PipelineOrchestrator]: STARTING FULL PIPELINE ORCHESTRATION FOR 'ALBANY'
+[2026-09-25 11:47:25] [INFO] [PipelineOrchestrator]: ==================================================
+[2026-09-25 11:47:25] [INFO] [PipelineOrchestrator]: >>> STARTING STAGE 1: Profiling & Metadata Extraction...
+[2026-09-25 11:47:25] [INFO] [PipelineOrchestrator]: Reading raw data from 'listings.csv.gz'...
+[2026-09-25 11:47:25] [INFO] [PipelineOrchestrator]: Loaded raw dataset with 490 rows and 90 columns.
+[2026-09-25 11:47:29] [INFO] [PipelineOrchestrator]: Profiling completed. Report written to 'test_results/profiling_report.json'. Raw row count: 490.
+[2026-09-25 11:47:29] [INFO] [PipelineOrchestrator]: <<< COMPLETED STAGE 1: Profiling & Metadata Extraction in 3.90s.
+
+[2026-09-25 11:47:29] [INFO] [PipelineOrchestrator]: >>> STARTING STAGE 2: Data Cleaning & Imputation (Method: MEDIAN)...
+[2026-09-25 11:47:29] [INFO] [PipelineOrchestrator]: Applying deduplication (threshold=0.85), schema normalization, and ML imputation ('median')...
+[2026-09-25 11:47:32] [INFO] [PipelineOrchestrator]: Cleaning completed. Output dataset shape: (466, 96). Written to 'test_results/cleaned_data.csv'. Cleaned row count: 466.
+[2026-09-25 11:47:32] [INFO] [PipelineOrchestrator]: <<< COMPLETED STAGE 2: Data Cleaning & Imputation (Method: MEDIAN) in 3.11s.
+
+[2026-09-25 11:47:32] [INFO] [PipelineOrchestrator]: >>> STARTING STAGE 3: Validation, Anomaly Detection & Scoring (Contamination: 0.05)...
+[2026-09-25 11:47:32] [INFO] [PipelineOrchestrator]: Running rule validator, AI anomaly detector (contamination=0.05), NLP classifier, and error scorer...
+[2026-09-25 11:47:39] [INFO] [PipelineOrchestrator]: Validation completed. Validated row count: 466. Overall Health Score: 71.17/100 (Grade: B).
+[2026-09-25 11:47:39] [INFO] [PipelineOrchestrator]: <<< COMPLETED STAGE 3: Validation, Anomaly Detection & Scoring (Contamination: 0.05) in 6.84s.
+
+[2026-09-25 11:47:39] [INFO] [PipelineOrchestrator]: ==================================================
+[2026-09-25 11:47:39] [INFO] [PipelineOrchestrator]: ALL PIPELINE STAGES COMPLETED SUCCESSFULLY IN 13.86s!
+[2026-09-25 11:47:39] [INFO] [PipelineOrchestrator]: Summary: Raw Rows = 490, Cleaned Rows = 466, Health Score = 71.17/100 (Grade: B)
+[2026-09-25 11:47:39] [INFO] [PipelineOrchestrator]: ==================================================
+
+[2026-09-25 11:48:57] [INFO] [PipelineOrchestrator]: ==================================================
+[2026-09-25 11:48:57] [INFO] [PipelineOrchestrator]: STARTING FULL PIPELINE ORCHESTRATION FOR 'ALBANY'
+[2026-09-25 11:48:57] [INFO] [PipelineOrchestrator]: ==================================================
+[2026-09-25 11:48:57] [INFO] [PipelineOrchestrator]: >>> STARTING STAGE 1: Profiling & Metadata Extraction...
+[2026-09-25 11:48:57] [INFO] [PipelineOrchestrator]: Reading raw data from 'C:\Users\HAI\AppData\Local\Temp\pytest-of-HAI\pytest-3\test_full_pipeline_integration0\sample_listings.csv.gz'...
+[2026-09-25 11:48:57] [INFO] [PipelineOrchestrator]: Loaded raw dataset with 50 rows and 90 columns.
+[2026-09-25 11:49:01] [INFO] [PipelineOrchestrator]: Profiling completed. Report written to 'C:\Users\HAI\AppData\Local\Temp\pytest-of-HAI\pytest-3\test_full_pipeline_integration0\integration_results\profiling_report.json'. Raw row count: 50.
+[2026-09-25 11:49:01] [INFO] [PipelineOrchestrator]: <<< COMPLETED STAGE 1: Profiling & Metadata Extraction in 3.81s.
+
+[2026-09-25 11:49:01] [INFO] [PipelineOrchestrator]: >>> STARTING STAGE 2: Data Cleaning & Imputation (Method: MEDIAN)...
+[2026-09-25 11:49:01] [INFO] [PipelineOrchestrator]: Applying deduplication (threshold=0.85), schema normalization, and ML imputation ('median')...
+[2026-09-25 11:49:01] [INFO] [PipelineOrchestrator]: Cleaning completed. Output dataset shape: (50, 96). Written to 'C:\Users\HAI\AppData\Local\Temp\pytest-of-HAI\pytest-3\test_full_pipeline_integration0\integration_results\cleaned_data.csv'. Cleaned row count: 50.
+[2026-09-25 11:49:01] [INFO] [PipelineOrchestrator]: <<< COMPLETED STAGE 2: Data Cleaning & Imputation (Method: MEDIAN) in 0.70s.
+
+[2026-09-25 11:49:01] [INFO] [PipelineOrchestrator]: >>> STARTING STAGE 3: Validation, Anomaly Detection & Scoring (Contamination: 0.05)...
+[2026-09-25 11:49:01] [INFO] [PipelineOrchestrator]: Running rule validator, AI anomaly detector (contamination=0.05), NLP classifier, and error scorer...
+[2026-09-25 11:49:04] [INFO] [PipelineOrchestrator]: Validation completed. Validated row count: 50. Overall Health Score: 73.1/100 (Grade: B).
+[2026-09-25 11:49:04] [INFO] [PipelineOrchestrator]: <<< COMPLETED STAGE 3: Validation, Anomaly Detection & Scoring (Contamination: 0.05) in 2.71s.
+
+[2026-09-25 11:49:04] [INFO] [PipelineOrchestrator]: ==================================================
+[2026-09-25 11:49:04] [INFO] [PipelineOrchestrator]: ALL PIPELINE STAGES COMPLETED SUCCESSFULLY IN 7.23s!
+[2026-09-25 11:49:04] [INFO] [PipelineOrchestrator]: Summary: Raw Rows = 50, Cleaned Rows = 50, Health Score = 73.1/100 (Grade: B)
+[2026-09-25 11:49:04] [INFO] [PipelineOrchestrator]: ==================================================
+
+[2026-09-25 11:49:04] [INFO] [PipelineOrchestrator]: ==================================================
+[2026-09-25 11:49:04] [INFO] [PipelineOrchestrator]: STARTING FULL PIPELINE ORCHESTRATION FOR 'ALBANY'
+[2026-09-25 11:49:04] [INFO] [PipelineOrchestrator]: ==================================================
+[2026-09-25 11:49:04] [INFO] [PipelineOrchestrator]: >>> STARTING STAGE 1: Profiling & Metadata Extraction...
+[2026-09-25 11:49:04] [INFO] [PipelineOrchestrator]: Reading raw data from 'C:\Users\HAI\AppData\Local\Temp\pytest-of-HAI\pytest-3\test_cli_argument_overrides0\sample_listings.csv.gz'...
+[2026-09-25 11:49:04] [INFO] [PipelineOrchestrator]: Loaded raw dataset with 50 rows and 90 columns.
+[2026-09-25 11:49:08] [INFO] [PipelineOrchestrator]: Profiling completed. Report written to 'C:\Users\HAI\AppData\Local\Temp\pytest-of-HAI\pytest-3\test_cli_argument_overrides0\cli_override_results\profiling_report.json'. Raw row count: 50.
+[2026-09-25 11:49:08] [INFO] [PipelineOrchestrator]: <<< COMPLETED STAGE 1: Profiling & Metadata Extraction in 3.64s.
+
+[2026-09-25 11:49:08] [INFO] [PipelineOrchestrator]: >>> STARTING STAGE 2: Data Cleaning & Imputation (Method: MEDIAN)...
+[2026-09-25 11:49:08] [INFO] [PipelineOrchestrator]: Applying deduplication (threshold=0.85), schema normalization, and ML imputation ('median')...
+[2026-09-25 11:49:08] [INFO] [PipelineOrchestrator]: Cleaning completed. Output dataset shape: (50, 96). Written to 'C:\Users\HAI\AppData\Local\Temp\pytest-of-HAI\pytest-3\test_cli_argument_overrides0\cli_override_results\cleaned_data.csv'. Cleaned row count: 50.
+[2026-09-25 11:49:08] [INFO] [PipelineOrchestrator]: <<< COMPLETED STAGE 2: Data Cleaning & Imputation (Method: MEDIAN) in 0.57s.
+
+[2026-09-25 11:49:08] [INFO] [PipelineOrchestrator]: >>> STARTING STAGE 3: Validation, Anomaly Detection & Scoring (Contamination: 0.05)...
+[2026-09-25 11:49:08] [INFO] [PipelineOrchestrator]: Running rule validator, AI anomaly detector (contamination=0.05), NLP classifier, and error scorer...
+[2026-09-25 11:49:11] [INFO] [PipelineOrchestrator]: Validation completed. Validated row count: 50. Overall Health Score: 73.1/100 (Grade: B).
+[2026-09-25 11:49:11] [INFO] [PipelineOrchestrator]: <<< COMPLETED STAGE 3: Validation, Anomaly Detection & Scoring (Contamination: 0.05) in 2.82s.
+
+[2026-09-25 11:49:11] [INFO] [PipelineOrchestrator]: ==================================================
+[2026-09-25 11:49:11] [INFO] [PipelineOrchestrator]: ALL PIPELINE STAGES COMPLETED SUCCESSFULLY IN 7.03s!
+[2026-09-25 11:49:11] [INFO] [PipelineOrchestrator]: Summary: Raw Rows = 50, Cleaned Rows = 50, Health Score = 73.1/100 (Grade: B)
+[2026-09-25 11:49:11] [INFO] [PipelineOrchestrator]: ==================================================
+
+[2026-09-25 11:51:24] [INFO] [PipelineOrchestrator]: ==================================================
+[2026-09-25 11:51:24] [INFO] [PipelineOrchestrator]: STARTING FULL PIPELINE ORCHESTRATION FOR 'ALBANY'
+[2026-09-25 11:51:24] [INFO] [PipelineOrchestrator]: ==================================================
+[2026-09-25 11:51:24] [INFO] [PipelineOrchestrator]: >>> STARTING STAGE 1: Profiling & Metadata Extraction...
+[2026-09-25 11:51:24] [INFO] [PipelineOrchestrator]: Reading raw data from 'C:\Users\HAI\AppData\Local\Temp\pytest-of-HAI\pytest-4\test_full_pipeline_integration0\sample_listings.csv.gz'...
+[2026-09-25 11:51:24] [INFO] [PipelineOrchestrator]: Loaded raw dataset with 50 rows and 90 columns.
+[2026-09-25 11:51:28] [INFO] [PipelineOrchestrator]: Profiling completed. Report written to 'C:\Users\HAI\AppData\Local\Temp\pytest-of-HAI\pytest-4\test_full_pipeline_integration0\integration_results\profiling_report.json'. Raw row count: 50.
+[2026-09-25 11:51:28] [INFO] [PipelineOrchestrator]: <<< COMPLETED STAGE 1: Profiling & Metadata Extraction in 4.16s.
+
+[2026-09-25 11:51:28] [INFO] [PipelineOrchestrator]: >>> STARTING STAGE 2: Data Cleaning & Imputation (Method: MEDIAN)...
+[2026-09-25 11:51:28] [INFO] [PipelineOrchestrator]: Applying deduplication (threshold=0.85), schema normalization, and ML imputation ('median')...
+[2026-09-25 11:51:29] [INFO] [PipelineOrchestrator]: Cleaning completed. Output dataset shape: (50, 96). Written to 'C:\Users\HAI\AppData\Local\Temp\pytest-of-HAI\pytest-4\test_full_pipeline_integration0\integration_results\cleaned_data.csv'. Cleaned row count: 50.
+[2026-09-25 11:51:29] [INFO] [PipelineOrchestrator]: <<< COMPLETED STAGE 2: Data Cleaning & Imputation (Method: MEDIAN) in 0.69s.
+
+[2026-09-25 11:51:29] [INFO] [PipelineOrchestrator]: >>> STARTING STAGE 3: Validation, Anomaly Detection & Scoring (Contamination: 0.05)...
+[2026-09-25 11:51:29] [INFO] [PipelineOrchestrator]: Running rule validator, AI anomaly detector (contamination=0.05), NLP classifier, and error scorer...
+[2026-09-25 11:51:31] [INFO] [PipelineOrchestrator]: Validation completed. Validated row count: 50. Overall Health Score: 73.1/100 (Grade: B).
+[2026-09-25 11:51:31] [INFO] [PipelineOrchestrator]: <<< COMPLETED STAGE 3: Validation, Anomaly Detection & Scoring (Contamination: 0.05) in 2.88s.
+
+[2026-09-25 11:51:31] [INFO] [PipelineOrchestrator]: ==================================================
+[2026-09-25 11:51:31] [INFO] [PipelineOrchestrator]: ALL PIPELINE STAGES COMPLETED SUCCESSFULLY IN 7.73s!
+[2026-09-25 11:51:31] [INFO] [PipelineOrchestrator]: Summary: Raw Rows = 50, Cleaned Rows = 50, Health Score = 73.1/100 (Grade: B)
+[2026-09-25 11:51:31] [INFO] [PipelineOrchestrator]: ==================================================
+
+[2026-09-25 11:51:32] [INFO] [PipelineOrchestrator]: ==================================================
+[2026-09-25 11:51:32] [INFO] [PipelineOrchestrator]: STARTING FULL PIPELINE ORCHESTRATION FOR 'ALBANY'
+[2026-09-25 11:51:32] [INFO] [PipelineOrchestrator]: ==================================================
+[2026-09-25 11:51:32] [INFO] [PipelineOrchestrator]: >>> STARTING STAGE 1: Profiling & Metadata Extraction...
+[2026-09-25 11:51:32] [INFO] [PipelineOrchestrator]: Reading raw data from 'C:\Users\HAI\AppData\Local\Temp\pytest-of-HAI\pytest-4\test_cli_argument_overrides0\sample_listings.csv.gz'...
+[2026-09-25 11:51:32] [INFO] [PipelineOrchestrator]: Loaded raw dataset with 50 rows and 90 columns.
+[2026-09-25 11:51:35] [INFO] [PipelineOrchestrator]: Profiling completed. Report written to 'C:\Users\HAI\AppData\Local\Temp\pytest-of-HAI\pytest-4\test_cli_argument_overrides0\cli_override_results\profiling_report.json'. Raw row count: 50.
+[2026-09-25 11:51:35] [INFO] [PipelineOrchestrator]: <<< COMPLETED STAGE 1: Profiling & Metadata Extraction in 3.85s.
+
+[2026-09-25 11:51:36] [INFO] [PipelineOrchestrator]: >>> STARTING STAGE 2: Data Cleaning & Imputation (Method: MEDIAN)...
+[2026-09-25 11:51:36] [INFO] [PipelineOrchestrator]: Applying deduplication (threshold=0.85), schema normalization, and ML imputation ('median')...
+[2026-09-25 11:51:36] [INFO] [PipelineOrchestrator]: Cleaning completed. Output dataset shape: (50, 96). Written to 'C:\Users\HAI\AppData\Local\Temp\pytest-of-HAI\pytest-4\test_cli_argument_overrides0\cli_override_results\cleaned_data.csv'. Cleaned row count: 50.
+[2026-09-25 11:51:36] [INFO] [PipelineOrchestrator]: <<< COMPLETED STAGE 2: Data Cleaning & Imputation (Method: MEDIAN) in 0.73s.
+
+[2026-09-25 11:51:36] [INFO] [PipelineOrchestrator]: >>> STARTING STAGE 3: Validation, Anomaly Detection & Scoring (Contamination: 0.05)...
+[2026-09-25 11:51:36] [INFO] [PipelineOrchestrator]: Running rule validator, AI anomaly detector (contamination=0.05), NLP classifier, and error scorer...
+[2026-09-25 11:51:39] [INFO] [PipelineOrchestrator]: Validation completed. Validated row count: 50. Overall Health Score: 73.1/100 (Grade: B).
+[2026-09-25 11:51:39] [INFO] [PipelineOrchestrator]: <<< COMPLETED STAGE 3: Validation, Anomaly Detection & Scoring (Contamination: 0.05) in 2.94s.
+
+[2026-09-25 11:51:39] [INFO] [PipelineOrchestrator]: ==================================================
+[2026-09-25 11:51:39] [INFO] [PipelineOrchestrator]: ALL PIPELINE STAGES COMPLETED SUCCESSFULLY IN 7.52s!
+[2026-09-25 11:51:39] [INFO] [PipelineOrchestrator]: Summary: Raw Rows = 50, Cleaned Rows = 50, Health Score = 73.1/100 (Grade: B)
+[2026-09-25 11:51:39] [INFO] [PipelineOrchestrator]: ==================================================
+
+[2026-09-25 11:52:08] [INFO] [PipelineOrchestrator]: ==================================================
+[2026-09-25 11:52:08] [INFO] [PipelineOrchestrator]: STARTING FULL PIPELINE ORCHESTRATION FOR 'ALBANY'
+[2026-09-25 11:52:08] [INFO] [PipelineOrchestrator]: ==================================================
+[2026-09-25 11:52:08] [INFO] [PipelineOrchestrator]: >>> STARTING STAGE 1: Profiling & Metadata Extraction...
+[2026-09-25 11:52:08] [INFO] [PipelineOrchestrator]: Reading raw data from 'listings.csv.gz'...
+[2026-09-25 11:52:08] [INFO] [PipelineOrchestrator]: Loaded raw dataset with 490 rows and 90 columns.
+[2026-09-25 11:52:10] [INFO] [PipelineOrchestrator]: Profiling completed. Report written to 'output\profiling_report.json'. Raw row count: 490.
+[2026-09-25 11:52:10] [INFO] [PipelineOrchestrator]: <<< COMPLETED STAGE 1: Profiling & Metadata Extraction in 2.96s.
+
+[2026-09-25 11:52:10] [INFO] [PipelineOrchestrator]: >>> STARTING STAGE 2: Data Cleaning & Imputation (Method: MEDIAN)...
+[2026-09-25 11:52:10] [INFO] [PipelineOrchestrator]: Applying deduplication (threshold=0.85), schema normalization, and ML imputation ('median')...
+[2026-09-25 11:52:13] [INFO] [PipelineOrchestrator]: Cleaning completed. Output dataset shape: (466, 96). Written to 'output\cleaned_data.csv'. Cleaned row count: 466.
+[2026-09-25 11:52:13] [INFO] [PipelineOrchestrator]: <<< COMPLETED STAGE 2: Data Cleaning & Imputation (Method: MEDIAN) in 2.35s.
+
+[2026-09-25 11:52:13] [INFO] [PipelineOrchestrator]: >>> STARTING STAGE 3: Validation, Anomaly Detection & Scoring (Contamination: 0.05)...
+[2026-09-25 11:52:13] [INFO] [PipelineOrchestrator]: Running rule validator, AI anomaly detector (contamination=0.05), NLP classifier, and error scorer...
+[2026-09-25 11:52:19] [INFO] [PipelineOrchestrator]: Validation completed. Validated row count: 466. Overall Health Score: 71.17/100 (Grade: B).
+[2026-09-25 11:52:19] [INFO] [PipelineOrchestrator]: <<< COMPLETED STAGE 3: Validation, Anomaly Detection & Scoring (Contamination: 0.05) in 5.76s.
+
+[2026-09-25 11:52:19] [INFO] [PipelineOrchestrator]: ==================================================
+[2026-09-25 11:52:19] [INFO] [PipelineOrchestrator]: ALL PIPELINE STAGES COMPLETED SUCCESSFULLY IN 11.08s!
+[2026-09-25 11:52:19] [INFO] [PipelineOrchestrator]: Summary: Raw Rows = 490, Cleaned Rows = 466, Health Score = 71.17/100 (Grade: B)
+[2026-09-25 11:52:19] [INFO] [PipelineOrchestrator]: ==================================================
+
+[2026-09-25 11:52:19] [INFO] [PipelineOrchestrator]: ==================================================
+[2026-09-25 11:52:19] [INFO] [PipelineOrchestrator]: STARTING FULL PIPELINE ORCHESTRATION FOR 'ALBANY'
+[2026-09-25 11:52:19] [INFO] [PipelineOrchestrator]: ==================================================
+[2026-09-25 11:52:19] [INFO] [PipelineOrchestrator]: >>> STARTING STAGE 1: Profiling & Metadata Extraction...
+[2026-09-25 11:52:19] [INFO] [PipelineOrchestrator]: Reading raw data from 'listings.csv.gz'...
+[2026-09-25 11:52:19] [INFO] [PipelineOrchestrator]: Loaded raw dataset with 490 rows and 90 columns.
+[2026-09-25 11:52:22] [INFO] [PipelineOrchestrator]: Profiling completed. Report written to 'output\profiling_report.json'. Raw row count: 490.
+[2026-09-25 11:52:22] [INFO] [PipelineOrchestrator]: <<< COMPLETED STAGE 1: Profiling & Metadata Extraction in 3.10s.
+
+[2026-09-25 11:52:22] [INFO] [PipelineOrchestrator]: >>> STARTING STAGE 2: Data Cleaning & Imputation (Method: MEDIAN)...
+[2026-09-25 11:52:22] [INFO] [PipelineOrchestrator]: Applying deduplication (threshold=0.85), schema normalization, and ML imputation ('median')...
+[2026-09-25 11:52:24] [INFO] [PipelineOrchestrator]: Cleaning completed. Output dataset shape: (466, 96). Written to 'output\cleaned_data.csv'. Cleaned row count: 466.
+[2026-09-25 11:52:24] [INFO] [PipelineOrchestrator]: <<< COMPLETED STAGE 2: Data Cleaning & Imputation (Method: MEDIAN) in 2.53s.
+
+[2026-09-25 11:52:24] [INFO] [PipelineOrchestrator]: >>> STARTING STAGE 3: Validation, Anomaly Detection & Scoring (Contamination: 0.15)...
+[2026-09-25 11:52:24] [INFO] [PipelineOrchestrator]: Running rule validator, AI anomaly detector (contamination=0.15), NLP classifier, and error scorer...
+[2026-09-25 11:52:30] [INFO] [PipelineOrchestrator]: Validation completed. Validated row count: 466. Overall Health Score: 64.84/100 (Grade: C).
+[2026-09-25 11:52:30] [INFO] [PipelineOrchestrator]: <<< COMPLETED STAGE 3: Validation, Anomaly Detection & Scoring (Contamination: 0.15) in 5.95s.
+
+[2026-09-25 11:52:30] [INFO] [PipelineOrchestrator]: ==================================================
+[2026-09-25 11:52:30] [INFO] [PipelineOrchestrator]: ALL PIPELINE STAGES COMPLETED SUCCESSFULLY IN 11.59s!
+[2026-09-25 11:52:30] [INFO] [PipelineOrchestrator]: Summary: Raw Rows = 490, Cleaned Rows = 466, Health Score = 64.84/100 (Grade: C)
+[2026-09-25 11:52:30] [INFO] [PipelineOrchestrator]: ==================================================
+

@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-09-24T17:00:41.720963+00:00",
-  "dataset_path": "cleaned_data.csv",
+  "timestamp": "2026-09-25T06:22:29.936386+00:00",
+  "dataset_path": "output\\cleaned_data.csv",
   "total_rows_validated": 466,
   "overall_health_score": 71.17,
   "health_grade": "B",
@@ -1418,7 +1418,7 @@
           "listing_id": 32450400.0,
           "column": "latitude,longitude",
           "value": "(42.6761, -73.73825)",
-          "details": "Coordinates (42.6761, -73.73825) fall outside real city bounding box for cleaned_data.csv [lat: 42.64..42.71, lon: -73.85..-73.74]."
+          "details": "Coordinates (42.6761, -73.73825) fall outside real city bounding box for output\\cleaned_data.csv [lat: 42.64..42.71, lon: -73.85..-73.74]."
         }
       ],
       "anomalies": [],
@@ -1778,7 +1778,7 @@
           "listing_id": 40828178.0,
           "column": "latitude,longitude",
           "value": "(42.67773, -73.73899)",
-          "details": "Coordinates (42.67773, -73.73899) fall outside real city bounding box for cleaned_data.csv [lat: 42.64..42.71, lon: -73.85..-73.74]."
+          "details": "Coordinates (42.67773, -73.73899) fall outside real city bounding box for output\\cleaned_data.csv [lat: 42.64..42.71, lon: -73.85..-73.74]."
         }
       ],
       "anomalies": [],
@@ -1907,7 +1907,7 @@
           "listing_id": 42763847.0,
           "column": "latitude,longitude",
           "value": "(42.63876, -73.78535)",
-          "details": "Coordinates (42.63876, -73.78535) fall outside real city bounding box for cleaned_data.csv [lat: 42.64..42.71, lon: -73.85..-73.74]."
+          "details": "Coordinates (42.63876, -73.78535) fall outside real city bounding box for output\\cleaned_data.csv [lat: 42.64..42.71, lon: -73.85..-73.74]."
         }
       ],
       "anomalies": [],
@@ -2810,7 +2810,7 @@
           "listing_id": 52152157.0,
           "column": "latitude,longitude",
           "value": "(42.63066, -73.77357)",
-          "details": "Coordinates (42.63066, -73.77357) fall outside real city bounding box for cleaned_data.csv [lat: 42.64..42.71, lon: -73.85..-73.74]."
+          "details": "Coordinates (42.63066, -73.77357) fall outside real city bounding box for output\\cleaned_data.csv [lat: 42.64..42.71, lon: -73.85..-73.74]."
         }
       ],
       "anomalies": [],
@@ -3730,7 +3730,7 @@
           "listing_id": 6.58638e+17,
           "column": "latitude,longitude",
           "value": "(42.6374547, -73.7716647)",
-          "details": "Coordinates (42.6374547, -73.7716647) fall outside real city bounding box for cleaned_data.csv [lat: 42.64..42.71, lon: -73.85..-73.74]."
+          "details": "Coordinates (42.6374547, -73.7716647) fall outside real city bounding box for output\\cleaned_data.csv [lat: 42.64..42.71, lon: -73.85..-73.74]."
         }
       ],
       "anomalies": [],
@@ -3763,7 +3763,7 @@
           "listing_id": 6.62133e+17,
           "column": "latitude,longitude",
           "value": "(42.6378819, -73.7715269)",
-          "details": "Coordinates (42.6378819, -73.7715269) fall outside real city bounding box for cleaned_data.csv [lat: 42.64..42.71, lon: -73.85..-73.74]."
+          "details": "Coordinates (42.6378819, -73.7715269) fall outside real city bounding box for output\\cleaned_data.csv [lat: 42.64..42.71, lon: -73.85..-73.74]."
         }
       ],
       "anomalies": [],
@@ -4804,7 +4804,7 @@
           "listing_id": 8.4596e+17,
           "column": "latitude,longitude",
           "value": "(42.63504, -73.79833)",
-          "details": "Coordinates (42.63504, -73.79833) fall outside real city bounding box for cleaned_data.csv [lat: 42.64..42.71, lon: -73.85..-73.74]."
+          "details": "Coordinates (42.63504, -73.79833) fall outside real city bounding box for output\\cleaned_data.csv [lat: 42.64..42.71, lon: -73.85..-73.74]."
         }
       ],
       "anomalies": [],
@@ -5798,7 +5798,7 @@
           "listing_id": 9.50614e+17,
           "column": "latitude,longitude",
           "value": "(42.6376753, -73.7685409)",
-          "details": "Coordinates (42.6376753, -73.7685409) fall outside real city bounding box for cleaned_data.csv [lat: 42.64..42.71, lon: -73.85..-73.74]."
+          "details": "Coordinates (42.6376753, -73.7685409) fall outside real city bounding box for output\\cleaned_data.csv [lat: 42.64..42.71, lon: -73.85..-73.74]."
         }
       ],
       "anomalies": [],
@@ -6475,7 +6475,7 @@
           "listing_id": 1.04357e+18,
           "column": "latitude,longitude",
           "value": "(42.63976, -73.75705)",
-          "details": "Coordinates (42.63976, -73.75705) fall outside real city bounding box for cleaned_data.csv [lat: 42.64..42.71, lon: -73.85..-73.74]."
+          "details": "Coordinates (42.63976, -73.75705) fall outside real city bounding box for output\\cleaned_data.csv [lat: 42.64..42.71, lon: -73.85..-73.74]."
         }
       ],
       "anomalies": [],
@@ -6531,7 +6531,7 @@
           "listing_id": 1.05647e+18,
           "column": "latitude,longitude",
           "value": "(42.7149, -73.87649)",
-          "details": "Coordinates (42.7149, -73.87649) fall outside real city bounding box for cleaned_data.csv [lat: 42.64..42.71, lon: -73.85..-73.74]."
+          "details": "Coordinates (42.7149, -73.87649) fall outside real city bounding box for output\\cleaned_data.csv [lat: 42.64..42.71, lon: -73.85..-73.74]."
         }
       ],
       "anomalies": [],
@@ -8188,7 +8188,7 @@
           "listing_id": 1.28498e+18,
           "column": "latitude,longitude",
           "value": "(42.67445143, -73.73835701)",
-          "details": "Coordinates (42.67445143, -73.73835701) fall outside real city bounding box for cleaned_data.csv [lat: 42.64..42.71, lon: -73.85..-73.74]."
+          "details": "Coordinates (42.67445143, -73.73835701) fall outside real city bounding box for output\\cleaned_data.csv [lat: 42.64..42.71, lon: -73.85..-73.74]."
         }
       ],
       "anomalies": [],
@@ -8768,7 +8768,7 @@
           "listing_id": 1.36977e+18,
           "column": "latitude,longitude",
           "value": "(42.63962652, -73.77330801)",
-          "details": "Coordinates (42.63962652, -73.77330801) fall outside real city bounding box for cleaned_data.csv [lat: 42.64..42.71, lon: -73.85..-73.74]."
+          "details": "Coordinates (42.63962652, -73.77330801) fall outside real city bounding box for output\\cleaned_data.csv [lat: 42.64..42.71, lon: -73.85..-73.74]."
         }
       ],
       "anomalies": [],
@@ -9386,7 +9386,7 @@
           "listing_id": 1.40965e+18,
           "column": "latitude,longitude",
           "value": "(42.6722593, -73.73905199)",
-          "details": "Coordinates (42.6722593, -73.73905199) fall outside real city bounding box for cleaned_data.csv [lat: 42.64..42.71, lon: -73.85..-73.74]."
+          "details": "Coordinates (42.6722593, -73.73905199) fall outside real city bounding box for output\\cleaned_data.csv [lat: 42.64..42.71, lon: -73.85..-73.74]."
         }
       ],
       "anomalies": [],
@@ -10885,7 +10885,7 @@
           "listing_id": 1.53732e+18,
           "column": "latitude,longitude",
           "value": "(42.63622, -73.76152)",
-          "details": "Coordinates (42.63622, -73.76152) fall outside real city bounding box for cleaned_data.csv [lat: 42.64..42.71, lon: -73.85..-73.74]."
+          "details": "Coordinates (42.63622, -73.76152) fall outside real city bounding box for output\\cleaned_data.csv [lat: 42.64..42.71, lon: -73.85..-73.74]."
         }
       ],
       "anomalies": [],
@@ -11575,7 +11575,7 @@
           "listing_id": 1.60949e+18,
           "column": "latitude,longitude",
           "value": "(42.63919025, -73.7753294)",
-          "details": "Coordinates (42.63919025, -73.7753294) fall outside real city bounding box for cleaned_data.csv [lat: 42.64..42.71, lon: -73.85..-73.74]."
+          "details": "Coordinates (42.63919025, -73.7753294) fall outside real city bounding box for output\\cleaned_data.csv [lat: 42.64..42.71, lon: -73.85..-73.74]."
         }
       ],
       "anomalies": [],
@@ -12216,7 +12216,7 @@
           "listing_id": 1.67692e+18,
           "column": "latitude,longitude",
           "value": "(42.6378758, -73.7594293)",
-          "details": "Coordinates (42.6378758, -73.7594293) fall outside real city bounding box for cleaned_data.csv [lat: 42.64..42.71, lon: -73.85..-73.74]."
+          "details": "Coordinates (42.6378758, -73.7594293) fall outside real city bounding box for output\\cleaned_data.csv [lat: 42.64..42.71, lon: -73.85..-73.74]."
         }
       ],
       "anomalies": [],

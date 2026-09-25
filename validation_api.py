@@ -14,11 +14,18 @@ class ValidationAPI:
     Runs rule validation, AI anomaly detection, NLP column classification,
     and statistical error detection, producing a unified validation_report.json.
     """
-    def run_validation_pipeline(self, input_path="cleaned_data.csv", output_path="validation_report.json", contamination=0.05):
+    def run_validation_pipeline(self, input_path="cleaned_data.csv", output_path="validation_report.json", contamination=0.05, anomaly_report_path=None, nlp_report_path=None):
         print("==================================================")
         print(f"RUNNING UNIFIED VALIDATION PIPELINE (Contamination={contamination})")
         print("==================================================")
         
+        out_dir = os.path.dirname(output_path) or "."
+        os.makedirs(out_dir, exist_ok=True)
+        if anomaly_report_path is None:
+            anomaly_report_path = os.path.join(out_dir, "anomaly_report.json") if out_dir != "." else "anomaly_report.json"
+        if nlp_report_path is None:
+            nlp_report_path = os.path.join(out_dir, "nlp_classification_report.json") if out_dir != "." else "nlp_classification_report.json"
+
         if not os.path.exists(input_path):
             raise FileNotFoundError(f"Dataset not found at {input_path}")
             
@@ -33,10 +40,10 @@ class ValidationAPI:
             rv_report = rv_res
             rule_violations = rv_report.get("rule_violations", [])
         
-        anom_report = detect_anomalies(input_path, "anomaly_report.json", contamination=contamination)
+        anom_report = detect_anomalies(input_path, anomaly_report_path, contamination=contamination)
         anomaly_flagged_rows = anom_report.get("flagged_rows", [])
         
-        nlp_report = run_nlp_classification(input_path, "nlp_classification_report.json")
+        nlp_report = run_nlp_classification(input_path, nlp_report_path)
         nlp_issues = nlp_report.get("flagged_text_issues", [])
         
         err_detector = ErrorDetector(df)

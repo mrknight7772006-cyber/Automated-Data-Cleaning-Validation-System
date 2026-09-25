@@ -114,13 +114,14 @@ def plot_correlation_heatmap(df: pd.DataFrame, output_path: str = "correlation_h
     print(f"Generated correlation heatmap: '{output_path}'")
     return output_path
 
-def generate_all_visualizations(df: pd.DataFrame) -> Dict[str, str]:
+def generate_all_visualizations(df: pd.DataFrame, output_dir: str = ".") -> Dict[str, str]:
     """
     Executes all visualization plots and returns dict of generated file paths.
     """
-    missing_path = plot_missing_value_heatmap(df, "heatmap_missing.png")
-    outlier_path = plot_outliers(df, "outlier_min_nights.png")
-    corr_path = plot_correlation_heatmap(df, "correlation_heatmap.png")
+    os.makedirs(output_dir, exist_ok=True)
+    missing_path = plot_missing_value_heatmap(df, os.path.join(output_dir, "heatmap_missing.png"))
+    outlier_path = plot_outliers(df, os.path.join(output_dir, "outlier_min_nights.png"))
+    corr_path = plot_correlation_heatmap(df, os.path.join(output_dir, "correlation_heatmap.png"))
     
     return {
         "missing_value_heatmap": missing_path,

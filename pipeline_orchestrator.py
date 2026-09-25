@@ -22,14 +22,17 @@ class PipelineOrchestrator:
     Stage 2: Cleaning (run_cleaning)
     Stage 3: Validation (run_validation)
     """
-    def __init__(self, config_path="config.yaml"):
+    def __init__(self, config_path="config.yaml", input_path=None, output_dir=None):
         self.config_path = config_path
-        self.config = self.load_config(config_path)
+        if os.path.exists(config_path):
+            self.config = self.load_config(config_path)
+        else:
+            self.config = {}
         
         p_cfg = self.config.get("pipeline", {})
         self.city_name = p_cfg.get("city_name", "Albany")
-        self.input_path = p_cfg.get("input_path", "listings.csv.gz")
-        self.output_dir = p_cfg.get("output_dir", "output")
+        self.input_path = input_path if input_path is not None else p_cfg.get("input_path", "listings.csv.gz")
+        self.output_dir = output_dir if output_dir is not None else p_cfg.get("output_dir", "output")
         self.log_file = "pipeline.log"
         
         os.makedirs(self.output_dir, exist_ok=True)
@@ -44,8 +47,8 @@ class PipelineOrchestrator:
     def run_profiling_stage(self):
         """Stage 1: Profiling & Schema Inference"""
         prof_cfg = self.config.get("profiling", {})
-        out_json = prof_cfg.get("output_json", os.path.join(self.output_dir, "profiling_report.json"))
-        cache_parquet = prof_cfg.get("parquet_cache", os.path.join(self.output_dir, "raw_data_loaded.parquet"))
+        out_json = os.path.join(self.output_dir, "profiling_report.json")
+        cache_parquet = os.path.join(self.output_dir, "raw_data_loaded.parquet")
         gen_visuals = prof_cfg.get("generate_visualizations", True)
         
         with StageTimer(self.logger, "STAGE 1: Profiling & Metadata Extraction"):
@@ -58,7 +61,8 @@ class PipelineOrchestrator:
                 df=raw_df,
                 parquet_path=cache_parquet,
                 output_json_path=out_json,
-                generate_visuals=gen_visuals
+                generate_visuals=gen_visuals,
+                output_dir=self.output_dir
             )
             self.logger.info(f"Profiling completed. Report written to '{out_json}'. Raw row count: {raw_count}.")
             return raw_df, prof_report
@@ -68,12 +72,12 @@ class PipelineOrchestrator:
         clean_cfg = self.config.get("cleaning", {})
         imputation_method = clean_cfg.get("imputation_method", "median")
         dedup_thresh = clean_cfg.get("deduplication_threshold", 0.85)
-        cleaned_csv = clean_cfg.get("output_cleaned_csv", os.path.join(self.output_dir, "cleaned_data.csv"))
-        imputed_parquet = clean_cfg.get("output_imputed_parquet", os.path.join(self.output_dir, "imputed_data.parquet"))
+        cleaned_csv = os.path.join(self.output_dir, "cleaned_data.csv")
+        imputed_parquet = os.path.join(self.output_dir, "imputed_data.parquet")
+        cache_parquet = os.path.join(self.output_dir, "raw_data_loaded.parquet")
         
         with StageTimer(self.logger, f"STAGE 2: Data Cleaning & Imputation (Method: {imputation_method.upper()})"):
             if raw_df is None:
-                cache_parquet = os.path.join(self.output_dir, "raw_data_loaded.parquet")
                 if os.path.exists(cache_parquet):
                     raw_df = pd.read_parquet(cache_parquet)
                 else:
@@ -90,8 +94,14 @@ class PipelineOrchestrator:
             if imputed_parquet != "imputed_data.parquet":
                 df_imputed.to_parquet("imputed_data.parquet")
                 
-            cleaner = CleaningAPI(imputed_parquet_path=imputed_parquet)
-            cleaned_df, clean_meta = cleaner.run_pipeline(output_csv_path=cleaned_csv)
+            cleaner = CleaningAPI(imputed_parquet_path=imputed_parquet, raw_parquet_path=cache_parquet)
+            cleaned_df, clean_meta = cleaner.run_pipeline(
+                output_csv_path=cleaned_csv,
+                log_json_path=os.path.join(self.output_dir, "cleaning_log.json"),
+                after_score_path=os.path.join(self.output_dir, "quality_score_after.json"),
+                delta_json_path=os.path.join(self.output_dir, "quality_delta.json"),
+                before_score_path=os.path.join(self.output_dir, "quality_score_before.json")
+            )
             
             if cleaned_csv != "cleaned_data.csv":
                 cleaned_df.to_csv("cleaned_data.csv", index=False)
@@ -104,22 +114,29 @@ class PipelineOrchestrator:
         """Stage 3: Validation, Anomaly Detection & Scoring Engine"""
         val_cfg = self.config.get("validation", {})
         contamination = float(val_cfg.get("contamination", 0.05))
-        val_report_path = val_cfg.get("output_report", os.path.join(self.output_dir, "validation_report.json"))
+        val_report_path = os.path.join(self.output_dir, "validation_report.json")
+        cleaned_csv = os.path.join(self.output_dir, "cleaned_data.csv")
         
         with StageTimer(self.logger, f"STAGE 3: Validation, Anomaly Detection & Scoring (Contamination: {contamination})"):
             val_api = ValidationAPI()
-            cleaned_path = "cleaned_data.csv"
-            if not os.path.exists(cleaned_path) and cleaned_df is not None:
-                cleaned_df.to_csv(cleaned_path, index=False)
+            if not os.path.exists(cleaned_csv) and cleaned_df is not None:
+                cleaned_df.to_csv(cleaned_csv, index=False)
+            if not os.path.exists("cleaned_data.csv") and cleaned_df is not None:
+                cleaned_df.to_csv("cleaned_data.csv", index=False)
                 
             self.logger.info(f"Running rule validator, AI anomaly detector (contamination={contamination}), NLP classifier, and error scorer...")
             val_report = val_api.run_validation_pipeline(
-                input_path=cleaned_path,
+                input_path=cleaned_csv if os.path.exists(cleaned_csv) else "cleaned_data.csv",
                 output_path=val_report_path,
-                contamination=contamination
+                contamination=contamination,
+                anomaly_report_path=os.path.join(self.output_dir, "anomaly_report.json"),
+                nlp_report_path=os.path.join(self.output_dir, "nlp_classification_report.json")
             )
             
-            eval_metrics = evaluate_pipeline(input_path=cleaned_path, report_path=val_report_path)
+            eval_metrics = evaluate_pipeline(
+                input_path=cleaned_csv if os.path.exists(cleaned_csv) else "cleaned_data.csv",
+                report_path=val_report_path
+            )
             
             health_score = val_report.get("overall_health_score", 0.0)
             health_grade = val_report.get("health_grade", "N/A")

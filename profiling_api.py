@@ -13,7 +13,9 @@ def run_profiling(
     df: Optional[pd.DataFrame] = None,
     parquet_path: str = "raw_data_loaded.parquet",
     output_json_path: str = "profiling_report.json",
-    generate_visuals: bool = True
+    generate_visuals: bool = True,
+    stats_summary_path: Optional[str] = None,
+    output_dir: Optional[str] = None
 ) -> Dict[str, Any]:
     """
     Exposes full data profiling API:
@@ -23,6 +25,13 @@ def run_profiling(
     4. Renders visualization artifacts (heatmap_missing.png, outlier_min_nights.png, correlation_heatmap.png)
     5. Saves and returns profiling_report.json
     """
+    if output_dir is None:
+        output_dir = os.path.dirname(output_json_path) or "."
+    os.makedirs(output_dir, exist_ok=True)
+
+    if stats_summary_path is None:
+        stats_summary_path = os.path.join(output_dir, "stats_summary.json")
+
     if df is None:
         if os.path.exists(parquet_path):
             print(f"[profiling_api] Loading dataset from Parquet '{parquet_path}'...")
@@ -34,7 +43,7 @@ def run_profiling(
         print(f"[profiling_api] Using provided DataFrame ({len(df)} rows, {len(df.columns)} columns).")
 
     # 1. Base statistical profiling engine output
-    stats_summary = run_profiling_engine(parquet_path=parquet_path, output_json_path="stats_summary.json")
+    stats_summary = run_profiling_engine(parquet_path=parquet_path, output_json_path=stats_summary_path)
 
     # 2. Suspicious column rules evaluation
     suspicious_rules = run_suspicious_rules(df)
@@ -42,13 +51,13 @@ def run_profiling(
     # 3. Visualizations rendering
     vis_paths = {}
     if generate_visuals:
-        print("[profiling_api] Generating visualization artifacts...")
-        vis_paths = generate_all_visualizations(df)
+        print(f"[profiling_api] Generating visualization artifacts in '{output_dir}'...")
+        vis_paths = generate_all_visualizations(df, output_dir=output_dir)
     else:
         vis_paths = {
-            "missing_value_heatmap": "heatmap_missing.png",
-            "outliers_boxplot": "outlier_min_nights.png",
-            "correlation_heatmap": "correlation_heatmap.png"
+            "missing_value_heatmap": os.path.join(output_dir, "heatmap_missing.png"),
+            "outliers_boxplot": os.path.join(output_dir, "outlier_min_nights.png"),
+            "correlation_heatmap": os.path.join(output_dir, "correlation_heatmap.png")
         }
 
     # 4. Assemble consolidated profiling report schema
