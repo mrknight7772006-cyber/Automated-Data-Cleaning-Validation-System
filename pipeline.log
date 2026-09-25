@@ -323,3 +323,51 @@
 [2026-09-25 11:52:30] [INFO] [PipelineOrchestrator]: Summary: Raw Rows = 490, Cleaned Rows = 466, Health Score = 64.84/100 (Grade: C)
 [2026-09-25 11:52:30] [INFO] [PipelineOrchestrator]: ==================================================
 
+[2026-09-25 12:04:15] [INFO] [PipelineOrchestrator]: ==================================================
+[2026-09-25 12:04:15] [INFO] [PipelineOrchestrator]: STARTING FULL PIPELINE ORCHESTRATION FOR 'ALBANY'
+[2026-09-25 12:04:15] [INFO] [PipelineOrchestrator]: ==================================================
+[2026-09-25 12:04:15] [INFO] [PipelineOrchestrator]: >>> STARTING STAGE 1: Profiling & Metadata Extraction...
+[2026-09-25 12:04:15] [INFO] [PipelineOrchestrator]: Reading raw data from 'C:\Users\HAI\AppData\Local\Temp\pytest-of-HAI\pytest-5\test_full_pipeline_integration0\sample_listings.csv.gz'...
+[2026-09-25 12:04:15] [INFO] [PipelineOrchestrator]: Loaded raw dataset with 50 rows and 90 columns.
+[2026-09-25 12:04:18] [INFO] [PipelineOrchestrator]: Profiling completed. Report written to 'C:\Users\HAI\AppData\Local\Temp\pytest-of-HAI\pytest-5\test_full_pipeline_integration0\integration_results\profiling_report.json'. Raw row count: 50.
+[2026-09-25 12:04:18] [INFO] [PipelineOrchestrator]: <<< COMPLETED STAGE 1: Profiling & Metadata Extraction in 2.85s.
+
+[2026-09-25 12:04:18] [INFO] [PipelineOrchestrator]: >>> STARTING STAGE 2: Data Cleaning & Imputation (Method: MEDIAN)...
+[2026-09-25 12:04:18] [INFO] [PipelineOrchestrator]: Applying deduplication (threshold=0.85), schema normalization, and ML imputation ('median')...
+[2026-09-25 12:04:18] [INFO] [PipelineOrchestrator]: Cleaning completed. Output dataset shape: (50, 96). Written to 'C:\Users\HAI\AppData\Local\Temp\pytest-of-HAI\pytest-5\test_full_pipeline_integration0\integration_results\cleaned_data.csv'. Cleaned row count: 50.
+[2026-09-25 12:04:18] [INFO] [PipelineOrchestrator]: <<< COMPLETED STAGE 2: Data Cleaning & Imputation (Method: MEDIAN) in 0.48s.
+
+[2026-09-25 12:04:18] [INFO] [PipelineOrchestrator]: >>> STARTING STAGE 3: Validation, Anomaly Detection & Scoring (Contamination: 0.05)...
+[2026-09-25 12:04:18] [INFO] [PipelineOrchestrator]: Running rule validator, AI anomaly detector (contamination=0.05), NLP classifier, and error scorer...
+[2026-09-25 12:04:20] [INFO] [PipelineOrchestrator]: Validation completed. Validated row count: 50. Overall Health Score: 73.1/100 (Grade: B).
+[2026-09-25 12:04:20] [INFO] [PipelineOrchestrator]: <<< COMPLETED STAGE 3: Validation, Anomaly Detection & Scoring (Contamination: 0.05) in 2.03s.
+
+[2026-09-25 12:04:20] [INFO] [PipelineOrchestrator]: ==================================================
+[2026-09-25 12:04:20] [INFO] [PipelineOrchestrator]: ALL PIPELINE STAGES COMPLETED SUCCESSFULLY IN 5.36s!
+[2026-09-25 12:04:20] [INFO] [PipelineOrchestrator]: Summary: Raw Rows = 50, Cleaned Rows = 50, Health Score = 73.1/100 (Grade: B)
+[2026-09-25 12:04:20] [INFO] [PipelineOrchestrator]: ==================================================
+
+[2026-09-25 12:04:21] [INFO] [PipelineOrchestrator]: ==================================================
+[2026-09-25 12:04:21] [INFO] [PipelineOrchestrator]: STARTING FULL PIPELINE ORCHESTRATION FOR 'ALBANY'
+[2026-09-25 12:04:21] [INFO] [PipelineOrchestrator]: ==================================================
+[2026-09-25 12:04:21] [INFO] [PipelineOrchestrator]: >>> STARTING STAGE 1: Profiling & Metadata Extraction...
+[2026-09-25 12:04:21] [INFO] [PipelineOrchestrator]: Reading raw data from 'C:\Users\HAI\AppData\Local\Temp\pytest-of-HAI\pytest-5\test_cli_argument_overrides0\sample_listings.csv.gz'...
+[2026-09-25 12:04:21] [INFO] [PipelineOrchestrator]: Loaded raw dataset with 50 rows and 90 columns.
+[2026-09-25 12:04:24] [INFO] [PipelineOrchestrator]: Profiling completed. Report written to 'C:\Users\HAI\AppData\Local\Temp\pytest-of-HAI\pytest-5\test_cli_argument_overrides0\cli_override_results\profiling_report.json'. Raw row count: 50.
+[2026-09-25 12:04:24] [INFO] [PipelineOrchestrator]: <<< COMPLETED STAGE 1: Profiling & Metadata Extraction in 3.02s.
+
+[2026-09-25 12:04:24] [INFO] [PipelineOrchestrator]: >>> STARTING STAGE 2: Data Cleaning & Imputation (Method: MEDIAN)...
+[2026-09-25 12:04:24] [INFO] [PipelineOrchestrator]: Applying deduplication (threshold=0.85), schema normalization, and ML imputation ('median')...
+[2026-09-25 12:04:24] [INFO] [PipelineOrchestrator]: Cleaning completed. Output dataset shape: (50, 96). Written to 'C:\Users\HAI\AppData\Local\Temp\pytest-of-HAI\pytest-5\test_cli_argument_overrides0\cli_override_results\cleaned_data.csv'. Cleaned row count: 50.
+[2026-09-25 12:04:24] [INFO] [PipelineOrchestrator]: <<< COMPLETED STAGE 2: Data Cleaning & Imputation (Method: MEDIAN) in 0.51s.
+
+[2026-09-25 12:04:24] [INFO] [PipelineOrchestrator]: >>> STARTING STAGE 3: Validation, Anomaly Detection & Scoring (Contamination: 0.05)...
+[2026-09-25 12:04:24] [INFO] [PipelineOrchestrator]: Running rule validator, AI anomaly detector (contamination=0.05), NLP classifier, and error scorer...
+[2026-09-25 12:04:26] [INFO] [PipelineOrchestrator]: Validation completed. Validated row count: 50. Overall Health Score: 73.1/100 (Grade: B).
+[2026-09-25 12:04:26] [INFO] [PipelineOrchestrator]: <<< COMPLETED STAGE 3: Validation, Anomaly Detection & Scoring (Contamination: 0.05) in 2.00s.
+
+[2026-09-25 12:04:26] [INFO] [PipelineOrchestrator]: ==================================================
+[2026-09-25 12:04:26] [INFO] [PipelineOrchestrator]: ALL PIPELINE STAGES COMPLETED SUCCESSFULLY IN 5.53s!
+[2026-09-25 12:04:26] [INFO] [PipelineOrchestrator]: Summary: Raw Rows = 50, Cleaned Rows = 50, Health Score = 73.1/100 (Grade: B)
+[2026-09-25 12:04:26] [INFO] [PipelineOrchestrator]: ==================================================
+

@@ -1,16 +1,16 @@
 {
-  "sample_size": 200,
-  "ground_truth_positives": 21,
-  "ground_truth_negatives": 179,
-  "precision": 0.8077,
+  "sample_size": 50,
+  "ground_truth_positives": 6,
+  "ground_truth_negatives": 44,
+  "precision": 1.0,
   "recall": 1.0,
-  "f1_score": 0.8936,
-  "accuracy": 0.975,
-  "roc_auc": 0.998,
+  "f1_score": 1.0,
+  "accuracy": 1.0,
+  "roc_auc": 1.0,
   "confusion_matrix": {
-    "true_negatives": 174,
-    "false_positives": 5,
+    "true_negatives": 44,
+    "false_positives": 0,
     "false_negatives": 0,
-    "true_positives": 21
+    "true_positives": 6
   }
 }
